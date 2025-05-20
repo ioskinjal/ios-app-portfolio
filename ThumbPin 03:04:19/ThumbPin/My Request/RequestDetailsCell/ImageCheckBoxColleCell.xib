@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="muli.regular.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCheckBoxColleCell" id="gTV-IL-0wX" customClass="ImageCheckBoxColleCell" customModule="ThumbPin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2a-Wv-ybQ">
+                        <rect key="frame" x="8" y="143" width="114" height="19"/>
+                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-o7-0nq">
+                        <rect key="frame" x="16" y="16" width="98" height="111"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="L2a-Wv-ybQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="1uJ-RT-Zgh"/>
+                <constraint firstAttribute="bottom" secondItem="L2a-Wv-ybQ" secondAttribute="bottom" constant="8" id="AOd-ec-1MS"/>
+                <constraint firstAttribute="trailing" secondItem="nbC-o7-0nq" secondAttribute="trailing" constant="16" id="S49-zo-3na"/>
+                <constraint firstItem="L2a-Wv-ybQ" firstAttribute="top" secondItem="nbC-o7-0nq" secondAttribute="bottom" constant="16" id="aeT-wg-nW3"/>
+                <constraint firstItem="nbC-o7-0nq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="faS-QB-Dny"/>
+                <constraint firstAttribute="trailing" secondItem="L2a-Wv-ybQ" secondAttribute="trailing" constant="8" id="lhM-FG-wqd"/>
+                <constraint firstItem="nbC-o7-0nq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="me3-IT-8Qh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imgvw" destination="nbC-o7-0nq" id="itD-KI-1ie"/>
+                <outlet property="labelName" destination="L2a-Wv-ybQ" id="baJ-b5-7CL"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

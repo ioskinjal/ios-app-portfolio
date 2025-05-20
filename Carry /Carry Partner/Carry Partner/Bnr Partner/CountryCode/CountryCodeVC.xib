@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryCodeVC" customModule="BnR_Partner" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDone" destination="35I-7U-lZ3" id="mXB-KD-JxR"/>
+                <outlet property="codePickerView" destination="VN9-9D-9ip" id="K9f-sg-Och"/>
+                <outlet property="view" destination="kPc-gd-xey" id="X79-Ol-aTB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kPc-gd-xey">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIj-1R-mLN">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXX-hf-I6B">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35I-7U-lZ3">
+                            <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                            <color key="backgroundColor" red="0.97254901960784312" green="0.7803921568627451" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gGX-T1-snB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnDoneClicked:" destination="-1" eventType="touchUpInside" id="lyV-fN-ZBA"/>
+                            </connections>
+                        </button>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VN9-9D-9ip">
+                            <rect key="frame" x="0.0" y="381" width="375" height="216"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="We3-24-mof"/>
+                                <outlet property="delegate" destination="-1" id="KfR-bv-gfh"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VN9-9D-9ip" secondAttribute="trailing" id="4gI-lf-Q0M"/>
+                        <constraint firstItem="35I-7U-lZ3" firstAttribute="top" secondItem="VN9-9D-9ip" secondAttribute="bottom" id="7q9-ZM-vh3"/>
+                        <constraint firstItem="35I-7U-lZ3" firstAttribute="leading" secondItem="lXX-hf-I6B" secondAttribute="leading" id="HQt-o5-HR4"/>
+                        <constraint firstAttribute="bottom" secondItem="35I-7U-lZ3" secondAttribute="bottom" id="HvM-CZ-v7w"/>
+                        <constraint firstItem="VN9-9D-9ip" firstAttribute="leading" secondItem="lXX-hf-I6B" secondAttribute="leading" id="Y7I-q4-gXG"/>
+                        <constraint firstAttribute="trailing" secondItem="35I-7U-lZ3" secondAttribute="trailing" id="Zjr-6h-4Nb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RRk-HT-w75" firstAttribute="trailing" secondItem="aIj-1R-mLN" secondAttribute="trailing" id="90Q-EQ-EuS"/>
+                <constraint firstItem="RRk-HT-w75" firstAttribute="bottom" secondItem="aIj-1R-mLN" secondAttribute="bottom" id="9Hs-7N-cd4"/>
+                <constraint firstItem="aIj-1R-mLN" firstAttribute="top" secondItem="RRk-HT-w75" secondAttribute="top" id="Fee-Mg-fZR"/>
+                <constraint firstItem="lXX-hf-I6B" firstAttribute="leading" secondItem="RRk-HT-w75" secondAttribute="leading" id="hwJ-Aj-3MF"/>
+                <constraint firstItem="RRk-HT-w75" firstAttribute="bottom" secondItem="lXX-hf-I6B" secondAttribute="bottom" id="knw-A5-938"/>
+                <constraint firstItem="aIj-1R-mLN" firstAttribute="leading" secondItem="RRk-HT-w75" secondAttribute="leading" id="ofm-58-U79"/>
+                <constraint firstItem="lXX-hf-I6B" firstAttribute="top" secondItem="RRk-HT-w75" secondAttribute="top" id="oqJ-g7-dNV"/>
+                <constraint firstItem="RRk-HT-w75" firstAttribute="trailing" secondItem="lXX-hf-I6B" secondAttribute="trailing" id="wUs-ry-fOY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="RRk-HT-w75"/>
+            <point key="canvasLocation" x="-14" y="-385"/>
+        </view>
+    </objects>
+</document>

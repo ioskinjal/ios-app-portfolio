@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RideTripMapVC" customModule="BooknRide" customModuleProvider="target">
+            <connections>
+                <outlet property="navView" destination="CDA-dm-27e" id="mR7-rj-qgB"/>
+                <outlet property="topLayoutConstraint" destination="kYI-0s-7Vm" id="nEr-ZW-N0J"/>
+                <outlet property="tripMapView" destination="Ogx-Id-Loy" id="Occ-su-u8z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDA-dm-27e" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn1-xD-QFL">
+                            <rect key="frame" x="70" y="23.666666666666671" width="295" height="23.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-1z-BLu">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="CLS-H0-agC"/>
+                            </constraints>
+                            <state key="normal" image="backBtn"/>
+                            <connections>
+                                <action selector="btnGoBackClicked:" destination="-1" eventType="touchUpInside" id="3Gx-XM-4dx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92589747909999998" green="0.92932659390000005" blue="0.93352997299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="f4b-1z-BLu" firstAttribute="leading" secondItem="CDA-dm-27e" secondAttribute="leading" id="3vM-ik-Bzv"/>
+                        <constraint firstAttribute="bottom" secondItem="f4b-1z-BLu" secondAttribute="bottom" id="5bI-Hl-K4f"/>
+                        <constraint firstItem="f4b-1z-BLu" firstAttribute="top" secondItem="CDA-dm-27e" secondAttribute="top" constant="10" id="PI4-Tr-7lX"/>
+                        <constraint firstItem="dn1-xD-QFL" firstAttribute="centerY" secondItem="f4b-1z-BLu" secondAttribute="centerY" id="T6l-rV-Hmk"/>
+                        <constraint firstItem="dn1-xD-QFL" firstAttribute="leading" secondItem="f4b-1z-BLu" secondAttribute="trailing" constant="20" id="ZED-H3-xzJ"/>
+                        <constraint firstAttribute="trailing" secondItem="dn1-xD-QFL" secondAttribute="trailing" constant="10" id="eYz-cG-kVN"/>
+                        <constraint firstAttribute="height" constant="60" id="lHB-vh-Fvy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogx-Id-Loy" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="104" width="375" height="674"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DsF-K5-TQy" firstAttribute="bottom" secondItem="Ogx-Id-Loy" secondAttribute="bottom" id="5US-yA-c7A"/>
+                <constraint firstItem="CDA-dm-27e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Vg-uq-ck8"/>
+                <constraint firstItem="Ogx-Id-Loy" firstAttribute="top" secondItem="CDA-dm-27e" secondAttribute="bottom" id="BDt-nB-5fx"/>
+                <constraint firstItem="CDA-dm-27e" firstAttribute="top" secondItem="DsF-K5-TQy" secondAttribute="top" priority="750" id="kYI-0s-7Vm"/>
+                <constraint firstAttribute="trailing" secondItem="Ogx-Id-Loy" secondAttribute="trailing" id="n7n-Os-fJq"/>
+                <constraint firstItem="Ogx-Id-Loy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ttf-FP-9GX"/>
+                <constraint firstAttribute="trailing" secondItem="CDA-dm-27e" secondAttribute="trailing" id="xUC-Hg-gV0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="DsF-K5-TQy"/>
+            <point key="canvasLocation" x="16" y="-118"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="10" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationVC" customModule="BnR_Partner" customModuleProvider="target">
+            <connections>
+                <outlet property="lblNavTitle" destination="i6R-U1-9hy" id="y38-E8-EE2"/>
+                <outlet property="navView" destination="DpG-SC-2G2" id="KGN-q7-YvT"/>
+                <outlet property="notificationTableview" destination="nxb-mr-tfA" id="vD8-dP-C35"/>
+                <outlet property="topLayoutConstraint" destination="yfM-rt-MNj" id="LUb-Nc-gqG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpG-SC-2G2" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6R-U1-9hy">
+                            <rect key="frame" x="70" y="23.666666666666671" width="295" height="23.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l91-Ca-Egv">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="GNQ-w5-Nr8"/>
+                            </constraints>
+                            <state key="normal" image="menu_icon"/>
+                            <connections>
+                                <action selector="btnNotificationMenuClicked:" destination="-1" eventType="touchUpInside" id="tdC-3U-mtC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92589747909999998" green="0.92932659390000005" blue="0.93352997299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="l91-Ca-Egv" secondAttribute="bottom" id="Dje-im-lBQ"/>
+                        <constraint firstAttribute="height" constant="60" id="HP5-Fi-1xg"/>
+                        <constraint firstItem="l91-Ca-Egv" firstAttribute="top" secondItem="DpG-SC-2G2" secondAttribute="top" constant="10" id="Lf2-1j-Uty"/>
+                        <constraint firstItem="i6R-U1-9hy" firstAttribute="leading" secondItem="l91-Ca-Egv" secondAttribute="trailing" constant="20" id="R0Q-i8-JeT"/>
+                        <constraint firstItem="i6R-U1-9hy" firstAttribute="centerY" secondItem="l91-Ca-Egv" secondAttribute="centerY" id="Vuh-cd-Hag"/>
+                        <constraint firstItem="l91-Ca-Egv" firstAttribute="leading" secondItem="DpG-SC-2G2" secondAttribute="leading" id="Wul-TG-Qje"/>
+                        <constraint firstAttribute="trailing" secondItem="i6R-U1-9hy" secondAttribute="trailing" constant="10" id="m6F-7l-UzE"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="nxb-mr-tfA">
+                    <rect key="frame" x="0.0" y="104" width="375" height="674"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6O9-Ye-5fd"/>
+                        <outlet property="delegate" destination="-1" id="DsA-b4-1og"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nxb-mr-tfA" firstAttribute="top" secondItem="DpG-SC-2G2" secondAttribute="bottom" id="Nlb-CS-Ggi"/>
+                <constraint firstItem="DpG-SC-2G2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UAO-Ne-nr2"/>
+                <constraint firstItem="VZg-fu-qpI" firstAttribute="trailing" secondItem="nxb-mr-tfA" secondAttribute="trailing" id="UXo-1k-47s"/>
+                <constraint firstAttribute="trailing" secondItem="DpG-SC-2G2" secondAttribute="trailing" id="oux-oz-5T5"/>
+                <constraint firstItem="VZg-fu-qpI" firstAttribute="bottom" secondItem="nxb-mr-tfA" secondAttribute="bottom" id="pYV-zF-ti3"/>
+                <constraint firstItem="nxb-mr-tfA" firstAttribute="leading" secondItem="VZg-fu-qpI" secondAttribute="leading" id="xqm-CO-Rea"/>
+                <constraint firstItem="DpG-SC-2G2" firstAttribute="top" secondItem="VZg-fu-qpI" secondAttribute="top" priority="750" id="yfM-rt-MNj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VZg-fu-qpI"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu_icon" width="16" height="16"/>
+    </resources>
+</document>

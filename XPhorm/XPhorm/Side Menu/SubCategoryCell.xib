@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubCategoryCell" customModule="XPhorm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="mVp-BW-JZY">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqE-wq-j8M">
+                        <rect key="frame" x="95" y="95" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="ghi-pa-JNr"/>
+                            <constraint firstAttribute="height" constant="45" id="zU0-qG-JN1"/>
+                        </constraints>
+                        <state key="normal" image="removeIcon"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="mVp-BW-JZY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dwc-DB-KcA"/>
+                <constraint firstAttribute="bottom" secondItem="mVp-BW-JZY" secondAttribute="bottom" id="IL4-Qc-CJd"/>
+                <constraint firstAttribute="bottom" secondItem="WqE-wq-j8M" secondAttribute="bottom" id="P9T-ZG-9IK"/>
+                <constraint firstAttribute="trailing" secondItem="mVp-BW-JZY" secondAttribute="trailing" id="cKO-H0-fFo"/>
+                <constraint firstAttribute="trailing" secondItem="WqE-wq-j8M" secondAttribute="trailing" id="nxd-46-Z0n"/>
+                <constraint firstItem="mVp-BW-JZY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="x1c-5z-9E3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="160" height="160"/>
+            <connections>
+                <outlet property="btnDelete" destination="WqE-wq-j8M" id="NWn-Il-4Gy"/>
+                <outlet property="imgView" destination="mVp-BW-JZY" id="wDb-wX-Mca"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="107"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="google.png" width="18" height="18"/>
+        <image name="removeIcon" width="25" height="25"/>
+    </resources>
+</document>

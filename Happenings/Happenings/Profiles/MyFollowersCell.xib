@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TitilliumWeb-Regular.ttf">
+            <string>TitilliumWeb-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyFollowersCell" customModule="Happenings" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="163" height="208"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I27-aV-EI4" customClass="CurvedUIImageView" customModule="Happenings" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="163" height="155"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.090196078430000007" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="155" id="QET-5d-V9f"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="curvedPercent">
+                                <real key="value" value="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-AD-fBx">
+                        <rect key="frame" x="3" y="163" width="157" height="25"/>
+                        <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="16"/>
+                        <color key="textColor" red="0.87843137250000003" green="0.090196078430000007" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FdC-AD-fBx" secondAttribute="bottom" constant="20" id="18M-1v-P2a"/>
+                <constraint firstAttribute="trailing" secondItem="I27-aV-EI4" secondAttribute="trailing" id="7yu-S3-uNd"/>
+                <constraint firstItem="FdC-AD-fBx" firstAttribute="top" secondItem="I27-aV-EI4" secondAttribute="bottom" constant="8" id="HeY-dM-FMM"/>
+                <constraint firstItem="I27-aV-EI4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OWQ-nE-XpN"/>
+                <constraint firstItem="FdC-AD-fBx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="dFV-7N-uf8"/>
+                <constraint firstAttribute="trailing" secondItem="FdC-AD-fBx" secondAttribute="trailing" constant="3" id="lKc-xd-lWt"/>
+                <constraint firstItem="I27-aV-EI4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nOg-Vk-ATp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="163" height="208"/>
+            <connections>
+                <outlet property="imgFollowers" destination="I27-aV-EI4" id="N5L-xe-KqA"/>
+                <outlet property="lblName" destination="FdC-AD-fBx" id="LON-rL-CuC"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="117.84107946026987"/>
+        </collectionViewCell>
+    </objects>
+</document>

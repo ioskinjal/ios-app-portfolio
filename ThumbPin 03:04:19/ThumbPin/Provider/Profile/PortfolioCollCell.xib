@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="muli.regular.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PortfolioCollCell" id="gTV-IL-0wX" customClass="PortfolioCollCell" customModule="ThumbPin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xf1-IT-ea5">
+                        <rect key="frame" x="9" y="9" width="152" height="152"/>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="po9-j4-Cp8">
+                        <rect key="frame" x="51" y="57" width="68" height="56.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuK-Rv-z7h">
+                                <rect key="frame" x="18" y="0.0" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Nz8-nK-24u"/>
+                                    <constraint firstAttribute="width" constant="32" id="jeR-CC-VSJ"/>
+                                </constraints>
+                                <state key="normal" image="AddProfile"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-AL-L2Q">
+                                <rect key="frame" x="0.0" y="40" width="68" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwE-PR-0AO">
+                        <rect key="frame" x="10" y="10" width="150" height="150"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxA-aI-5xK">
+                        <rect key="frame" x="10" y="10" width="150" height="150"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-fa-HSy">
+                        <rect key="frame" x="136" y="0.0" width="34" height="34"/>
+                        <state key="normal" image="del"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GwE-PR-0AO" secondAttribute="trailing" constant="10" id="3Vo-S7-WUH"/>
+                <constraint firstAttribute="trailing" secondItem="gxA-aI-5xK" secondAttribute="trailing" constant="10" id="95T-wa-CeP"/>
+                <constraint firstItem="po9-j4-Cp8" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Dgb-ZU-yUi"/>
+                <constraint firstItem="xf1-IT-ea5" firstAttribute="leading" secondItem="gxA-aI-5xK" secondAttribute="leading" constant="-1" id="E4K-ib-qdM"/>
+                <constraint firstItem="gxA-aI-5xK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="H9Q-nA-7de"/>
+                <constraint firstItem="gxA-aI-5xK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Okr-7S-a12"/>
+                <constraint firstItem="aCa-fa-HSy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rqi-FQ-VZW"/>
+                <constraint firstAttribute="trailing" secondItem="aCa-fa-HSy" secondAttribute="trailing" id="czq-Pl-cPj"/>
+                <constraint firstAttribute="bottom" secondItem="GwE-PR-0AO" secondAttribute="bottom" constant="10" id="ghz-wN-F5g"/>
+                <constraint firstAttribute="bottom" secondItem="gxA-aI-5xK" secondAttribute="bottom" constant="10" id="h2r-I9-y5K"/>
+                <constraint firstItem="xf1-IT-ea5" firstAttribute="top" secondItem="gxA-aI-5xK" secondAttribute="top" constant="-1" id="iWX-w5-cmv"/>
+                <constraint firstItem="GwE-PR-0AO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="jxp-pg-Ixb"/>
+                <constraint firstItem="xf1-IT-ea5" firstAttribute="bottom" secondItem="gxA-aI-5xK" secondAttribute="bottom" constant="1" id="mOQ-wp-23A"/>
+                <constraint firstItem="GwE-PR-0AO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="nYF-e9-ZSN"/>
+                <constraint firstItem="xf1-IT-ea5" firstAttribute="trailing" secondItem="gxA-aI-5xK" secondAttribute="trailing" constant="1" id="xCD-7P-R82"/>
+                <constraint firstItem="po9-j4-Cp8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xWi-gF-KUY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="btnAddimage" destination="GwE-PR-0AO" id="Ltg-sC-0sd"/>
+                <outlet property="btnDelete" destination="aCa-fa-HSy" id="Ajb-NK-814"/>
+                <outlet property="imgvwPortFolio" destination="gxA-aI-5xK" id="ztv-ay-Gj8"/>
+                <outlet property="labelAddImage" destination="Zqu-AL-L2Q" id="KpF-OP-fII"/>
+                <outlet property="stackViewAddimage" destination="po9-j4-Cp8" id="Z2n-Bo-OMC"/>
+                <outlet property="viewBorder" destination="xf1-IT-ea5" id="Omj-14-uEV"/>
+            </connections>
+            <point key="canvasLocation" x="-601" y="11"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AddProfile" width="31" height="31"/>
+        <image name="del" width="34" height="34"/>
+    </resources>
+</document>

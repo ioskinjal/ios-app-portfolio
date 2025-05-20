@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuVC" customModule="Carry_Partner" customModuleProvider="target">
+            <connections>
+                <outlet property="lblUserName" destination="ERj-pU-oZc" id="cFw-JW-Wkp"/>
+                <outlet property="tableMenu" destination="Qvt-id-JRL" id="waq-4Y-QPM"/>
+                <outlet property="userImgView" destination="VyT-L8-3G4" id="giS-6O-5zb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-1c-gQe" userLabel="mainView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VyT-L8-3G4">
+                            <rect key="frame" x="15" y="50" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="Ctg-j5-o80"/>
+                                <constraint firstAttribute="height" constant="70" id="yrC-v4-qeQ"/>
+                            </constraints>
+                        </imageView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qvt-id-JRL">
+                            <rect key="frame" x="0.0" y="150" width="375" height="584"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="52N-Oj-zr7"/>
+                                <outlet property="delegate" destination="-1" id="ivc-QV-cIK"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer nCrypted" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERj-pU-oZc">
+                            <rect key="frame" x="102" y="74.333333333333329" width="265" height="21.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxO-GM-l1g">
+                            <rect key="frame" x="320" y="15" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="4xx-i0-wjN"/>
+                                <constraint firstAttribute="width" constant="45" id="Io8-VR-JoT"/>
+                            </constraints>
+                            <state key="normal" image="Close"/>
+                            <connections>
+                                <action selector="onClickClose:" destination="-1" eventType="touchUpInside" id="KiD-FR-rSR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ERj-pU-oZc" firstAttribute="centerY" secondItem="VyT-L8-3G4" secondAttribute="centerY" id="3rB-mB-Bj6"/>
+                        <constraint firstAttribute="trailing" secondItem="ERj-pU-oZc" secondAttribute="trailing" constant="8" id="7od-G2-OfT"/>
+                        <constraint firstAttribute="trailing" secondItem="OxO-GM-l1g" secondAttribute="trailing" constant="10" id="EZO-hR-5kn"/>
+                        <constraint firstAttribute="trailing" secondItem="Qvt-id-JRL" secondAttribute="trailing" id="LhT-Lu-vfj"/>
+                        <constraint firstItem="OxO-GM-l1g" firstAttribute="top" secondItem="RHV-1c-gQe" secondAttribute="top" constant="15" id="LuJ-8c-2Jw"/>
+                        <constraint firstItem="VyT-L8-3G4" firstAttribute="top" secondItem="RHV-1c-gQe" secondAttribute="top" constant="50" id="NLA-7A-wSP"/>
+                        <constraint firstItem="Qvt-id-JRL" firstAttribute="top" secondItem="VyT-L8-3G4" secondAttribute="bottom" constant="30" id="Zku-xE-9Yv"/>
+                        <constraint firstItem="ERj-pU-oZc" firstAttribute="leading" secondItem="RHV-1c-gQe" secondAttribute="leading" constant="102" id="vvs-tc-NRW"/>
+                        <constraint firstItem="VyT-L8-3G4" firstAttribute="leading" secondItem="RHV-1c-gQe" secondAttribute="leading" constant="15" id="xdK-Mc-yNz"/>
+                        <constraint firstItem="Qvt-id-JRL" firstAttribute="leading" secondItem="RHV-1c-gQe" secondAttribute="leading" id="xej-mA-RIv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RHV-1c-gQe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CH0-Rh-9sC"/>
+                <constraint firstItem="Qvt-id-JRL" firstAttribute="bottom" secondItem="zlb-1P-Ysc" secondAttribute="bottom" id="Eje-rP-0LJ"/>
+                <constraint firstItem="RHV-1c-gQe" firstAttribute="top" secondItem="zlb-1P-Ysc" secondAttribute="top" id="aED-xU-Boc"/>
+                <constraint firstAttribute="trailing" secondItem="RHV-1c-gQe" secondAttribute="trailing" id="grs-Xg-F3n"/>
+                <constraint firstItem="zlb-1P-Ysc" firstAttribute="bottom" secondItem="RHV-1c-gQe" secondAttribute="bottom" id="n8X-M5-Bzp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="zlb-1P-Ysc"/>
+            <point key="canvasLocation" x="-263.5" y="-99"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close" width="26" height="26"/>
+    </resources>
+</document>

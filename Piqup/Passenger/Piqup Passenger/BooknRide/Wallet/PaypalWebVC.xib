@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaypalWebVC" customModule="Carry" customModuleProvider="target">
+            <connections>
+                <outlet property="actIndicator" destination="QOK-qO-efa" id="QpP-eE-qMO"/>
+                <outlet property="navView" destination="Dj3-EZ-Apw" id="P7y-fq-Xbl"/>
+                <outlet property="paymentWebView" destination="Rjh-CC-QQk" id="a02-jO-iEK"/>
+                <outlet property="topLayoutConstraint" destination="YaE-CK-cWj" id="rie-9d-M4m"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dj3-EZ-Apw" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdy-kS-kI8">
+                            <rect key="frame" x="70" y="23" width="295" height="24"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYe-uX-vH8">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="afL-Dm-oPq"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="backBtn"/>
+                            <connections>
+                                <action selector="btnBackClicked:" destination="-1" eventType="touchUpInside" id="KBT-IH-YuC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92589747909999998" green="0.92932659390000005" blue="0.93352997299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Qdy-kS-kI8" firstAttribute="leading" secondItem="QYe-uX-vH8" secondAttribute="trailing" constant="20" id="75D-6a-vEd"/>
+                        <constraint firstItem="QYe-uX-vH8" firstAttribute="leading" secondItem="Dj3-EZ-Apw" secondAttribute="leading" id="9rr-I1-un0"/>
+                        <constraint firstItem="Qdy-kS-kI8" firstAttribute="centerY" secondItem="QYe-uX-vH8" secondAttribute="centerY" id="S3a-CA-WyM"/>
+                        <constraint firstAttribute="bottom" secondItem="QYe-uX-vH8" secondAttribute="bottom" id="Z92-Fa-Zdf"/>
+                        <constraint firstAttribute="height" constant="60" id="ko3-xP-sXs"/>
+                        <constraint firstItem="QYe-uX-vH8" firstAttribute="top" secondItem="Dj3-EZ-Apw" secondAttribute="top" constant="10" id="rTi-5c-VkC"/>
+                        <constraint firstAttribute="trailing" secondItem="Qdy-kS-kI8" secondAttribute="trailing" constant="10" id="w7Z-U8-bIy"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-CC-QQk">
+                    <rect key="frame" x="0.0" y="104" width="375" height="674"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="kQ8-IT-NPy"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QOK-qO-efa">
+                    <rect key="frame" x="177.66666666666666" y="396" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rjh-CC-QQk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Bn-m3-Rtc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rjh-CC-QQk" secondAttribute="bottom" id="AdQ-bG-2wX"/>
+                <constraint firstItem="Rjh-CC-QQk" firstAttribute="top" secondItem="Dj3-EZ-Apw" secondAttribute="bottom" id="Aks-LQ-bk2"/>
+                <constraint firstItem="Dj3-EZ-Apw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="750" id="YaE-CK-cWj"/>
+                <constraint firstItem="QOK-qO-efa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f9V-pt-lTr"/>
+                <constraint firstItem="Dj3-EZ-Apw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jmt-Wq-dMU"/>
+                <constraint firstAttribute="trailing" secondItem="Dj3-EZ-Apw" secondAttribute="trailing" id="noO-DR-lHH"/>
+                <constraint firstItem="QOK-qO-efa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oTo-BO-Oi5"/>
+                <constraint firstItem="Rjh-CC-QQk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xQt-Yu-1ps"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="10" height="16"/>
+    </resources>
+</document>

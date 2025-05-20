@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomizationCell" id="KGk-i7-Jjw" customClass="CustomizationCell" customModule="Moms_Kitchen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-pI-1hU">
+                        <rect key="frame" x="10" y="1" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="hu0-be-lU5"/>
+                            <constraint firstAttribute="width" constant="40" id="vHb-pg-y4S"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                        <state key="normal" image="checkbox_unchecked"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be7-wM-Umo">
+                        <rect key="frame" x="51" y="11" width="39" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="vz1-Xg-t4j"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SMn-pI-1hU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="5ys-Jk-IJw"/>
+                    <constraint firstAttribute="bottom" secondItem="SMn-pI-1hU" secondAttribute="bottom" constant="2.5" id="Gs4-A3-ctU"/>
+                    <constraint firstItem="be7-wM-Umo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="REG-TP-c6u"/>
+                    <constraint firstItem="be7-wM-Umo" firstAttribute="leading" secondItem="SMn-pI-1hU" secondAttribute="trailing" constant="1" id="gLW-bn-4RA"/>
+                    <constraint firstItem="SMn-pI-1hU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="sW5-Qi-UcL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnCheck" destination="SMn-pI-1hU" id="9Xp-5m-Vih"/>
+                <outlet property="lblName" destination="be7-wM-Umo" id="8fE-l3-I2Q"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="52"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox_unchecked" width="170" height="170"/>
+    </resources>
+</document>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="carSelectedCell" id="KGk-i7-Jjw" customClass="CarSelectedCell" customModule="BnR_Partner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-Ub-6qD">
+                        <rect key="frame" x="10" y="10" width="300" height="99.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="XTN-Re-wFu">
+                                <rect key="frame" x="10" y="15" width="50" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="gPn-At-878"/>
+                                    <constraint firstAttribute="width" constant="50" id="vJQ-6Q-218"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maruti Suzuki Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-jO-S7L">
+                                <rect key="frame" x="80" y="15" width="210" height="21"/>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GJ3 5645" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1I-IT-VaR">
+                                <rect key="frame" x="80" y="44" width="210" height="18"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN2-vu-ehr">
+                                <rect key="frame" x="80" y="98.5" width="220" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Jb4-Kv-agy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-xu-N2S">
+                                <rect key="frame" x="80" y="67" width="210" height="18"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tkT-xu-N2S" firstAttribute="leading" secondItem="b1I-IT-VaR" secondAttribute="leading" id="17X-ZG-9Qc"/>
+                            <constraint firstAttribute="trailing" secondItem="tkT-xu-N2S" secondAttribute="trailing" constant="10" id="7Er-jn-phL"/>
+                            <constraint firstItem="eN2-vu-ehr" firstAttribute="leading" secondItem="b1I-IT-VaR" secondAttribute="leading" id="DUb-Xb-YoK"/>
+                            <constraint firstItem="b1I-IT-VaR" firstAttribute="top" secondItem="P5M-jO-S7L" secondAttribute="bottom" constant="8" id="Fst-Xl-Vfl"/>
+                            <constraint firstItem="eN2-vu-ehr" firstAttribute="top" secondItem="tkT-xu-N2S" secondAttribute="bottom" constant="13.5" id="Lq9-Kt-MqU"/>
+                            <constraint firstAttribute="trailing" secondItem="eN2-vu-ehr" secondAttribute="trailing" id="Qdf-yq-E36"/>
+                            <constraint firstItem="P5M-jO-S7L" firstAttribute="leading" secondItem="XTN-Re-wFu" secondAttribute="trailing" constant="20" id="RK8-8b-Pbs"/>
+                            <constraint firstItem="XTN-Re-wFu" firstAttribute="leading" secondItem="K0s-Ub-6qD" secondAttribute="leading" constant="10" id="UvR-XI-DTV"/>
+                            <constraint firstItem="tkT-xu-N2S" firstAttribute="top" secondItem="b1I-IT-VaR" secondAttribute="bottom" constant="5" id="VkF-uM-waz"/>
+                            <constraint firstItem="b1I-IT-VaR" firstAttribute="leading" secondItem="P5M-jO-S7L" secondAttribute="leading" id="gqZ-Zm-dDn"/>
+                            <constraint firstAttribute="bottom" secondItem="eN2-vu-ehr" secondAttribute="bottom" id="had-t8-3Qa"/>
+                            <constraint firstItem="P5M-jO-S7L" firstAttribute="top" secondItem="K0s-Ub-6qD" secondAttribute="top" constant="15" id="kQr-3G-QFF"/>
+                            <constraint firstAttribute="trailing" secondItem="P5M-jO-S7L" secondAttribute="trailing" constant="10" id="seO-mE-W0D"/>
+                            <constraint firstAttribute="trailing" secondItem="b1I-IT-VaR" secondAttribute="trailing" constant="10" id="wBB-u6-YrC"/>
+                            <constraint firstItem="XTN-Re-wFu" firstAttribute="top" secondItem="K0s-Ub-6qD" secondAttribute="top" constant="15" id="xyz-qZ-auT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="K0s-Ub-6qD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="USg-R2-o8m"/>
+                    <constraint firstAttribute="trailing" secondItem="K0s-Ub-6qD" secondAttribute="trailing" constant="10" id="lgy-1f-Ok9"/>
+                    <constraint firstItem="K0s-Ub-6qD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oz7-VQ-QFO"/>
+                    <constraint firstAttribute="bottom" secondItem="K0s-Ub-6qD" secondAttribute="bottom" id="xLA-Vr-rBP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carImgView" destination="XTN-Re-wFu" id="D4z-zL-Hiv"/>
+                <outlet property="lblCarName" destination="P5M-jO-S7L" id="ko3-fs-8Zg"/>
+                <outlet property="lblCarNo" destination="b1I-IT-VaR" id="CxR-MN-kQl"/>
+                <outlet property="lblCarType" destination="tkT-xu-N2S" id="9PX-x4-Zyf"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

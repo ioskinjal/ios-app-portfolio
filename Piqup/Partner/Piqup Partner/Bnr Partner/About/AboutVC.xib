@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutVC" customModule="Carry_Partner" customModuleProvider="target">
+            <connections>
+                <outlet property="aboutWebView" destination="b7d-CM-ew8" id="4Qc-5J-bsD"/>
+                <outlet property="actIndicator" destination="pgl-Nd-pN4" id="EVV-KR-di6"/>
+                <outlet property="lblNavTitle" destination="rna-rr-3zf" id="3Mx-Vn-7dc"/>
+                <outlet property="navView" destination="GHb-0o-UPz" id="K4E-WK-sg5"/>
+                <outlet property="topLayoutConstraint" destination="X8J-7d-Tgg" id="vKY-hv-7gZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-0o-UPz" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rna-rr-3zf">
+                            <rect key="frame" x="70" y="25.333333333333329" width="295" height="20"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-II-oni">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="dw9-vU-Jet"/>
+                            </constraints>
+                            <state key="normal" image="menu_icon"/>
+                            <connections>
+                                <action selector="btnAboutMenuClicked:" destination="-1" eventType="touchUpInside" id="irl-9g-AlA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.81960784310000001" green="0.1843137255" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="QWq-II-oni" firstAttribute="leading" secondItem="GHb-0o-UPz" secondAttribute="leading" id="01Z-A4-NXH"/>
+                        <constraint firstAttribute="bottom" secondItem="QWq-II-oni" secondAttribute="bottom" id="1kR-Ok-m1a"/>
+                        <constraint firstAttribute="trailing" secondItem="rna-rr-3zf" secondAttribute="trailing" constant="10" id="CVZ-Vx-ct2"/>
+                        <constraint firstItem="rna-rr-3zf" firstAttribute="centerY" secondItem="QWq-II-oni" secondAttribute="centerY" id="JAg-eM-NJu"/>
+                        <constraint firstItem="QWq-II-oni" firstAttribute="top" secondItem="GHb-0o-UPz" secondAttribute="top" constant="10" id="T3A-wQ-VMw"/>
+                        <constraint firstAttribute="height" constant="60" id="lOW-gN-tPS"/>
+                        <constraint firstItem="rna-rr-3zf" firstAttribute="leading" secondItem="QWq-II-oni" secondAttribute="trailing" constant="20" id="ndP-ZG-6Zy"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7d-CM-ew8">
+                    <rect key="frame" x="0.0" y="104" width="375" height="674"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="bdK-PT-Jxk"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pgl-Nd-pN4">
+                    <rect key="frame" x="177.66666666666666" y="431" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b7d-CM-ew8" firstAttribute="top" secondItem="GHb-0o-UPz" secondAttribute="bottom" id="645-d4-lk2"/>
+                <constraint firstItem="GHb-0o-UPz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6xl-W7-ufs"/>
+                <constraint firstItem="pgl-Nd-pN4" firstAttribute="centerY" secondItem="b7d-CM-ew8" secondAttribute="centerY" id="BAw-MJ-0vx"/>
+                <constraint firstAttribute="trailing" secondItem="b7d-CM-ew8" secondAttribute="trailing" id="Jap-Uk-mXl"/>
+                <constraint firstItem="b7d-CM-ew8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="McF-Wx-XxR"/>
+                <constraint firstAttribute="trailing" secondItem="GHb-0o-UPz" secondAttribute="trailing" id="NN4-KT-AIV"/>
+                <constraint firstItem="pgl-Nd-pN4" firstAttribute="centerX" secondItem="b7d-CM-ew8" secondAttribute="centerX" id="WCR-ce-Jji"/>
+                <constraint firstItem="8J8-vI-bXe" firstAttribute="top" secondItem="GHb-0o-UPz" secondAttribute="top" priority="750" id="X8J-7d-Tgg"/>
+                <constraint firstItem="b7d-CM-ew8" firstAttribute="bottom" secondItem="8J8-vI-bXe" secondAttribute="bottom" id="l8K-ob-sgo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="8J8-vI-bXe"/>
+            <point key="canvasLocation" x="18" y="-123"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu_icon" width="28" height="20"/>
+    </resources>
+</document>

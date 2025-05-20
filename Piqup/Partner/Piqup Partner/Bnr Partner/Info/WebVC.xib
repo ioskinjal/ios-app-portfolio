@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebVC" customModule="Carry_Partner" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTitle" destination="6v0-SQ-Wed" id="Oi4-af-ccX"/>
+                <outlet property="navView" destination="wxT-bU-gy9" id="AVl-5X-rFB"/>
+                <outlet property="topLayoutConstraint" destination="cZV-po-sL5" id="g7M-rF-qhz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="CgG-UT-uUW" id="SSW-AM-ezC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxT-bU-gy9" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v0-SQ-Wed">
+                            <rect key="frame" x="70" y="25" width="295" height="20"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuv-Au-1gb">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="eTt-er-tfj"/>
+                            </constraints>
+                            <state key="normal" image="backBtn"/>
+                            <connections>
+                                <action selector="btnBackClicked:" destination="-1" eventType="touchUpInside" id="ilL-Y3-WEP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.81960784310000001" green="0.1843137255" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Xuv-Au-1gb" firstAttribute="top" secondItem="wxT-bU-gy9" secondAttribute="top" constant="10" id="2XR-Fr-4NY"/>
+                        <constraint firstItem="Xuv-Au-1gb" firstAttribute="leading" secondItem="wxT-bU-gy9" secondAttribute="leading" id="BC9-NH-Crc"/>
+                        <constraint firstAttribute="trailing" secondItem="6v0-SQ-Wed" secondAttribute="trailing" constant="10" id="LY7-lF-biD"/>
+                        <constraint firstItem="6v0-SQ-Wed" firstAttribute="leading" secondItem="Xuv-Au-1gb" secondAttribute="trailing" constant="20" id="QX1-4J-XK0"/>
+                        <constraint firstAttribute="bottom" secondItem="Xuv-Au-1gb" secondAttribute="bottom" id="Xrq-DE-mgR"/>
+                        <constraint firstAttribute="height" constant="60" id="cNM-Br-xvD"/>
+                        <constraint firstItem="6v0-SQ-Wed" firstAttribute="centerY" secondItem="Xuv-Au-1gb" secondAttribute="centerY" id="qgM-Ny-5fg"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgG-UT-uUW">
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Kvu-oU-64f"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CgG-UT-uUW" firstAttribute="top" secondItem="wxT-bU-gy9" secondAttribute="bottom" id="He1-DG-OHO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CgG-UT-uUW" secondAttribute="trailing" id="Otc-4N-eha"/>
+                <constraint firstItem="wxT-bU-gy9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WjZ-Yo-O85"/>
+                <constraint firstAttribute="trailing" secondItem="wxT-bU-gy9" secondAttribute="trailing" id="bzG-jp-JYG"/>
+                <constraint firstItem="wxT-bU-gy9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="750" id="cZV-po-sL5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CgG-UT-uUW" secondAttribute="bottom" id="cfR-LX-OUF"/>
+                <constraint firstItem="CgG-UT-uUW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u1Y-Xp-7tl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="10" height="16"/>
+    </resources>
+</document>

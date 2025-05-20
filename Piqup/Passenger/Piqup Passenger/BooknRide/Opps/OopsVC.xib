@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OopsVC" customModule="Carry" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e0-V8-V8U">
+                    <rect key="frame" x="0.0" y="70" width="375" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="something_went_wrong" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-yz-cmj">
+                    <rect key="frame" x="73" y="123.5" width="229" height="195"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="229" id="CMj-WU-uiq"/>
+                        <constraint firstAttribute="height" constant="195" id="dsJ-Nz-V2X"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops..!! Brace yourself till we get the error fixed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-iF-aZV">
+                    <rect key="frame" x="30" y="358.5" width="315" height="47"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please retry after sometime." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMb-zh-HKj">
+                    <rect key="frame" x="20" y="425.5" width="335" height="21"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndv-yp-fNq">
+                    <rect key="frame" x="0.0" y="486.5" width="187.5" height="36"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                    <state key="normal" title="Retry">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRetryClicked:" destination="-1" eventType="touchUpInside" id="zsI-l1-5Gd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcx-77-1qM">
+                    <rect key="frame" x="187.5" y="486.5" width="187.5" height="36"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                    <state key="normal" title="Exit">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnExitClicked:" destination="-1" eventType="touchUpInside" id="OLj-hw-Fqg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bcx-77-1qM" firstAttribute="leading" secondItem="Ndv-yp-fNq" secondAttribute="trailing" id="10y-up-4tg"/>
+                <constraint firstItem="ZMb-zh-HKj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="33f-mA-X6j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZMb-zh-HKj" secondAttribute="trailing" constant="20" id="CeX-kS-nj1"/>
+                <constraint firstItem="ZMb-zh-HKj" firstAttribute="top" secondItem="Qat-iF-aZV" secondAttribute="bottom" constant="20" id="I4n-Fk-eP5"/>
+                <constraint firstItem="kxp-yz-cmj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K7I-kU-MYJ"/>
+                <constraint firstItem="kxp-yz-cmj" firstAttribute="top" secondItem="3e0-V8-V8U" secondAttribute="bottom" constant="30" id="Lvt-2F-WZ0"/>
+                <constraint firstItem="Ndv-yp-fNq" firstAttribute="top" secondItem="ZMb-zh-HKj" secondAttribute="bottom" constant="40" id="Tg1-Ev-NlN"/>
+                <constraint firstItem="3e0-V8-V8U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UYL-GW-ZI4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qat-iF-aZV" secondAttribute="trailing" constant="30" id="UcS-bS-07L"/>
+                <constraint firstItem="Qat-iF-aZV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="b23-lX-PQ2"/>
+                <constraint firstItem="bcx-77-1qM" firstAttribute="width" secondItem="Ndv-yp-fNq" secondAttribute="width" id="cuC-y1-lVl"/>
+                <constraint firstItem="bcx-77-1qM" firstAttribute="top" secondItem="ZMb-zh-HKj" secondAttribute="bottom" constant="40" id="hQI-tk-CJX"/>
+                <constraint firstItem="3e0-V8-V8U" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="hrQ-gP-eqa"/>
+                <constraint firstItem="Ndv-yp-fNq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qJ8-1m-Te9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3e0-V8-V8U" secondAttribute="trailing" id="s7M-EY-U4G"/>
+                <constraint firstItem="Qat-iF-aZV" firstAttribute="top" secondItem="kxp-yz-cmj" secondAttribute="bottom" constant="40" id="wDW-v8-Fap"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bcx-77-1qM" secondAttribute="trailing" id="zDr-il-iGh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="something_went_wrong" width="229" height="195"/>
+    </resources>
+</document>

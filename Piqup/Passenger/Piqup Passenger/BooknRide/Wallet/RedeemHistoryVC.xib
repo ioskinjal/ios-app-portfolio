@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RedeemHistoryVC" customModule="Carry" customModuleProvider="target">
+            <connections>
+                <outlet property="historyTablview" destination="3qz-gx-dB1" id="qhc-0d-MQh"/>
+                <outlet property="navView" destination="shl-e2-eLO" id="2Gk-x8-ebU"/>
+                <outlet property="topLayoutConstraint" destination="jC3-C9-jS7" id="pz0-rQ-SxV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shl-e2-eLO" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="44" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redeem Request History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-AL-7r0">
+                            <rect key="frame" x="50" y="23.666666666666671" width="315" height="23"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nZ-hx-KX8">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="hQL-nh-obi"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="backBtn"/>
+                            <connections>
+                                <action selector="btnBackClicked:" destination="-1" eventType="touchUpInside" id="XWb-gg-omG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.87843137250000003" green="0.090196078430000007" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="0nZ-hx-KX8" secondAttribute="bottom" id="6BA-K5-8a3"/>
+                        <constraint firstItem="0nZ-hx-KX8" firstAttribute="leading" secondItem="shl-e2-eLO" secondAttribute="leading" id="ACh-MC-X9J"/>
+                        <constraint firstAttribute="height" constant="60" id="NOd-DR-Ktw"/>
+                        <constraint firstItem="0nZ-hx-KX8" firstAttribute="top" secondItem="shl-e2-eLO" secondAttribute="top" constant="10" id="O5S-Yh-dpG"/>
+                        <constraint firstItem="lfp-AL-7r0" firstAttribute="leading" secondItem="0nZ-hx-KX8" secondAttribute="trailing" id="UAb-MX-3yJ"/>
+                        <constraint firstItem="lfp-AL-7r0" firstAttribute="centerY" secondItem="0nZ-hx-KX8" secondAttribute="centerY" id="Ufz-dk-Iez"/>
+                        <constraint firstAttribute="trailing" secondItem="lfp-AL-7r0" secondAttribute="trailing" constant="10" id="rtQ-2x-sWS"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="150" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-gx-dB1">
+                    <rect key="frame" x="0.0" y="104" width="375" height="674"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3qz-gx-dB1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HOI-oy-yOp"/>
+                <constraint firstAttribute="trailing" secondItem="shl-e2-eLO" secondAttribute="trailing" id="L0Y-gt-oNE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3qz-gx-dB1" secondAttribute="trailing" id="QGP-fQ-FFm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3qz-gx-dB1" secondAttribute="bottom" id="iju-Nm-ic3"/>
+                <constraint firstItem="shl-e2-eLO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="750" id="jC3-C9-jS7"/>
+                <constraint firstItem="shl-e2-eLO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qk0-jV-3T5"/>
+                <constraint firstItem="3qz-gx-dB1" firstAttribute="top" secondItem="shl-e2-eLO" secondAttribute="bottom" id="z7N-Q0-DTI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backBtn" width="10" height="16"/>
+    </resources>
+</document>

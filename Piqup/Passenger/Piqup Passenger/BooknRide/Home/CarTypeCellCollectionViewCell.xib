@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CarTypeCellCollectionViewCell" customModule="Carry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-gt-V7c">
+                        <rect key="frame" x="19" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="XSH-vY-V4f"/>
+                            <constraint firstAttribute="height" constant="80" id="my3-OU-9TX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="hatchback" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Faq-N6-k1J">
+                        <rect key="frame" x="5" y="85" width="109" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="qo8-z5-Z8K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Faq-N6-k1J" firstAttribute="centerX" secondItem="ORW-gt-V7c" secondAttribute="centerX" id="1Ky-0W-Fqs"/>
+                <constraint firstItem="Faq-N6-k1J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="KRz-hC-TqQ"/>
+                <constraint firstAttribute="trailing" secondItem="Faq-N6-k1J" secondAttribute="trailing" constant="5" id="Vpt-4i-760"/>
+                <constraint firstItem="ORW-gt-V7c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WSa-lo-cwF"/>
+                <constraint firstItem="ORW-gt-V7c" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="XZD-x9-OWn"/>
+                <constraint firstItem="Faq-N6-k1J" firstAttribute="top" secondItem="ORW-gt-V7c" secondAttribute="bottom" constant="5" id="hdq-j8-dx8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="119" height="135"/>
+            <connections>
+                <outlet property="imgView" destination="ORW-gt-V7c" id="RiI-5F-h8J"/>
+                <outlet property="lblName" destination="Faq-N6-k1J" id="Doe-xh-dML"/>
+            </connections>
+            <point key="canvasLocation" x="-57.5" y="-10.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
