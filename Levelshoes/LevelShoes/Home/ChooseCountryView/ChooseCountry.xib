@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BrandonGrotesque-Light.otf">
+            <string>BrandonGrotesque-Light</string>
+        </array>
+        <array key="brandon-grotesque-regular.otf">
+            <string>BrandonGrotesque-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChooseCountry" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdK-zI-YJb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="335"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqH-ng-8qN" userLabel="textfield container">
+                            <rect key="frame" x="30" y="40" width="315" height="70"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-Ip-fC7">
+                                    <rect key="frame" x="0.0" y="0.0" width="123" height="27"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="123" id="4qs-rf-guj"/>
+                                        <constraint firstAttribute="height" constant="27" id="Isk-37-Ueq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="14"/>
+                                    <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ttn-ag-2PC">
+                                    <rect key="frame" x="0.0" y="34" width="137" height="18"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KSA" translatesAutoresizingMaskIntoConstraints="NO" id="YSm-J1-dNr">
+                                            <rect key="frame" x="0.0" y="0.0" width="25" height="18"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="ehe-Hi-1JF"/>
+                                                <constraint firstAttribute="height" constant="18" id="xWA-dC-3jx"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select a country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nmd-4C-4P1">
+                                            <rect key="frame" x="35" y="0.0" width="102" height="18"/>
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="countryTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="esm-3e-vZX"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUS-8N-BoG">
+                                    <rect key="frame" x="285" y="28" width="30" height="30"/>
+                                    <state key="normal" image="icn_chevron"/>
+                                    <connections>
+                                        <action selector="arrowTapped" destination="iN0-l3-epB" eventType="touchUpInside" id="wvy-cl-37O"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="sUS-8N-BoG" firstAttribute="centerY" secondItem="Nmd-4C-4P1" secondAttribute="centerY" id="1BJ-6C-9iR"/>
+                                <constraint firstItem="sUS-8N-BoG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ttn-ag-2PC" secondAttribute="trailing" constant="8" id="J07-nE-BUJ"/>
+                                <constraint firstAttribute="height" constant="70" id="JC3-l1-YBh"/>
+                                <constraint firstAttribute="bottom" secondItem="Ttn-ag-2PC" secondAttribute="bottom" constant="18" id="Sud-ua-ltt"/>
+                                <constraint firstAttribute="trailing" secondItem="sUS-8N-BoG" secondAttribute="trailing" id="Wg8-GD-KLv"/>
+                                <constraint firstItem="cnC-Ip-fC7" firstAttribute="top" secondItem="dqH-ng-8qN" secondAttribute="top" id="gqI-o6-Nu5"/>
+                                <constraint firstItem="Ttn-ag-2PC" firstAttribute="top" secondItem="cnC-Ip-fC7" secondAttribute="bottom" constant="7" id="hym-sI-pOa"/>
+                                <constraint firstItem="Ttn-ag-2PC" firstAttribute="leading" secondItem="dqH-ng-8qN" secondAttribute="leading" id="vgR-5X-zna"/>
+                                <constraint firstItem="cnC-Ip-fC7" firstAttribute="leading" secondItem="dqH-ng-8qN" secondAttribute="leading" id="w96-tt-7jt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah8-oX-fuG" userLabel="line">
+                            <rect key="frame" x="30" y="109" width="315" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="XEn-XN-6UG"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t20-zH-WaG" userLabel="notification container">
+                            <rect key="frame" x="30" y="135" width="315" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable notifications to stay up-to-date on latest collections and offers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blt-F1-pgW">
+                                    <rect key="frame" x="0.0" y="0.0" width="252" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="ZP7-Qf-adV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kw-dc-vXo" customClass="Toggle" customModule="LevelShoes" customModuleProvider="target">
+                                    <rect key="frame" x="265" y="9" width="50" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="dQe-ZO-Uk0"/>
+                                        <constraint firstAttribute="height" constant="30" id="mZm-UZ-9GN"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="blt-F1-pgW" firstAttribute="top" secondItem="t20-zH-WaG" secondAttribute="top" id="2z3-mt-ElK"/>
+                                <constraint firstAttribute="bottom" secondItem="blt-F1-pgW" secondAttribute="bottom" id="CzP-PV-mnl"/>
+                                <constraint firstItem="5kw-dc-vXo" firstAttribute="leading" secondItem="blt-F1-pgW" secondAttribute="trailing" constant="13" id="EF2-sl-SaS"/>
+                                <constraint firstItem="5kw-dc-vXo" firstAttribute="centerY" secondItem="blt-F1-pgW" secondAttribute="centerY" id="JBb-bv-Dwz"/>
+                                <constraint firstItem="blt-F1-pgW" firstAttribute="leading" secondItem="t20-zH-WaG" secondAttribute="leading" id="NQD-Io-0xA"/>
+                                <constraint firstAttribute="trailing" secondItem="5kw-dc-vXo" secondAttribute="trailing" id="PxB-2a-cek"/>
+                                <constraint firstAttribute="height" constant="48" id="WoN-LK-7iw"/>
+                            </constraints>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwr-8c-Wsl">
+                            <rect key="frame" x="30" y="222" width="315" height="53"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWs-oT-64m" userLabel="continue" customClass="CustomButton" customModule="LevelShoes" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="53"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="16"/>
+                                    <state key="normal" title="CONTINUE">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                            <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="KWs-oT-64m" secondAttribute="trailing" id="0sI-z6-2M2"/>
+                                <constraint firstItem="KWs-oT-64m" firstAttribute="top" secondItem="mwr-8c-Wsl" secondAttribute="top" id="Egz-zW-SCx"/>
+                                <constraint firstItem="KWs-oT-64m" firstAttribute="leading" secondItem="mwr-8c-Wsl" secondAttribute="leading" id="I7E-Zf-a39"/>
+                                <constraint firstAttribute="bottom" secondItem="KWs-oT-64m" secondAttribute="bottom" id="PFO-qc-OWq"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="ah8-oX-fuG" firstAttribute="leading" secondItem="dqH-ng-8qN" secondAttribute="leading" id="2Ww-4w-peU"/>
+                        <constraint firstItem="t20-zH-WaG" firstAttribute="leading" secondItem="VdK-zI-YJb" secondAttribute="leading" constant="30" id="86c-BB-42c"/>
+                        <constraint firstItem="mwr-8c-Wsl" firstAttribute="leading" secondItem="VdK-zI-YJb" secondAttribute="leading" constant="30" id="ET2-Pc-q25"/>
+                        <constraint firstAttribute="trailing" secondItem="mwr-8c-Wsl" secondAttribute="trailing" constant="30" id="HeM-2J-n36"/>
+                        <constraint firstItem="dqH-ng-8qN" firstAttribute="top" secondItem="VdK-zI-YJb" secondAttribute="top" constant="40" id="IlA-Mi-aqD"/>
+                        <constraint firstAttribute="trailing" secondItem="t20-zH-WaG" secondAttribute="trailing" constant="30" id="LcW-yH-8sg"/>
+                        <constraint firstItem="mwr-8c-Wsl" firstAttribute="top" secondItem="t20-zH-WaG" secondAttribute="bottom" constant="39" id="LdH-Ry-8ow"/>
+                        <constraint firstAttribute="bottom" secondItem="mwr-8c-Wsl" secondAttribute="bottom" constant="60" id="QEk-dR-qYB"/>
+                        <constraint firstAttribute="trailing" secondItem="dqH-ng-8qN" secondAttribute="trailing" constant="30" id="W3C-l2-xFx"/>
+                        <constraint firstItem="ah8-oX-fuG" firstAttribute="trailing" secondItem="dqH-ng-8qN" secondAttribute="trailing" id="XpO-6h-NVH"/>
+                        <constraint firstAttribute="height" constant="335" id="ptz-hw-l0Z">
+                            <variation key="heightClass=regular-widthClass=compact" constant="335"/>
+                        </constraint>
+                        <constraint firstItem="t20-zH-WaG" firstAttribute="top" secondItem="dqH-ng-8qN" secondAttribute="bottom" constant="25" id="pzu-t0-HEH"/>
+                        <constraint firstItem="dqH-ng-8qN" firstAttribute="leading" secondItem="VdK-zI-YJb" secondAttribute="leading" constant="30" id="rSI-SX-K0t"/>
+                        <constraint firstItem="ah8-oX-fuG" firstAttribute="bottom" secondItem="dqH-ng-8qN" secondAttribute="bottom" id="wiM-Ds-Ycu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="VdK-zI-YJb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lrh-Py-JCb"/>
+                <constraint firstItem="VdK-zI-YJb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="rc3-bT-n7T">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="VdK-zI-YJb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="sHD-QY-YIN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="_lblChooseCountry" destination="cnC-Ip-fC7" id="moR-EV-31R"/>
+                <outlet property="_lblNotification" destination="blt-F1-pgW" id="Hjn-wu-fKa"/>
+                <outlet property="_txtCountryName" destination="Nmd-4C-4P1" id="lDb-oB-bBa"/>
+                <outlet property="arrowButton" destination="sUS-8N-BoG" id="Vj9-e5-UsL"/>
+                <outlet property="btnContinue" destination="KWs-oT-64m" id="7eX-yR-7QN"/>
+                <outlet property="countryView" destination="dqH-ng-8qN" id="wVB-fw-hyw"/>
+                <outlet property="imgCountryFlag" destination="YSm-J1-dNr" id="jeo-dx-T0e"/>
+                <outlet property="toggle" destination="5kw-dc-vXo" id="9Rr-Lw-yuM"/>
+            </connections>
+            <point key="canvasLocation" x="117.59999999999999" y="-93.472906403940897"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KSA" width="25" height="18"/>
+        <image name="icn_chevron" width="30" height="30"/>
+    </resources>
+</document>

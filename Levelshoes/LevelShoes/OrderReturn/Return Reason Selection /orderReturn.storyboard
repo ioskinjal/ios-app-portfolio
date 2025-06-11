@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BrandonGrotesque-Light.otf">
+            <string>BrandonGrotesque-Light</string>
+        </array>
+        <array key="brandon-grotesque-medium.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Return OrderVC-->
+        <scene sceneID="1Pj-lG-LKz">
+            <objects>
+                <viewController storyboardIdentifier="ReturnOrderVC" id="Lad-dR-vqH" customClass="ReturnOrderVC" customModule="LevelShoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Z5-ak-9n9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auO-xA-aXC" customClass="headerView" customModule="LevelShoes">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PP5-Z0-ChH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="opTitle" value="RETURN ORDER"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="230" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-qN-8Os">
+                                <rect key="frame" x="0.0" y="200" width="414" height="657"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="dq2-lJ-kbR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select items to return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgZ-yQ-lbN">
+                                            <rect key="frame" x="30" y="30" width="354" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="GFe-fm-yvs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the order number we sent you via email/SMS in order to track your order status" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlG-TQ-rL5">
+                                            <rect key="frame" x="30" y="72" width="354" height="51.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="b19-Xq-c0Z"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="SlG-TQ-rL5" firstAttribute="top" secondItem="jgZ-yQ-lbN" secondAttribute="bottom" constant="15" id="MqJ-DJ-Cl4"/>
+                                        <constraint firstItem="jgZ-yQ-lbN" firstAttribute="top" secondItem="dq2-lJ-kbR" secondAttribute="top" constant="30" id="NVp-ey-oaw"/>
+                                        <constraint firstAttribute="trailing" secondItem="jgZ-yQ-lbN" secondAttribute="trailing" constant="30" id="Stt-sI-D6x"/>
+                                        <constraint firstItem="SlG-TQ-rL5" firstAttribute="leading" secondItem="dq2-lJ-kbR" secondAttribute="leading" constant="30" id="Ytz-16-1xr"/>
+                                        <constraint firstItem="jgZ-yQ-lbN" firstAttribute="leading" secondItem="dq2-lJ-kbR" secondAttribute="leading" constant="30" id="ZbT-4g-4OQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="SlG-TQ-rL5" secondAttribute="trailing" constant="30" id="sdm-SW-Xjo"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="FSm-5L-3rv" customClass="footerOrderReturn" customModule="LevelShoes" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="411.5" width="414" height="470"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderDetailCell" id="4Hd-SU-73V" customClass="orderDetailCell" customModule="LevelShoes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180.5" width="414" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Hd-SU-73V" id="jP0-6F-4Ma">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lad-dR-vqH" id="1DH-2U-5EO"/>
+                                    <outlet property="delegate" destination="Lad-dR-vqH" id="3IQ-cP-cE5"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJJ-nw-yPu" customClass="headerOrderReturn" customModule="LevelShoes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="toH-6E-hqk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.040000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="io1-Wh-mC2" firstAttribute="bottom" secondItem="dWd-qN-8Os" secondAttribute="bottom" constant="5" id="98T-73-MOB"/>
+                            <constraint firstItem="auO-xA-aXC" firstAttribute="trailing" secondItem="io1-Wh-mC2" secondAttribute="trailing" id="FVg-A8-ubW"/>
+                            <constraint firstItem="dWd-qN-8Os" firstAttribute="leading" secondItem="io1-Wh-mC2" secondAttribute="leading" id="LEv-Ob-CbT"/>
+                            <constraint firstItem="dWd-qN-8Os" firstAttribute="trailing" secondItem="io1-Wh-mC2" secondAttribute="trailing" id="ZYu-Yn-J1l"/>
+                            <constraint firstItem="QJJ-nw-yPu" firstAttribute="trailing" secondItem="io1-Wh-mC2" secondAttribute="trailing" id="gVh-Iv-pJW"/>
+                            <constraint firstItem="QJJ-nw-yPu" firstAttribute="top" secondItem="auO-xA-aXC" secondAttribute="bottom" id="gnJ-Qz-uMH"/>
+                            <constraint firstItem="QJJ-nw-yPu" firstAttribute="leading" secondItem="io1-Wh-mC2" secondAttribute="leading" id="mKh-wZ-27n"/>
+                            <constraint firstItem="auO-xA-aXC" firstAttribute="leading" secondItem="io1-Wh-mC2" secondAttribute="leading" id="qLN-L7-YW5"/>
+                            <constraint firstItem="dWd-qN-8Os" firstAttribute="top" secondItem="QJJ-nw-yPu" secondAttribute="bottom" id="toT-tS-oRP"/>
+                            <constraint firstItem="auO-xA-aXC" firstAttribute="top" secondItem="2Z5-ak-9n9" secondAttribute="top" id="yC0-1o-Xag"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="io1-Wh-mC2"/>
+                    </view>
+                    <connections>
+                        <outlet property="footer" destination="FSm-5L-3rv" id="lme-E4-l7T"/>
+                        <outlet property="header" destination="auO-xA-aXC" id="cLN-Da-Q8i"/>
+                        <outlet property="headerOftable" destination="QJJ-nw-yPu" id="40t-TB-igj"/>
+                        <outlet property="lblDesc" destination="SlG-TQ-rL5" id="4WF-U3-kdh"/>
+                        <outlet property="lblHeader" destination="jgZ-yQ-lbN" id="rJS-Nv-oPz"/>
+                        <outlet property="tblReturn" destination="dWd-qN-8Os" id="EkR-cG-IWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KR3-OF-qcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570" y="-95"/>
+        </scene>
+    </scenes>
+</document>

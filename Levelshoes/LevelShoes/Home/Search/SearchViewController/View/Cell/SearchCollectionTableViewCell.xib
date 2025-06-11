@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BrandonGrotesque-Light.otf">
+            <string>BrandonGrotesque-Light</string>
+        </array>
+        <array key="brandon-grotesque-medium.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCollectionTableViewCell" id="KGk-i7-Jjw" customClass="SearchCollectionTableViewCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB3-pw-FAN">
+                        <rect key="frame" x="0.0" y="10" width="375" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U08-eU-W8p">
+                                <rect key="frame" x="20" y="0.0" width="88" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="3Cr-fE-jG2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txj-oG-YPF">
+                                <rect key="frame" x="315" y="0.0" width="55" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="BkY-rz-zl1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="txj-oG-YPF" secondAttribute="bottom" id="Dci-Iz-Oas"/>
+                            <constraint firstItem="U08-eU-W8p" firstAttribute="leading" secondItem="FB3-pw-FAN" secondAttribute="leading" constant="20" id="Jpk-nR-Tzr"/>
+                            <constraint firstItem="txj-oG-YPF" firstAttribute="top" secondItem="FB3-pw-FAN" secondAttribute="top" id="Mjn-7p-Kdq"/>
+                            <constraint firstAttribute="bottom" secondItem="U08-eU-W8p" secondAttribute="bottom" id="RNT-VE-06b"/>
+                            <constraint firstAttribute="trailing" secondItem="txj-oG-YPF" secondAttribute="trailing" constant="5" id="rUy-Px-iDB"/>
+                            <constraint firstItem="U08-eU-W8p" firstAttribute="top" secondItem="FB3-pw-FAN" secondAttribute="top" id="rzY-Cn-beI"/>
+                            <constraint firstAttribute="height" constant="28" id="w0b-jE-ta7"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-6G-k38">
+                        <rect key="frame" x="20" y="58" width="335" height="477"/>
+                        <color key="backgroundColor" red="0.031372549019607843" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="427" id="vF8-RV-IZT"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="iAa-gB-Ew3">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="25" minY="10" maxX="20" maxY="25"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="lcj-jB-qwQ"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="cfM-CH-u2G"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.031372549019607843" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="FB3-pw-FAN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XBY-7e-2XT"/>
+                    <constraint firstItem="FB3-pw-FAN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YJk-sH-e9J"/>
+                    <constraint firstAttribute="bottom" secondItem="Bfb-6G-k38" secondAttribute="bottom" id="as0-Cp-4C8"/>
+                    <constraint firstAttribute="trailing" secondItem="FB3-pw-FAN" secondAttribute="trailing" id="c6t-6D-7tE"/>
+                    <constraint firstItem="Bfb-6G-k38" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="tGF-c8-OGR"/>
+                    <constraint firstItem="Bfb-6G-k38" firstAttribute="top" secondItem="FB3-pw-FAN" secondAttribute="bottom" constant="20" id="uKM-md-SlV"/>
+                    <constraint firstAttribute="trailing" secondItem="Bfb-6G-k38" secondAttribute="trailing" constant="20" id="xUK-0R-lcF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.031372549019607843" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="trailing" secondItem="njF-e1-oar" secondAttribute="trailing" id="F5N-ol-Epx"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="NS0-e4-FM8"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="eHz-pZ-c91"/>
+                <constraint firstItem="H2p-sc-9uM" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="gNa-cY-Tf8"/>
+            </constraints>
+            <connections>
+                <outlet property="_heightConstant" destination="vF8-RV-IZT" id="S3Q-EV-a0d"/>
+                <outlet property="_iblToTotalResult" destination="txj-oG-YPF" id="MIP-Ah-Wpp"/>
+                <outlet property="collectionViews" destination="Bfb-6G-k38" id="vza-dR-n8n"/>
+                <outlet property="lblSearchResults" destination="U08-eU-W8p" id="PKd-HX-1Rr"/>
+            </connections>
+            <point key="canvasLocation" x="137.8125" y="89.260563380281695"/>
+        </tableViewCell>
+    </objects>
+</document>

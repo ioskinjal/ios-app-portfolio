@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ApplePayTableViewCell" rowHeight="85" id="KGk-i7-Jjw" customClass="ApplePayTableViewCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="473" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJF-iH-Ppv">
+                        <rect key="frame" x="0.0" y="0.0" width="473" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDM-Vj-hlG">
+                                <rect key="frame" x="20" y="10" width="433" height="85"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple_Pay_Mark" translatesAutoresizingMaskIntoConstraints="NO" id="jec-3P-pIv">
+                                        <rect key="frame" x="20" y="18" width="80" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="1cb-Hs-pzb"/>
+                                            <constraint firstAttribute="height" constant="50" id="ApR-94-c8k"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="400-a6-J2S">
+                                        <rect key="frame" x="388" y="30" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="K8i-ee-S1m"/>
+                                            <constraint firstAttribute="width" constant="25" id="owF-fR-db9"/>
+                                        </constraints>
+                                        <state key="normal" image="radio_off"/>
+                                        <connections>
+                                            <action selector="applePayAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8He-fE-Yei"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jec-3P-pIv" secondAttribute="bottom" constant="17" id="2ZV-h4-Ldp"/>
+                                    <constraint firstAttribute="bottom" secondItem="400-a6-J2S" secondAttribute="bottom" constant="30" id="FFX-Xz-NL4"/>
+                                    <constraint firstItem="400-a6-J2S" firstAttribute="top" secondItem="BDM-Vj-hlG" secondAttribute="top" constant="30" id="KLz-Cm-Xcs"/>
+                                    <constraint firstAttribute="height" constant="85" id="PQr-v2-ZPX"/>
+                                    <constraint firstAttribute="trailing" secondItem="400-a6-J2S" secondAttribute="trailing" constant="20" id="aff-Jv-cZY"/>
+                                    <constraint firstItem="jec-3P-pIv" firstAttribute="leading" secondItem="BDM-Vj-hlG" secondAttribute="leading" constant="20" id="hry-Kt-AX3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BDM-Vj-hlG" secondAttribute="trailing" constant="20" id="Plr-OK-1g0"/>
+                            <constraint firstItem="BDM-Vj-hlG" firstAttribute="top" secondItem="GJF-iH-Ppv" secondAttribute="top" constant="10" id="W0z-G9-hXe"/>
+                            <constraint firstItem="BDM-Vj-hlG" firstAttribute="leading" secondItem="GJF-iH-Ppv" secondAttribute="leading" constant="20" id="a4C-U1-XqL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="GJF-iH-Ppv" secondAttribute="trailing" id="Lyg-ov-2un"/>
+                    <constraint firstAttribute="bottom" secondItem="GJF-iH-Ppv" secondAttribute="bottom" id="bJf-oH-1R8"/>
+                    <constraint firstItem="GJF-iH-Ppv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cRV-OK-MHq"/>
+                    <constraint firstItem="GJF-iH-Ppv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wn5-ZM-NoB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="applePayCheckBtnOutlet" destination="400-a6-J2S" id="OZ5-tr-uES"/>
+                <outlet property="viewBg" destination="BDM-Vj-hlG" id="Vmk-qA-IiB"/>
+            </connections>
+            <point key="canvasLocation" x="389.13043478260875" y="129.24107142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Apple_Pay_Mark" width="165.52107238769531" height="105.96510314941406"/>
+        <image name="radio_off" width="19" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

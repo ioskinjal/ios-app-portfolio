@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Email PopupVC-->
+        <scene sceneID="jUC-eH-nX2">
+            <objects>
+                <viewController storyboardIdentifier="emailPopupVC" modalPresentationStyle="currentContext" id="eSH-zP-ZHc" customClass="emailPopupVC" customModule="LevelShoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uXx-M7-r8q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIZ-uP-s8t" customClass="emailPopup" customModule="LevelShoes" customModuleProvider="target">
+                                <rect key="frame" x="30" y="223" width="354" height="450"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="dpz-ft-8Va"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tIZ-uP-s8t" firstAttribute="centerY" secondItem="uXx-M7-r8q" secondAttribute="centerY" id="50j-Fj-MwT"/>
+                            <constraint firstItem="tIZ-uP-s8t" firstAttribute="leading" secondItem="PdA-sF-Vxn" secondAttribute="leading" constant="30" id="6FA-7L-Mf2"/>
+                            <constraint firstItem="PdA-sF-Vxn" firstAttribute="trailing" secondItem="tIZ-uP-s8t" secondAttribute="trailing" constant="30" id="Opa-qx-cG2"/>
+                            <constraint firstItem="tIZ-uP-s8t" firstAttribute="centerX" secondItem="uXx-M7-r8q" secondAttribute="centerX" id="aFX-Vz-5m5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PdA-sF-Vxn"/>
+                    </view>
+                    <connections>
+                        <outlet property="popup" destination="tIZ-uP-s8t" id="BLQ-iO-din"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWL-um-3fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="57"/>
+        </scene>
+    </scenes>
+</document>

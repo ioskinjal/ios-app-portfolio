@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Thanks PopupVC-->
+        <scene sceneID="PqP-Nv-oZA">
+            <objects>
+                <viewController storyboardIdentifier="ThanksPopupVC" modalPresentationStyle="overCurrentContext" id="GRi-Xt-1cw" customClass="ThanksPopupVC" customModule="LevelShoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qXZ-Pi-YTS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ie3-tw-I9C" customClass="ThanksPopup" customModule="LevelShoes" customModuleProvider="target">
+                                <rect key="frame" x="25" y="291.5" width="364" height="313"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="X0k-of-aPA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ie3-tw-I9C" firstAttribute="centerY" secondItem="qXZ-Pi-YTS" secondAttribute="centerY" id="co5-6c-lQh"/>
+                            <constraint firstItem="e5g-a7-a92" firstAttribute="trailing" secondItem="ie3-tw-I9C" secondAttribute="trailing" constant="25" id="t4V-uo-wQE"/>
+                            <constraint firstItem="ie3-tw-I9C" firstAttribute="leading" secondItem="e5g-a7-a92" secondAttribute="leading" constant="25" id="wiN-8s-3Lh"/>
+                            <constraint firstItem="ie3-tw-I9C" firstAttribute="centerX" secondItem="qXZ-Pi-YTS" secondAttribute="centerX" id="xJ5-Fk-Ykt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e5g-a7-a92"/>
+                    </view>
+                    <connections>
+                        <outlet property="thanksView" destination="ie3-tw-I9C" id="bvf-Xm-rHA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufe-2d-bKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="90"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Hc-se-hHL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My OrdersVC-->
+        <scene sceneID="I1Y-5e-SWr">
+            <objects>
+                <viewController restorationIdentifier="MyOrdersVC" storyboardIdentifier="MyOrdersVC" id="BoX-41-Z28" customClass="MyOrdersVC" customModule="LevelShoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i43-ur-crw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="230" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-UM-5f8">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Cp4-xd-GdT" customClass="tblHeaderView" customModule="LevelShoes" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="i3u-sR-AEP" customClass="tblFooterView" customModule="LevelShoes">
+                                    <rect key="frame" x="0.0" y="383.5" width="414" height="173"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyOrderCell" id="zDH-M1-rcP" customClass="MyOrderCell" customModule="LevelShoes">
+                                        <rect key="frame" x="0.0" y="152.5" width="414" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zDH-M1-rcP" id="Xmq-an-oWD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BoX-41-Z28" id="vGw-P1-cVe"/>
+                                    <outlet property="delegate" destination="BoX-41-Z28" id="M7d-kC-m1s"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTs-H8-sZJ" customClass="headerView" customModule="LevelShoes">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aXw-JG-Y7J"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="opTitle" value="MY ORDERS"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.040000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6GQ-XC-W9W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nu7-UM-5f8" firstAttribute="trailing" secondItem="6GQ-XC-W9W" secondAttribute="trailing" id="3GN-qD-xUu"/>
+                            <constraint firstItem="HTs-H8-sZJ" firstAttribute="top" secondItem="i43-ur-crw" secondAttribute="top" id="98t-R0-rJT"/>
+                            <constraint firstItem="Nu7-UM-5f8" firstAttribute="leading" secondItem="6GQ-XC-W9W" secondAttribute="leading" id="CT1-ki-5Zn"/>
+                            <constraint firstItem="Nu7-UM-5f8" firstAttribute="top" secondItem="HTs-H8-sZJ" secondAttribute="bottom" id="IQi-Eh-EXp"/>
+                            <constraint firstItem="HTs-H8-sZJ" firstAttribute="leading" secondItem="6GQ-XC-W9W" secondAttribute="leading" id="NGr-0n-9ow"/>
+                            <constraint firstAttribute="bottom" secondItem="Nu7-UM-5f8" secondAttribute="bottom" id="Vfl-Ms-ctu"/>
+                            <constraint firstItem="HTs-H8-sZJ" firstAttribute="trailing" secondItem="6GQ-XC-W9W" secondAttribute="trailing" id="uPQ-FD-hit"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="ic_user" id="xd9-Ez-uxv">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="ZMd-Vi-t32"/>
+                    <connections>
+                        <outlet property="header" destination="HTs-H8-sZJ" id="lth-Oc-U1i"/>
+                        <outlet property="tblFooter" destination="i3u-sR-AEP" id="Sih-7t-AQc"/>
+                        <outlet property="tblHeader" destination="Cp4-xd-GdT" id="l51-y9-i4H"/>
+                        <outlet property="tblMyOrders" destination="Nu7-UM-5f8" id="XOe-kH-4Wq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIs-fb-EzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7254" y="-2352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1TF-24-7RS">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="5Hc-se-hHL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NUW-W4-FZz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BoX-41-Z28" kind="relationship" relationship="rootViewController" id="Toh-nQ-VLU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yae-Cb-7gG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6450" y="-2139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_user" width="20" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

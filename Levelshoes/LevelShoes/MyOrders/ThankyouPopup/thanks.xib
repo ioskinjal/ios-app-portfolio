@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BrandonGrotesque-Light.otf">
+            <string>BrandonGrotesque-Light</string>
+        </array>
+        <array key="brandon-grotesque-medium.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+        <array key="brandon-grotesque-regular.otf">
+            <string>BrandonGrotesque-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThanksPopup" customModule="LevelShoes" customModuleProvider="target">
+            <connections>
+                <outlet property="btnContinue" destination="HhD-jn-XU5" id="gt1-6p-1Jw"/>
+                <outlet property="lblDesc" destination="Te7-1d-b9h" id="jdc-Kc-vLF"/>
+                <outlet property="lblHeader" destination="unu-67-knx" id="vvX-yw-8fO"/>
+                <outlet property="thanksImage" destination="Fgc-wQ-cmY" id="P4I-6D-xMJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmD-V4-EnA">
+                    <rect key="frame" x="2" y="2" width="410" height="309"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxB-tJ-mNa">
+                            <rect key="frame" x="182.5" y="40" width="45" height="45"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_success" translatesAutoresizingMaskIntoConstraints="NO" id="Fgc-wQ-cmY">
+                                    <rect key="frame" x="4" y="4" width="38" height="38"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Fgc-wQ-cmY" secondAttribute="bottom" constant="3" id="18W-DV-tnV"/>
+                                <constraint firstAttribute="trailing" secondItem="Fgc-wQ-cmY" secondAttribute="trailing" constant="3" id="GRS-nE-bn4"/>
+                                <constraint firstAttribute="width" constant="45" id="Sev-Pt-XbH"/>
+                                <constraint firstItem="Fgc-wQ-cmY" firstAttribute="top" secondItem="wxB-tJ-mNa" secondAttribute="top" constant="4" id="Sv5-Eo-Vvk"/>
+                                <constraint firstItem="Fgc-wQ-cmY" firstAttribute="leading" secondItem="wxB-tJ-mNa" secondAttribute="leading" constant="4" id="imk-9B-miA"/>
+                                <constraint firstAttribute="height" constant="45" id="v9w-Of-gdy"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I4V-ye-Sua">
+                            <rect key="frame" x="30" y="100" width="350" height="101"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unu-67-knx">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="30.5"/>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IS LONG TEXT MESSAGE TO TEST DESC OF THE POP UP THNKA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te7-1d-b9h">
+                                    <rect key="frame" x="0.0" y="45.5" width="350" height="55.5"/>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPe-Pk-1Nw">
+                            <rect key="frame" x="30" y="226" width="350" height="53"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-jn-XU5">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="53"/>
+                                    <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="14"/>
+                                    <state key="normal" title="CONTINUE">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="HhD-jn-XU5" secondAttribute="bottom" id="J93-KO-1bI"/>
+                                <constraint firstAttribute="trailing" secondItem="HhD-jn-XU5" secondAttribute="trailing" id="NiR-qS-Hth"/>
+                                <constraint firstItem="HhD-jn-XU5" firstAttribute="leading" secondItem="sPe-Pk-1Nw" secondAttribute="leading" id="TpK-g8-Or8"/>
+                                <constraint firstAttribute="height" constant="53" id="jeq-To-E3r"/>
+                                <constraint firstItem="HhD-jn-XU5" firstAttribute="top" secondItem="sPe-Pk-1Nw" secondAttribute="top" id="zF8-zc-zQd"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="I4V-ye-Sua" firstAttribute="top" secondItem="wxB-tJ-mNa" secondAttribute="bottom" constant="15" id="0b3-YI-6Ax"/>
+                        <constraint firstItem="sPe-Pk-1Nw" firstAttribute="top" secondItem="I4V-ye-Sua" secondAttribute="bottom" constant="25" id="DcC-m7-LgW"/>
+                        <constraint firstItem="wxB-tJ-mNa" firstAttribute="top" secondItem="nmD-V4-EnA" secondAttribute="top" constant="40" id="EwR-1u-8sU"/>
+                        <constraint firstAttribute="trailing" secondItem="I4V-ye-Sua" secondAttribute="trailing" constant="30" id="Hpt-TO-5Xr"/>
+                        <constraint firstItem="I4V-ye-Sua" firstAttribute="leading" secondItem="nmD-V4-EnA" secondAttribute="leading" constant="30" id="V08-C9-8CU"/>
+                        <constraint firstAttribute="bottom" secondItem="sPe-Pk-1Nw" secondAttribute="bottom" constant="30" id="Vdc-e4-TgH"/>
+                        <constraint firstItem="sPe-Pk-1Nw" firstAttribute="leading" secondItem="nmD-V4-EnA" secondAttribute="leading" constant="30" id="aL9-fI-Bg8"/>
+                        <constraint firstItem="wxB-tJ-mNa" firstAttribute="centerX" secondItem="nmD-V4-EnA" secondAttribute="centerX" id="bNc-1Z-ZQK"/>
+                        <constraint firstAttribute="trailing" secondItem="sPe-Pk-1Nw" secondAttribute="trailing" constant="30" id="zwq-SM-Fdw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.01" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nmD-V4-EnA" secondAttribute="bottom" constant="2" id="6l9-Gv-TtU"/>
+                <constraint firstItem="nmD-V4-EnA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-2" id="PB6-q5-6GB"/>
+                <constraint firstItem="nmD-V4-EnA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="SzV-VQ-qdX"/>
+                <constraint firstItem="nmD-V4-EnA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="Ukf-QV-BEe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="139" y="84"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_success" width="90" height="90"/>
+    </resources>
+</document>

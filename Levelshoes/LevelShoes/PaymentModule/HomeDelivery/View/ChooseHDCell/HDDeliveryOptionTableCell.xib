@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BrandonGrotesque-Light.otf">
+            <string>BrandonGrotesque-Light</string>
+        </array>
+        <array key="brandon-grotesque-medium.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HDDeliveryOptionTableCell" rowHeight="127" id="KGk-i7-Jjw" customClass="HDDeliveryOptionTableCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrA-gz-KgE">
+                        <rect key="frame" x="20" y="0.0" width="335" height="127"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GI-QR-JFU">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="dqe-Yo-pu2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Delivery Select between Express Delivery in 2 hours, Today or Tomorrow delivery. Free Delivery." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="j2R-Gw-48y">
+                                <rect key="frame" x="0.0" y="42" width="335" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="cOH-zJ-10f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="127" id="FiU-zl-z7W"/>
+                            <constraint firstAttribute="trailing" secondItem="j2R-Gw-48y" secondAttribute="trailing" id="T2V-sQ-5or"/>
+                            <constraint firstItem="1GI-QR-JFU" firstAttribute="top" secondItem="lrA-gz-KgE" secondAttribute="top" id="TVi-cd-0gX"/>
+                            <constraint firstAttribute="trailing" secondItem="1GI-QR-JFU" secondAttribute="trailing" id="a7C-Am-qA3"/>
+                            <constraint firstItem="1GI-QR-JFU" firstAttribute="leading" secondItem="lrA-gz-KgE" secondAttribute="leading" id="aMo-5X-Rqd"/>
+                            <constraint firstItem="j2R-Gw-48y" firstAttribute="top" secondItem="1GI-QR-JFU" secondAttribute="bottom" constant="15" id="jOe-GD-3Tz"/>
+                            <constraint firstItem="j2R-Gw-48y" firstAttribute="leading" secondItem="lrA-gz-KgE" secondAttribute="leading" id="oo0-lZ-m2S"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="lrA-gz-KgE" secondAttribute="trailing" constant="20" id="Hxa-bk-NEa"/>
+                    <constraint firstItem="lrA-gz-KgE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bzt-3N-2ME"/>
+                    <constraint firstItem="lrA-gz-KgE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qb6-eq-EBw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="_lblDeliveryOption" destination="1GI-QR-JFU" id="4C1-ii-6jK"/>
+                <outlet property="_lblDeliveryTitle" destination="j2R-Gw-48y" id="349-Ja-92J"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="88"/>
+        </tableViewCell>
+    </objects>
+</document>

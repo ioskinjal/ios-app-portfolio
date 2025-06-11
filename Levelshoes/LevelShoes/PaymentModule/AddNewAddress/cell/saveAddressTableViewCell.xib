@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="saveAddressTableViewCell" rowHeight="79" id="KGk-i7-Jjw" customClass="saveAddressTableViewCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="359" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-2X-pw7" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="79"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-xy-gac">
+                                <rect key="frame" x="20" y="10" width="319" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SAVE ADDRESS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="z54-Ol-GBG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bXS-xy-gac" firstAttribute="leading" secondItem="VE3-2X-pw7" secondAttribute="leading" constant="20" id="9s9-Pt-jI8"/>
+                            <constraint firstAttribute="trailing" secondItem="bXS-xy-gac" secondAttribute="trailing" constant="20" id="IX8-FZ-kZr"/>
+                            <constraint firstAttribute="bottom" secondItem="bXS-xy-gac" secondAttribute="bottom" constant="19" id="LHq-ET-JHA"/>
+                            <constraint firstItem="bXS-xy-gac" firstAttribute="top" secondItem="VE3-2X-pw7" secondAttribute="top" constant="10" id="uwp-AF-sWr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VE3-2X-pw7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Dx3-NM-FOo"/>
+                    <constraint firstItem="VE3-2X-pw7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HAz-Yv-Uxe"/>
+                    <constraint firstAttribute="trailing" secondItem="VE3-2X-pw7" secondAttribute="trailing" id="bFQ-hw-nT2"/>
+                    <constraint firstAttribute="bottom" secondItem="VE3-2X-pw7" secondAttribute="bottom" id="dZc-t6-8h3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainView" destination="VE3-2X-pw7" id="VLN-wx-b5G"/>
+                <outlet property="saveBtnOutlet" destination="bXS-xy-gac" id="yqk-tF-kzC"/>
+            </connections>
+            <point key="canvasLocation" x="163.04347826086959" y="134.93303571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

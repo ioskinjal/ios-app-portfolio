@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="brandon-grotesque-medium.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+        <array key="brandon-grotesque-regular.otf">
+            <string>BrandonGrotesque-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddressNameCell" rowHeight="251" id="KGk-i7-Jjw" customClass="AddressNameCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="251"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="251"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDW-QX-J7A">
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="251"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1y-UC-G7q">
+                                <rect key="frame" x="20" y="40" width="110.5" height="29"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-by-DAU">
+                                <rect key="frame" x="20" y="84" width="323" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-7b-xA2">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="16"/>
+                                        <state key="normal" title="Work">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="workAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NqR-4p-rr6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQa-2X-OHc">
+                                        <rect key="frame" x="109.5" y="0.0" width="104" height="50"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="16"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="homeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OC0-a9-R7d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rm-lW-GUy">
+                                        <rect key="frame" x="218.5" y="0.0" width="104.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="16"/>
+                                        <state key="normal" title="Other">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="otherAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kW3-VJ-xdN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.32149124150000002" blue="0.2067335844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zMM-oP-BPs"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address new address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN5-BW-GNT">
+                                <rect key="frame" x="20" y="201" width="161.5" height="29"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H1y-UC-G7q" firstAttribute="top" secondItem="nDW-QX-J7A" secondAttribute="top" constant="40" id="8pI-Bt-wIQ"/>
+                            <constraint firstItem="H1y-UC-G7q" firstAttribute="leading" secondItem="nDW-QX-J7A" secondAttribute="leading" constant="20" id="8zh-UR-h8t"/>
+                            <constraint firstItem="lN5-BW-GNT" firstAttribute="leading" secondItem="H1y-UC-G7q" secondAttribute="leading" id="Ak9-jS-G6S"/>
+                            <constraint firstItem="lN5-BW-GNT" firstAttribute="top" secondItem="UcE-by-DAU" secondAttribute="bottom" constant="67" id="b4n-rQ-05K"/>
+                            <constraint firstItem="UcE-by-DAU" firstAttribute="leading" secondItem="H1y-UC-G7q" secondAttribute="leading" id="g8L-xP-NJe"/>
+                            <constraint firstItem="UcE-by-DAU" firstAttribute="top" secondItem="H1y-UC-G7q" secondAttribute="bottom" constant="15" id="oNO-mx-ZLd"/>
+                            <constraint firstAttribute="bottom" secondItem="lN5-BW-GNT" secondAttribute="bottom" constant="21" id="pMh-ND-Ra7"/>
+                            <constraint firstAttribute="trailing" secondItem="UcE-by-DAU" secondAttribute="trailing" constant="20" id="uHM-UQ-SBW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nDW-QX-J7A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Zs1-jk-b5y"/>
+                    <constraint firstItem="nDW-QX-J7A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bFa-aD-3Nf"/>
+                    <constraint firstAttribute="bottom" secondItem="nDW-QX-J7A" secondAttribute="bottom" id="bK7-YZ-bmW"/>
+                    <constraint firstAttribute="trailing" secondItem="nDW-QX-J7A" secondAttribute="trailing" id="exh-BK-4hb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="homeBtnOutlet" destination="UQa-2X-OHc" id="SFF-OR-5JB"/>
+                <outlet property="otherBtnOutlet" destination="2Rm-lW-GUy" id="Neh-s6-qeb"/>
+                <outlet property="workBtnOutlet" destination="zDl-7b-xA2" id="Dju-JD-XAu"/>
+            </connections>
+            <point key="canvasLocation" x="167.39130434782609" y="191.85267857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

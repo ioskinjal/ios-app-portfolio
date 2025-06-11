@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Attributes" representedClassName="Attributes" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute_code" optional="YES" attributeType="String"/>
+        <attribute name="options" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <entity name="Cart" representedClassName="Cart" syncable="YES" codeGenerationType="class">
+        <attribute name="allSKU" optional="YES" attributeType="String"/>
+        <attribute name="attributeID" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="childSKU" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="productName" optional="YES" attributeType="String"/>
+        <attribute name="productPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="selectedSize" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Filter" representedClassName="Filter" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute_code" optional="YES" attributeType="String"/>
+        <attribute name="label" optional="YES" attributeType="String"/>
+        <attribute name="sort_order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Kids" representedClassName="Kids" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="baby" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KidsChildrenBaby" inverseName="kidsChildrenBaby" inverseEntity="KidsChildrenBaby"/>
+        <relationship name="boy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KidsChildrenBoy" inverseName="kidsChildrenBoy" inverseEntity="KidsChildrenBoy"/>
+        <relationship name="girl" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KidsChildrenGirl" inverseName="kidsChildrenGirl" inverseEntity="KidsChildrenGirl"/>
+    </entity>
+    <entity name="KidsChildData" representedClassName="KidsChildData" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KidsData" inverseName="kids" inverseEntity="KidsData"/>
+    </entity>
+    <entity name="KidsChildrenBaby" representedClassName="KidsChildrenBaby" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="kidsChildrenBaby" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kids" inverseName="baby" inverseEntity="Kids"/>
+    </entity>
+    <entity name="KidsChildrenBoy" representedClassName="KidsChildrenBoy" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="kidsChildrenBoy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kids" inverseName="boy" inverseEntity="Kids"/>
+    </entity>
+    <entity name="KidsChildrenGirl" representedClassName="KidsChildrenGirl" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="kidsChildrenGirl" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kids" inverseName="girl" inverseEntity="Kids"/>
+    </entity>
+    <entity name="KidsData" representedClassName="KidsData" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="kids" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KidsChildData" inverseName="child" inverseEntity="KidsChildData"/>
+    </entity>
+    <entity name="Men" representedClassName="Men" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenBags" representedClassName="MenBags" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenBoots" representedClassName="MenBoots" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenChildData" representedClassName="MenChildData" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MenData" inverseName="mens" inverseEntity="MenData"/>
+    </entity>
+    <entity name="MenData" representedClassName="MenData" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="mens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MenChildData" inverseName="child" inverseEntity="MenChildData"/>
+    </entity>
+    <entity name="MenJewellery" representedClassName="MenJewellery" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenLaceUps" representedClassName="MenLaceUps" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenLoafersSlippers" representedClassName="MenLoafersSlippers" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenOtherAccessories" representedClassName="MenOtherAccessories" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenSlidesFlipFlops" representedClassName="MenSlidesFlipFlops" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenSmallLeatherGoods" representedClassName="MenSmallLeatherGoods" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenSneakers" representedClassName="MenSneakers" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MenSunglasses" representedClassName="MenSunglasses" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProductList" representedClassName="ProductList" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryId" optional="YES" attributeType="String"/>
+        <attribute name="catName" optional="YES" attributeType="String"/>
+        <attribute name="genderID" optional="YES" attributeType="String"/>
+        <attribute name="linkCatIds" optional="YES" attributeType="String"/>
+        <attribute name="linkType" optional="YES" attributeType="String"/>
+        <attribute name="parentCatId" optional="YES" attributeType="String"/>
+        <attribute name="parentCatName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Recentitemsearch" representedClassName="Recentitemsearch" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryname" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="searchtext" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RecentSearch" representedClassName="RecentSearch" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SortBy" representedClassName="SortBy" syncable="YES" codeGenerationType="class">
+        <attribute name="label" optional="YES" attributeType="String"/>
+        <attribute name="sort_order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TrandingNow" representedClassName="TrandingNow" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Women" representedClassName="Women" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenBags" representedClassName="WomenBags" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenBoots" representedClassName="WomenBoots" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenChildData" representedClassName="WomenChildData" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="womensChild" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WomenData" inverseName="womens" inverseEntity="WomenData"/>
+    </entity>
+    <entity name="WomenData" representedClassName="WomenData" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="womens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WomenChildData" inverseName="womensChild" inverseEntity="WomenChildData"/>
+    </entity>
+    <entity name="WomenEspadrilles" representedClassName="WomenEspadrilles" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenFlats" representedClassName="WomenFlats" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenFootShoeCare" representedClassName="WomenFootShoeCare" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenHeels" representedClassName="WomenHeels" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenJewellery" representedClassName="WomenJewellery" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenLoafersSlippers" representedClassName="WomenLoafersSlippers" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenMules" representedClassName="WomenMules" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenOtherAccessories" representedClassName="WomenOtherAccessories" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenPuma" representedClassName="WomenPuma" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenSandals" representedClassName="WomenSandals" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenSlidesFlipFlops" representedClassName="WomenSlidesFlipFlops" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenSmallLeatherGoods" representedClassName="WomenSmallLeatherGoods" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenSneakers" representedClassName="WomenSneakers" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WomenSunglasses" representedClassName="WomenSunglasses" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Attributes" positionX="-441" positionY="-612" width="128" height="73"/>
+        <element name="Cart" positionX="-468" positionY="-639" width="128" height="193"/>
+        <element name="Filter" positionX="-432" positionY="-603" width="128" height="88"/>
+        <element name="Kids" positionX="-118.59375" positionY="-383.015625" width="128" height="118"/>
+        <element name="KidsChildData" positionX="-458.45703125" positionY="-290.09375" width="128" height="88"/>
+        <element name="KidsChildrenBaby" positionX="64.2421875" positionY="-262.7109375" width="128" height="88"/>
+        <element name="KidsChildrenBoy" positionX="-276.3125" positionY="-300.63671875" width="128" height="88"/>
+        <element name="KidsChildrenGirl" positionX="56.3515625" positionY="-464.3046875" width="128" height="88"/>
+        <element name="KidsData" positionX="-366.77734375" positionY="-437.53125" width="128" height="88"/>
+        <element name="Men" positionX="128.890625" positionY="-123.0078125" width="128" height="73"/>
+        <element name="MenBags" positionX="23.40625" positionY="-12.55078125" width="128" height="73"/>
+        <element name="MenBoots" positionX="24.72265625" positionY="81.234375" width="128" height="73"/>
+        <element name="MenChildData" positionX="-540.65625" positionY="-637.25" width="128" height="88"/>
+        <element name="MenData" positionX="-555.0625" positionY="-790.78515625" width="128" height="88"/>
+        <element name="MenJewellery" positionX="259.6015625" positionY="359.734375" width="128" height="73"/>
+        <element name="MenLaceUps" positionX="24.14453125" positionY="178.16796875" width="128" height="73"/>
+        <element name="MenLoafersSlippers" positionX="260.0546875" positionY="160.92578125" width="128" height="73"/>
+        <element name="MenOtherAccessories" positionX="249.44921875" positionY="-34.171875" width="128" height="73"/>
+        <element name="MenSlidesFlipFlops" positionX="258.50390625" positionY="68.17578125" width="128" height="73"/>
+        <element name="MenSmallLeatherGoods" positionX="29.10546875" positionY="373.94140625" width="128" height="73"/>
+        <element name="MenSneakers" positionX="23.46875" positionY="267.4140625" width="128" height="73"/>
+        <element name="MenSunglasses" positionX="264.69921875" positionY="264.3359375" width="128" height="73"/>
+        <element name="ProductList" positionX="-450" positionY="-621" width="128" height="148"/>
+        <element name="Recentitemsearch" positionX="-459" positionY="-630" width="128" height="103"/>
+        <element name="RecentSearch" positionX="-623.48828125" positionY="-228.08203125" width="128" height="58"/>
+        <element name="SortBy" positionX="-423" positionY="-594" width="128" height="88"/>
+        <element name="TrandingNow" positionX="-626.5" positionY="-358.6015625" width="128" height="73"/>
+        <element name="Women" positionX="-465.5703125" positionY="-83.828125" width="128" height="73"/>
+        <element name="WomenBags" positionX="-672.4453125" positionY="150.88671875" width="128" height="73"/>
+        <element name="WomenBoots" positionX="-297.15234375" positionY="489.27734375" width="128" height="73"/>
+        <element name="WomenChildData" positionX="-306" positionY="-603" width="128" height="88"/>
+        <element name="WomenData" positionX="-231.47265625" positionY="-742.203125" width="128" height="88"/>
+        <element name="WomenEspadrilles" positionX="-292.453125" positionY="-22.55078125" width="128" height="73"/>
+        <element name="WomenFlats" positionX="-295.76953125" positionY="575.53125" width="128" height="73"/>
+        <element name="WomenFootShoeCare" positionX="-290.046875" positionY="236.27734375" width="128" height="73"/>
+        <element name="WomenHeels" positionX="-289.0234375" positionY="320.03125" width="128" height="73"/>
+        <element name="WomenJewellery" positionX="-665.625" positionY="406.40234375" width="128" height="73"/>
+        <element name="WomenLoafersSlippers" positionX="-294.5" positionY="408.984375" width="128" height="73"/>
+        <element name="WomenMules" positionX="-667.31640625" positionY="323.7578125" width="128" height="73"/>
+        <element name="WomenOtherAccessories" positionX="-295.12890625" positionY="67.62890625" width="128" height="73"/>
+        <element name="WomenPuma" positionX="-675.04296875" positionY="-19.28125" width="128" height="73"/>
+        <element name="WomenSandals" positionX="-673.9765625" positionY="64.77734375" width="128" height="73"/>
+        <element name="WomenSlidesFlipFlops" positionX="-661.44140625" positionY="571.96875" width="128" height="73"/>
+        <element name="WomenSmallLeatherGoods" positionX="-670.3671875" positionY="238.6484375" width="128" height="73"/>
+        <element name="WomenSneakers" positionX="-299.49609375" positionY="156.07421875" width="128" height="73"/>
+        <element name="WomenSunglasses" positionX="-662.74609375" positionY="486.97265625" width="128" height="73"/>
+    </elements>
+</model>

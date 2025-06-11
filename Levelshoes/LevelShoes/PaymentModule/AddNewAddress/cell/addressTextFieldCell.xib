@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="brandon-grotesque-regular.otf">
+            <string>BrandonGrotesque-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addressTextFieldCell" rowHeight="112" id="KGk-i7-Jjw" customClass="addressTextFieldCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="373" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTd-aH-f6J">
+                        <rect key="frame" x="0.0" y="0.0" width="373" height="112"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfT-SG-awR">
+                                <rect key="frame" x="20" y="35" width="333" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Recipient’s Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifg-hH-3vn">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="48"/>
+                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Regular" family="Brandon Grotesque" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="KGk-i7-Jjw" id="nwz-ZN-2yp"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-Kx-CNy">
+                                        <rect key="frame" x="0.0" y="48" width="333" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="0HC-lw-ZZp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="0vG-f1-2xs">
+                                        <rect key="frame" x="305" y="15" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="EyQ-xh-HTa"/>
+                                            <constraint firstAttribute="width" constant="20" id="HRN-33-ilm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJi-j6-lsh">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="48"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5FD-7N-1xi"/>
+                                    <constraint firstItem="gBd-Kx-CNy" firstAttribute="leading" secondItem="TfT-SG-awR" secondAttribute="leading" id="6C0-ay-HHT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ifg-hH-3vn" secondAttribute="trailing" id="9IB-nn-hRY"/>
+                                    <constraint firstItem="0vG-f1-2xs" firstAttribute="centerY" secondItem="TfT-SG-awR" secondAttribute="centerY" id="Bbr-uS-Bvi"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBd-Kx-CNy" secondAttribute="trailing" id="EQR-cR-mc0"/>
+                                    <constraint firstItem="Ifg-hH-3vn" firstAttribute="top" secondItem="TfT-SG-awR" secondAttribute="top" id="GiA-0X-fAQ"/>
+                                    <constraint firstItem="BJi-j6-lsh" firstAttribute="trailing" secondItem="0vG-f1-2xs" secondAttribute="trailing" id="JRj-dg-Jv3"/>
+                                    <constraint firstAttribute="bottom" secondItem="gBd-Kx-CNy" secondAttribute="bottom" constant="1" id="R0P-gH-iLE"/>
+                                    <constraint firstItem="BJi-j6-lsh" firstAttribute="leading" secondItem="Ifg-hH-3vn" secondAttribute="leading" id="Wfo-14-foD"/>
+                                    <constraint firstAttribute="trailing" secondItem="0vG-f1-2xs" secondAttribute="trailing" constant="8" id="XNE-3I-KyC"/>
+                                    <constraint firstItem="Ifg-hH-3vn" firstAttribute="leading" secondItem="TfT-SG-awR" secondAttribute="leading" id="duz-Pr-9VX"/>
+                                    <constraint firstItem="BJi-j6-lsh" firstAttribute="top" secondItem="Ifg-hH-3vn" secondAttribute="top" id="eRf-HA-Ha5"/>
+                                    <constraint firstItem="BJi-j6-lsh" firstAttribute="bottom" secondItem="Ifg-hH-3vn" secondAttribute="bottom" id="ia3-Zj-da7"/>
+                                    <constraint firstItem="gBd-Kx-CNy" firstAttribute="top" secondItem="Ifg-hH-3vn" secondAttribute="bottom" id="mGa-u0-nF2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TfT-SG-awR" firstAttribute="top" secondItem="BTd-aH-f6J" secondAttribute="top" constant="35" id="Bqa-ej-aXc"/>
+                            <constraint firstItem="TfT-SG-awR" firstAttribute="leading" secondItem="BTd-aH-f6J" secondAttribute="leading" constant="20" id="CzF-bE-WFQ"/>
+                            <constraint firstAttribute="bottom" secondItem="TfT-SG-awR" secondAttribute="bottom" constant="27" id="XOP-XS-hlo"/>
+                            <constraint firstAttribute="trailing" secondItem="TfT-SG-awR" secondAttribute="trailing" constant="20" id="eNA-1P-GZ8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BTd-aH-f6J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1pF-Sp-rHe"/>
+                    <constraint firstAttribute="bottom" secondItem="BTd-aH-f6J" secondAttribute="bottom" id="FAE-Zf-5U6"/>
+                    <constraint firstItem="BTd-aH-f6J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hL9-EI-ePR"/>
+                    <constraint firstAttribute="trailing" secondItem="BTd-aH-f6J" secondAttribute="trailing" id="teZ-vK-L7A"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressTF" destination="Ifg-hH-3vn" id="5t1-j8-Hc9"/>
+                <outlet property="dropDownBtnOutlet" destination="BJi-j6-lsh" id="mQG-37-qRu"/>
+                <outlet property="dropDownIcon" destination="0vG-f1-2xs" id="R57-LF-YA5"/>
+            </connections>
+            <point key="canvasLocation" x="176.08695652173915" y="103.125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_dropdown" width="14" height="8"/>
+    </resources>
+</document>

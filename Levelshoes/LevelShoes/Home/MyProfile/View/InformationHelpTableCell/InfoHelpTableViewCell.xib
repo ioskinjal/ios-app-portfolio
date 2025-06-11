@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="brandon-grotesque-medium.otf">
+            <string>BrandonGrotesque-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InfoHelpTableViewCell" id="KGk-i7-Jjw" customClass="InfoHelpTableViewCell" customModule="LevelShoes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information &amp; Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72l-mf-aq8">
+                        <rect key="frame" x="20" y="60" width="154.5" height="27"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="QQ1-R5-uiz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBY-1B-Ue5">
+                        <rect key="frame" x="20" y="117" width="335" height="373"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="co9-l6-W7K">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="373"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KGk-i7-Jjw" id="LK2-Uo-tFI"/>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="Xww-Zn-Eca"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="373" id="6o5-hy-FU8"/>
+                            <constraint firstItem="co9-l6-W7K" firstAttribute="top" secondItem="uBY-1B-Ue5" secondAttribute="top" id="Jsq-ID-8Rh"/>
+                            <constraint firstAttribute="trailing" secondItem="co9-l6-W7K" secondAttribute="trailing" id="TBf-cA-sRO"/>
+                            <constraint firstAttribute="bottom" secondItem="co9-l6-W7K" secondAttribute="bottom" id="jqO-gi-HnU"/>
+                            <constraint firstItem="co9-l6-W7K" firstAttribute="leading" secondItem="uBY-1B-Ue5" secondAttribute="leading" id="uVG-p1-uX9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="72l-mf-aq8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="1z1-6h-UEI"/>
+                    <constraint firstAttribute="bottom" secondItem="uBY-1B-Ue5" secondAttribute="bottom" constant="20" id="Hdm-SV-dUf"/>
+                    <constraint firstItem="uBY-1B-Ue5" firstAttribute="top" secondItem="72l-mf-aq8" secondAttribute="bottom" constant="30" id="PL8-rm-VCp"/>
+                    <constraint firstAttribute="trailing" secondItem="uBY-1B-Ue5" secondAttribute="trailing" constant="20" id="Q9m-Ha-9EL"/>
+                    <constraint firstItem="72l-mf-aq8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cs0-MA-Uge"/>
+                    <constraint firstItem="uBY-1B-Ue5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nAW-PK-xes"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="infoHelpTableView" destination="co9-l6-W7K" id="cZg-C4-UKH"/>
+                <outlet property="lblInfoHeader" destination="72l-mf-aq8" id="LMw-Og-xcG"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="81.696428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

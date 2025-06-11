@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BrandonGrotesque-Light.otf">
+            <string>BrandonGrotesque-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Size GuideVC-->
+        <scene sceneID="o4n-8h-jsd">
+            <objects>
+                <viewController storyboardIdentifier="sizeguide" id="b2G-YP-XzM" customClass="sizeGuideVC" customModule="LevelShoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8cc-iv-1aH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="54" estimatedRowHeight="-1" sectionHeaderHeight="162" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tPI-Gs-bHi">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SizeGuideCell" rowHeight="54" id="OiO-RS-SEy" customClass="SizeGuideCell" customModule="LevelShoes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OiO-RS-SEy" id="lEy-jS-tBj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Kys-UE-3Ia">
+                                                    <rect key="frame" x="35" y="15" width="344" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-jB-tfZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="81.5" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mar-gT-zus">
+                                                            <rect key="frame" x="131.5" y="0.0" width="81" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3e-SG-5x0">
+                                                            <rect key="frame" x="262.5" y="0.0" width="81.5" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="0cU-5y-tle"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Kys-UE-3Ia" secondAttribute="trailing" constant="35" id="GTd-6S-91F"/>
+                                                <constraint firstItem="Kys-UE-3Ia" firstAttribute="centerY" secondItem="lEy-jS-tBj" secondAttribute="centerY" id="RTr-4P-AEI"/>
+                                                <constraint firstItem="Kys-UE-3Ia" firstAttribute="leading" secondItem="lEy-jS-tBj" secondAttribute="leading" constant="35" id="RYR-cN-hYg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblEUsize" destination="cJP-jB-tfZ" id="k1t-hP-Wmf"/>
+                                            <outlet property="lblUKsize" destination="Mar-gT-zus" id="gbn-md-tf0"/>
+                                            <outlet property="lblUSsize" destination="r3e-SG-5x0" id="PXN-QA-DJT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="babySizeCell" rowHeight="54" id="xby-CD-AZq" customClass="babySizeCell" customModule="LevelShoes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="109.5" width="414" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xby-CD-AZq" id="7bI-zM-E6W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eog-Il-v6Y">
+                                                    <rect key="frame" x="30" y="15" width="354" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 - 1 Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-Bo-UQJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="76.5" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22M-1V-yc0">
+                                                            <rect key="frame" x="129.5" y="0.0" width="21.5" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-Dw-4HI">
+                                                            <rect key="frame" x="231.5" y="0.0" width="21" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m29-lV-qy8">
+                                                            <rect key="frame" x="333.5" y="0.0" width="20.5" height="24"/>
+                                                            <fontDescription key="fontDescription" name="BrandonGrotesque-Light" family="Brandon Grotesque" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="4tV-Bo-4u5"/>
+                                                        <constraint firstAttribute="height" constant="24" id="fcs-cq-uOs"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eog-Il-v6Y" secondAttribute="trailing" constant="30" id="5Vv-NJ-dEd"/>
+                                                <constraint firstItem="eog-Il-v6Y" firstAttribute="top" secondItem="7bI-zM-E6W" secondAttribute="top" constant="15" id="O2a-VR-cBo"/>
+                                                <constraint firstItem="eog-Il-v6Y" firstAttribute="leading" secondItem="7bI-zM-E6W" secondAttribute="leading" constant="30" id="vSN-mK-9kw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblAge" destination="Mdt-Bo-UQJ" id="PXd-Eb-67y"/>
+                                            <outlet property="lblEUsize" destination="22M-1V-yc0" id="je0-nK-fd5"/>
+                                            <outlet property="lblUKsize" destination="6vh-Dw-4HI" id="h8V-kc-nPF"/>
+                                            <outlet property="lblUSsize" destination="m29-lV-qy8" id="CRN-h8-Dcg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="b2G-YP-XzM" id="gfW-MX-dKF"/>
+                                    <outlet property="delegate" destination="b2G-YP-XzM" id="dCW-rl-QVo"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYe-78-SxT" customClass="headerView" customModule="LevelShoes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ICa-es-Zdu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="opTitle" value="SIZE GUIDE"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tPI-Gs-bHi" firstAttribute="top" secondItem="PYe-78-SxT" secondAttribute="bottom" id="2gB-8m-WMs"/>
+                            <constraint firstItem="9oi-Fj-xfh" firstAttribute="trailing" secondItem="tPI-Gs-bHi" secondAttribute="trailing" id="KSA-Zh-RKo"/>
+                            <constraint firstItem="PYe-78-SxT" firstAttribute="top" secondItem="8cc-iv-1aH" secondAttribute="top" id="T2w-dw-2t2"/>
+                            <constraint firstItem="9oi-Fj-xfh" firstAttribute="bottom" secondItem="tPI-Gs-bHi" secondAttribute="bottom" id="dVr-ux-PoN"/>
+                            <constraint firstItem="PYe-78-SxT" firstAttribute="leading" secondItem="9oi-Fj-xfh" secondAttribute="leading" id="hdq-7e-Xln"/>
+                            <constraint firstItem="tPI-Gs-bHi" firstAttribute="leading" secondItem="9oi-Fj-xfh" secondAttribute="leading" id="sA3-t9-TVq"/>
+                            <constraint firstItem="PYe-78-SxT" firstAttribute="trailing" secondItem="9oi-Fj-xfh" secondAttribute="trailing" id="td0-P2-mPI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9oi-Fj-xfh"/>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="PYe-78-SxT" id="4CZ-Ou-XZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiE-N3-lsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="41"/>
+        </scene>
+    </scenes>
+</document>
