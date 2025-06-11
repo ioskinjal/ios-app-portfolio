@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterGenres_Cell" id="BgL-Z1-hMv">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="175" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J7d-hC-RgA">
+                        <rect key="frame" x="10" y="32.5" width="35" height="35"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="FFn-xa-LUh"/>
+                            <constraint firstAttribute="width" constant="35" identifier="imageWidthConstraint" id="o55-y2-awa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQT-hG-eow">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="100"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQe-om-c5h">
+                        <rect key="frame" x="148" y="10" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="rbT-sJ-cPE"/>
+                            <constraint firstAttribute="height" constant="17" id="sCo-9n-OgB"/>
+                        </constraints>
+                        <state key="normal" image="circle_icon"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XQT-hG-eow" secondAttribute="bottom" id="1UD-kz-zcs"/>
+                <constraint firstItem="IQe-om-c5h" firstAttribute="leading" secondItem="XQT-hG-eow" secondAttribute="trailing" constant="-27" id="4yM-My-2sD"/>
+                <constraint firstItem="J7d-hC-RgA" firstAttribute="centerY" secondItem="BgL-Z1-hMv" secondAttribute="centerY" id="CrA-4b-jgo"/>
+                <constraint firstItem="J7d-hC-RgA" firstAttribute="leading" secondItem="BgL-Z1-hMv" secondAttribute="leading" constant="10" id="KhC-DR-sqU"/>
+                <constraint firstAttribute="trailing" secondItem="IQe-om-c5h" secondAttribute="trailing" constant="10" id="NxX-nv-GIB"/>
+                <constraint firstItem="XQT-hG-eow" firstAttribute="centerY" secondItem="BgL-Z1-hMv" secondAttribute="centerY" id="crp-d2-Da3"/>
+                <constraint firstItem="XQT-hG-eow" firstAttribute="top" secondItem="BgL-Z1-hMv" secondAttribute="top" id="i9L-2W-InR"/>
+                <constraint firstItem="XQT-hG-eow" firstAttribute="leading" secondItem="J7d-hC-RgA" secondAttribute="trailing" constant="-45" id="iVF-GY-0Ja"/>
+                <constraint firstItem="IQe-om-c5h" firstAttribute="top" secondItem="BgL-Z1-hMv" secondAttribute="top" constant="10" id="pBZ-Mg-6FL"/>
+                <constraint firstItem="XQT-hG-eow" firstAttribute="height" secondItem="BgL-Z1-hMv" secondAttribute="height" id="pfp-1G-Wt9"/>
+            </constraints>
+            <size key="customSize" width="248" height="228"/>
+            <point key="canvasLocation" x="-401" y="-428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circle_icon" width="40" height="40"/>
+    </resources>
+</document>

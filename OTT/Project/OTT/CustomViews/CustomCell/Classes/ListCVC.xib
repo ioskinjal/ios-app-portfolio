@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCVC" id="gTV-IL-0wX" customClass="ListCVC" customModule="ReelDrama" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="61"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="61"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vwy-Ye-O3f">
+                        <rect key="frame" x="0.0" y="0.0" width="109" height="61"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="109" id="ovY-w5-KOf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22j-td-01j">
+                        <rect key="frame" x="118" y="10" width="215" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="WGV-mY-skE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-ug-dSi">
+                        <rect key="frame" x="118" y="34" width="215" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="2Rn-pL-7GS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Vwy-Ye-O3f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="99x-xg-LXZ"/>
+                <constraint firstItem="Vwy-Ye-O3f" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HSV-cK-wT6"/>
+                <constraint firstAttribute="bottom" secondItem="Vwy-Ye-O3f" secondAttribute="bottom" id="YGM-L6-AwT"/>
+                <constraint firstItem="eFF-ug-dSi" firstAttribute="leading" secondItem="Vwy-Ye-O3f" secondAttribute="trailing" constant="9" id="cVw-74-Qzu"/>
+                <constraint firstItem="eFF-ug-dSi" firstAttribute="top" secondItem="22j-td-01j" secondAttribute="bottom" constant="5" id="gQ3-Z9-74y"/>
+                <constraint firstItem="22j-td-01j" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="lWn-ET-wx4"/>
+                <constraint firstItem="22j-td-01j" firstAttribute="leading" secondItem="Vwy-Ye-O3f" secondAttribute="trailing" constant="9" id="pAX-5y-r05"/>
+                <constraint firstAttribute="trailing" secondItem="22j-td-01j" secondAttribute="trailing" id="uK5-Y2-k3w"/>
+                <constraint firstAttribute="trailing" secondItem="eFF-ug-dSi" secondAttribute="trailing" id="vQu-6J-hwx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imageView" destination="Vwy-Ye-O3f" id="6rh-ve-uKT"/>
+                <outlet property="subTitle" destination="eFF-ug-dSi" id="Moy-eF-gfB"/>
+                <outlet property="title" destination="22j-td-01j" id="nvV-Jh-94o"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="139"/>
+        </collectionViewCell>
+    </objects>
+</document>

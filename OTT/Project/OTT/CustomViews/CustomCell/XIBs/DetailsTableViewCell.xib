@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Light.ttf">
+            <string>SFUIText-Light</string>
+        </array>
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="155" id="KGk-i7-Jjw" customClass="DetailsTableViewCell" customModule="Viusasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GyX-Vj-DpY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sBQ-CJ-Y10">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="PPb-Gp-6mU"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="9UT-nq-VyD"/>
+                        </connections>
+                    </collectionView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-50-FX4">
+                        <rect key="frame" x="140" y="5" width="320" height="140"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sad-face" translatesAutoresizingMaskIntoConstraints="NO" id="QM6-Oq-FX4">
+                                <rect key="frame" x="130" y="8" width="63" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OOPS! No Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfn-hE-ZW1">
+                                <rect key="frame" x="43" y="88" width="234" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                                <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please try again !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zt-Iu-eAT">
+                                <rect key="frame" x="70" y="121" width="180" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="10"/>
+                                <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="0Wm-ip-aFH"/>
+                            <constraint firstAttribute="width" constant="320" id="Jwd-qL-1c3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="GyX-Vj-DpY" secondAttribute="bottom" id="24M-4w-OOd"/>
+                    <constraint firstItem="6Uh-50-FX4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2uZ-VP-J7m"/>
+                    <constraint firstItem="GyX-Vj-DpY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GVC-fW-twu"/>
+                    <constraint firstAttribute="bottom" secondItem="GyX-Vj-DpY" secondAttribute="bottom" id="Hjk-sb-OZX"/>
+                    <constraint firstItem="6Uh-50-FX4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="a1l-hO-OdG"/>
+                    <constraint firstItem="GyX-Vj-DpY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lZC-0R-lCa"/>
+                    <constraint firstItem="GyX-Vj-DpY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pMy-ww-Py2"/>
+                    <constraint firstAttribute="trailing" secondItem="GyX-Vj-DpY" secondAttribute="trailing" id="se3-Ah-33K"/>
+                    <constraint firstItem="GyX-Vj-DpY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vSq-A1-4HC"/>
+                    <constraint firstAttribute="trailing" secondItem="GyX-Vj-DpY" secondAttribute="trailing" id="xRt-Cf-Dcb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="errorView" destination="6Uh-50-FX4" id="Fq2-TJ-WrI"/>
+                <outlet property="recommendationCV" destination="GyX-Vj-DpY" id="1EJ-8a-xyD"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="31"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sad-face" width="62.5" height="62.5"/>
+    </resources>
+</document>

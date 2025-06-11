@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Bold.ttf">
+            <string>SFUIText-Bold</string>
+        </array>
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TVGuideDescPopUpViewController" customModule="Viusasa" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="h6c-Yj-ddL" id="1sp-9A-hma"/>
+                <outlet property="selectedProgramDesc" destination="nJS-VC-CAr" id="9mm-5i-NPS"/>
+                <outlet property="selectedProgramLbl" destination="EPl-eG-JQp" id="kuD-Ju-auo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="watchNowBtn" destination="T9V-ub-TeO" id="2G5-Yn-OM5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="301" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPl-eG-JQp">
+                    <rect key="frame" x="10" y="6" width="281" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="S9x-T2-dRf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="16"/>
+                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJS-VC-CAr">
+                    <rect key="frame" x="10" y="30" width="281" height="111"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="111" id="0hx-ls-SCt"/>
+                    </constraints>
+                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6c-Yj-ddL">
+                    <rect key="frame" x="0.0" y="155" width="152" height="45"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="epf-oN-87E"/>
+                        <constraint firstAttribute="width" constant="152" id="gg7-gd-fcV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" red="0.51372549019607838" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelBtnClicked:" destination="-1" eventType="touchUpInside" id="Rm3-z6-fFa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9V-ub-TeO">
+                    <rect key="frame" x="152" y="155" width="149" height="45"/>
+                    <color key="backgroundColor" red="0.019607843137254902" green="0.6705882352941176" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="YND-Wa-0pu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                    <state key="normal" title="Watch Now">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="watchNowBtnClicked:" destination="-1" eventType="touchUpInside" id="Wia-GX-iG8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="h6c-Yj-ddL" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="3rT-sX-uhS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EPl-eG-JQp" secondAttribute="trailing" constant="10" id="GR1-cg-NJC"/>
+                <constraint firstItem="T9V-ub-TeO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LNr-xi-bw4"/>
+                <constraint firstItem="nJS-VC-CAr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="RU7-NH-YEh"/>
+                <constraint firstItem="nJS-VC-CAr" firstAttribute="top" secondItem="EPl-eG-JQp" secondAttribute="bottom" constant="5" id="WnR-Xu-nT8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nJS-VC-CAr" secondAttribute="trailing" constant="10" id="fyl-RW-Y8b"/>
+                <constraint firstItem="h6c-Yj-ddL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="izg-fy-5rw"/>
+                <constraint firstItem="EPl-eG-JQp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="rET-1w-6lQ"/>
+                <constraint firstItem="T9V-ub-TeO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tF8-xE-tN8"/>
+                <constraint firstItem="EPl-eG-JQp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="6" id="uaC-Y0-Q4o"/>
+                <constraint firstItem="T9V-ub-TeO" firstAttribute="leading" secondItem="h6c-Yj-ddL" secondAttribute="trailing" id="y4n-My-Xdx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="32.5" y="109"/>
+        </view>
+    </objects>
+</document>

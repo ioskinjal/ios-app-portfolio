@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Semibold.ttf">
+            <string>SFUIText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SquarePosterCell" id="Dt2-jc-Iom" customClass="SquarePosterCell" customModule="Viusasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MaV-GN-8ce">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="9Al-2V-Ggv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoU-J6-QNr">
+                        <rect key="frame" x="0.0" y="100" width="100" height="30"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="10"/>
+                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="JoU-J6-QNr" firstAttribute="top" secondItem="MaV-GN-8ce" secondAttribute="bottom" id="1eB-Wj-eX2"/>
+                <constraint firstItem="MaV-GN-8ce" firstAttribute="top" secondItem="Dt2-jc-Iom" secondAttribute="top" id="1ft-of-zFE"/>
+                <constraint firstItem="JoU-J6-QNr" firstAttribute="leading" secondItem="Dt2-jc-Iom" secondAttribute="leading" id="YSq-4e-a6r"/>
+                <constraint firstAttribute="bottom" secondItem="JoU-J6-QNr" secondAttribute="bottom" id="ceH-Ss-pjH"/>
+                <constraint firstAttribute="trailing" secondItem="JoU-J6-QNr" secondAttribute="trailing" id="fCz-Y4-yWH"/>
+                <constraint firstAttribute="trailing" secondItem="MaV-GN-8ce" secondAttribute="trailing" id="iQR-kf-zVa"/>
+                <constraint firstItem="MaV-GN-8ce" firstAttribute="leading" secondItem="Dt2-jc-Iom" secondAttribute="leading" id="lgS-jk-apP"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="MaV-GN-8ce" id="Rss-Ux-7Jm"/>
+                <outlet property="imageViewHeightConstraint" destination="9Al-2V-Ggv" id="lRK-RC-BVT"/>
+                <outlet property="nameLbl" destination="JoU-J6-QNr" id="dCj-Sk-OEy"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

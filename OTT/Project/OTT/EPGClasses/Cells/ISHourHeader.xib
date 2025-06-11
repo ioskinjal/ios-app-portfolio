@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="ISHourHeader">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqD-jJ-wHO">
+                    <rect key="frame" x="6" y="0.0" width="77" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h64-db-acr">
+                    <rect key="frame" x="89" y="0.0" width="1" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="hx4-9v-As6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h64-db-acr" secondAttribute="bottom" id="1KO-Gz-jXX"/>
+                <constraint firstAttribute="trailing" secondItem="vqD-jJ-wHO" secondAttribute="trailing" constant="7" id="DIK-Ob-qeW"/>
+                <constraint firstItem="vqD-jJ-wHO" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="JV0-xM-BSE"/>
+                <constraint firstItem="h64-db-acr" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="U7F-15-hwX"/>
+                <constraint firstAttribute="trailing" secondItem="h64-db-acr" secondAttribute="trailing" id="YQb-YK-f9K"/>
+                <constraint firstAttribute="bottom" secondItem="vqD-jJ-wHO" secondAttribute="bottom" id="htv-az-e5C"/>
+                <constraint firstItem="vqD-jJ-wHO" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="6" id="q5d-qQ-qrw"/>
+            </constraints>
+            <connections>
+                <outlet property="timeLabel" destination="vqD-jJ-wHO" id="Nr8-RI-Ofo"/>
+            </connections>
+            <point key="canvasLocation" x="287" y="182"/>
+        </collectionReusableView>
+    </objects>
+</document>

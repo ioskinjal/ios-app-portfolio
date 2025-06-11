@@ -1,0 +1,435 @@
+{
+    "exp": "30", //expiry
+    "config": {
+        "te": [
+            0
+        ], // custom metabase targeting enabled
+        "ae": 1, // allow extraction
+        "csl": "{“csl”:1, “sev”: “1”}", // CSL
+        "ls": ""
+    },
+    "asi": {
+        "ff12das3": {
+            "config": {
+                "at": "4", // ad type
+                "te": [
+                    0
+                ],// custom metabase targeting enabled
+                "ma": 1, // multiads enabled or not
+                "vr": "157", // version
+                "adseq": "", // ad sequencing
+                "rwin": 123431, //reward in
+                "adrt": 20,  // ad request timeout
+                "mdt": 20,  // media timeout
+                "plr": 0, //player
+                "nwhit": 1, //netwrk hit
+                "blk": 0  //block
+                "rwin","adseq","adrt","mdt"
+            },
+            "pacing": { // throttle
+                "dom": [
+                    "ajdivotdelbloab24.jio.com"
+                ],// domain
+                "itr": [{ // iteration
+                        "wt": [
+                            60,
+                            40,
+                            0
+                        ] // weight
+                    },
+                    {
+                        "wt": [
+                            50,
+                            30,
+                            20
+                        ]
+                    }
+                ]
+            },
+            "bkp": { // backup
+                "cmps": {
+                    "md": { // mediation
+                        "pgm": 40,
+                        "dd": 60
+                    },
+                    "dd": { // direct deals
+                        "79376": {
+                            "config": {
+                                "mid": ""
+                            },
+                            "wt": 1,
+                            "ads": {
+                                "482506": {
+                                    "config": {
+                                        "fmt": "1", // format 0:native,1:video,2:display
+                                        "ao": "portrait",  // ad orientation
+                                        "im": "merImpr(mAd87a9fb3f,0);", // impression
+                                        "skd": 0, //skip duration
+                                        "adr": 30, //adrefresh
+                                        "mdc": 0, //media caching
+                                        "mim": 2, //mainimage
+                                        "oia": 0, //open in app
+                                        "strm": 1, //streaming
+                                        "cid": "4988_0_87a9fb3f_[ccb]" //click id
+                                        
+                                        
+                                    },
+                                    "ad": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"4.2\" xmlns=\"http://www.iab.com/VAST\">\n  <Ad id=\"20004\" >\n    <InLine>\n      <AdSystem version=\"1\">iabtechlab</AdSystem>\n      <Error><![CDATA[https://example.com/error]]></Error>\n      <Impression id=\"Impression-ID\"><![CDATA[https://example.com/track/impression]]></Impression>\n      <Pricing model=\"cpm\" currency=\"USD\">\n        <![CDATA[ 25.00 ]]>\n      </Pricing>\n      <AdServingId>a532d16d-4d7f-4440-bd29-2ec0e693fc80</AdServingId>\n      <AdTitle>\n        <![CDATA[VAST 4.0 Pilot - Scenario 5]]>\n      </AdTitle>\n      <Creatives>\n        <Creative id=\"5480\" sequence=\"1\" adId=\"2447226\">\n          <CompanionAds>\n            <Companion id=\"1232\" width=\"300\" height=\"250\"  adSlotId=\"3214\" pxratio=\"1400\">\n              <StaticResource creativeType=\"image/png\">\n                <![CDATA[https://www.iab.com/wp-content/uploads/2014/09/iab-tech-lab-6-644x290.png]]>\n              </StaticResource>\n              <CompanionClickThrough>\n                <![CDATA[https://iabtechlab.com]]>\n              </CompanionClickThrough>\n              <AdParameters><![CDATA[{\"show_after_vs\":\"0\",\"show_for_after_ve\":\"0\"}]]></AdParameters>\n            </Companion>\n            \n          </CompanionAds>\n          <UniversalAdId idRegistry=\"Ad-ID\" >8465</UniversalAdId>\n        </Creative>\n        <Creative id=\"5481\" sequence=\"1\" adId=\"2447226\">\n          <Linear>\n            <TrackingEvents>\n              <Tracking event=\"start\" ><![CDATA[https://example.com/tracking/start]]></Tracking>\n              <Tracking event=\"progress\" offset=\"00:00:10\"><![CDATA[http://example.com/tracking/progress-10]]></Tracking>\n              <Tracking event=\"firstQuartile\"><![CDATA[https://example.com/tracking/firstQuartile]]></Tracking>\n              <Tracking event=\"midpoint\"><![CDATA[https://example.com/tracking/midpoint]]></Tracking>\n              <Tracking event=\"thirdQuartile\"><![CDATA[https://example.com/tracking/thirdQuartile]]></Tracking>\n              <Tracking event=\"complete\"><![CDATA[https://example.com/tracking/complete]]></Tracking>\n            </TrackingEvents>\n            <Duration>00:00:16</Duration>\n            <MediaFiles>\n              <MediaFile id=\"5241\" delivery=\"progressive\" type=\"video/mp4\" bitrate=\"2000\" width=\"1280\" height=\"720\" minBitrate=\"1500\" maxBitrate=\"2500\" scalable=\"1\" maintainAspectRatio=\"1\" codec=\"H.264\">\n                <![CDATA[https://iab-publicfiles.s3.amazonaws.com/vast/VAST-4.0-Short-Intro.mp4]]>\n              </MediaFile>\n              <MediaFile id=\"5244\" delivery=\"progressive\" type=\"video/mp4\" bitrate=\"1000\" width=\"854\" height=\"480\" minBitrate=\"700\" maxBitrate=\"1500\" scalable=\"1\" maintainAspectRatio=\"1\" codec=\"H.264\">\n                <![CDATA[https://iab-publicfiles.s3.amazonaws.com/vast/VAST-4.0-Short-Intro-mid-resolution.mp4]]>\n              </MediaFile>\n              <MediaFile id=\"5246\" delivery=\"progressive\" type=\"video/mp4\" bitrate=\"600\" width=\"640\" height=\"360\" minBitrate=\"500\" maxBitrate=\"700\" scalable=\"1\" maintainAspectRatio=\"1\" codec=\"H.264\">\n                <![CDATA[https://iab-publicfiles.s3.amazonaws.com/vast/VAST-4.0-Short-Intro-low-resolution.mp4]]>\n              </MediaFile>\n            </MediaFiles>\n            <VideoClicks>\n              <ClickThrough id=\"blog\">\n                <![CDATA[https://iabtechlab.com]]>\n              </ClickThrough>\n            </VideoClicks>\n          </Linear>\n          <UniversalAdId idRegistry=\"Ad-ID\" >8466</UniversalAdId>\n        </Creative>\n      </Creatives>\n      <Description>\n        <![CDATA[This is sample companion ad tag with Linear ad tag. This tag while showing video ad on the player, will show a companion ad beside the player where it can be fitted. At most 3 companion ads can be placed. Modify accordingly to see your own content. ]]>\n      </Description>\n    </InLine>\n  </Ad>\n  \n  <Ad id=\"20005\" >\n    <InLine>\n      <AdSystem version=\"1\">iabtechlab</AdSystem>\n      <Error><![CDATA[https://example.com/error]]></Error>\n      <Impression id=\"Impression-ID\"><![CDATA[https://example.com/track/impression]]></Impression>\n      <Pricing model=\"cpm\" currency=\"USD\">\n        <![CDATA[ 25.00 ]]>\n      </Pricing>\n      <AdServingId>a532d16d-4d7f-4440-bd29-2ec0e693fc80</AdServingId>\n      <AdTitle>\n        <![CDATA[VAST 4.0 Pilot - Scenario 5]]>\n      </AdTitle>\n      <Creatives>\n        <Creative id=\"5480\" sequence=\"1\" adId=\"2447226\">\n          <CompanionAds>\n            <Companion id=\"1232\" width=\"300\" height=\"250\"  adSlotId=\"3215\" pxratio=\"1400\">\n              <StaticResource creativeType=\"image/png\">\n                <![CDATA[https://www.iab.com/wp-content/uploads/2014/09/iab-tech-lab-6-644x290.png]]>\n              </StaticResource>\n              <CompanionClickThrough>\n                <![CDATA[https://iabtechlab.com]]>\n              </CompanionClickThrough>\n              <AdParameters><![CDATA[{\"show_after_vs\":\"0\",\"show_for_after_ve\":\"0\"}]]></AdParameters>\n            </Companion>\n            \n          </CompanionAds>\n          <UniversalAdId idRegistry=\"Ad-ID\" >8465</UniversalAdId>\n        </Creative>\n        <Creative id=\"5481\" sequence=\"1\" adId=\"2447226\">\n          <Linear>\n            <TrackingEvents>\n              <Tracking event=\"start\" ><![CDATA[https://example.com/tracking/start]]></Tracking>\n              <Tracking event=\"progress\" offset=\"00:00:10\"><![CDATA[http://example.com/tracking/progress-10]]></Tracking>\n              <Tracking event=\"firstQuartile\"><![CDATA[https://example.com/tracking/firstQuartile]]></Tracking>\n              <Tracking event=\"midpoint\"><![CDATA[https://example.com/tracking/midpoint]]></Tracking>\n              <Tracking event=\"thirdQuartile\"><![CDATA[https://example.com/tracking/thirdQuartile]]></Tracking>\n              <Tracking event=\"complete\"><![CDATA[https://example.com/tracking/complete]]></Tracking>\n            </TrackingEvents>\n            <Duration>00:00:16</Duration>\n            <MediaFiles>\n              <MediaFile id=\"5241\" delivery=\"progressive\" type=\"video/mp4\" bitrate=\"2000\" width=\"1280\" height=\"720\" minBitrate=\"1500\" maxBitrate=\"2500\" scalable=\"1\" maintainAspectRatio=\"1\" codec=\"H.264\">\n                <![CDATA[https://iab-publicfiles.s3.amazonaws.com/vast/VAST-4.0-Short-Intro.mp4]]>\n              </MediaFile>\n              <MediaFile id=\"5244\" delivery=\"progressive\" type=\"video/mp4\" bitrate=\"1000\" width=\"854\" height=\"480\" minBitrate=\"700\" maxBitrate=\"1500\" scalable=\"1\" maintainAspectRatio=\"1\" codec=\"H.264\">\n                <![CDATA[https://iab-publicfiles.s3.amazonaws.com/vast/VAST-4.0-Short-Intro-mid-resolution.mp4]]>\n              </MediaFile>\n              <MediaFile id=\"5246\" delivery=\"progressive\" type=\"video/mp4\" bitrate=\"600\" width=\"640\" height=\"360\" minBitrate=\"500\" maxBitrate=\"700\" scalable=\"1\" maintainAspectRatio=\"1\" codec=\"H.264\">\n                <![CDATA[https://iab-publicfiles.s3.amazonaws.com/vast/VAST-4.0-Short-Intro-low-resolution.mp4]]>\n              </MediaFile>\n            </MediaFiles>\n            <VideoClicks>\n              <ClickThrough id=\"blog\">\n                <![CDATA[https://iabtechlab.com]]>\n              </ClickThrough>\n            </VideoClicks>\n          </Linear>\n          <UniversalAdId idRegistry=\"Ad-ID\" >8466</UniversalAdId>\n        </Creative>\n      </Creatives>\n      <Description>\n        <![CDATA[This is sample companion ad tag with Linear ad tag. This tag while showing video ad on the player, will show a companion ad beside the player where it can be fitted. At most 3 companion ads can be placed. Modify accordingly to see your own content. ]]>\n      </Description>\n    </InLine>\n  </Ad>\n</VAST>\n",
+                                    "mod": {
+                                        "trgt": {
+                                            "cde": "checkCKVT('md_channel', 'sony', '=~')"
+                                        },
+                                        "surl": [
+                                            "https://jioads.akamaized.net/ad_instructions/cap_4988_482506.json?ccb=[ccb]"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "prm": {
+                        "79370": {
+                            "config": {
+                                "fcr": { // frequency capping
+                                    "i": { // impression
+                                        "m": "1", //min
+                                        "h": "2", // hour
+                                        "d": "1", // day
+                                        "l": "-1" // lifetime
+                                    },
+                                    "c": {
+                                        "m": "2",
+                                        "h": "1",
+                                        "d": "5",
+                                        "l": "-1"
+                                    },
+                                    "lmt": {
+                                        "i": {
+                                            "m": "3",
+                                            "h": "6",
+                                            "d": "5",
+                                            "l": "-1"
+                                        },
+                                        "c": {
+                                            "m": "2",
+                                            "h": "1",
+                                            "d": "1",
+                                            "l": "-1"
+                                        }
+                                    }
+                                },
+                                "mid": ""
+                            },
+                            "wt": 1,
+                            "ads": {
+                                "482507": {
+                                    "config": {
+                                        "fmt": "1",
+                                        "ao": "portrait",
+                                        "im": "merImpr(mAd87a9fb3f,0);",
+                                        "skd": 0,
+                                        "adr": 30,
+                                        "mdc": 0,
+                                        "mim": 2,
+                                        "oia": 0,
+                                        "strm": 1,
+                                        "cid": "4988_0_87a9fb3f_[ccb]"
+                                    },
+                                    "ad": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"3.0\"><Ad id=\"225\"><InLine><AdSystem><![CDATA[JioAds]]></AdSystem><AdTitle /><Description><![CDATA[Inline Video Ad]]></Description><Error><![CDATA[https://mercury-im.jio.com/delivery/er.php?b=342&c=522&cb=d2cb52b907&asi=225&ec=[ERRORCODE]&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Error><Impression id=\"primaryAdServer\"><![CDATA[https://mercury-im.jio.com/delivery/lg.php?b=342&c=522&asi=225&oxfb=1&cb=d2cb52b907&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Impression><Creatives><Creative sequence=\"1\" id=\"342\"><Linear skipoffset=\"0%\"><AdID><![CDATA[342]]></AdID><Duration>00:00:20</Duration><TrackingEvents><Tracking event=\"start\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=start&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"midpoint\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=midpoint&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"firstQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=firstquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"thirdQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=thirdquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"complete\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=complete&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"mute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=mute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"pause\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=pause&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"replay\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=replay&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"fullscreen\">2021-02-04 10:20:37.725 6059-6059/com.jio.test D/merc:  <![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=fullscreen&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"stop\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=stop&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"unmute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=unmute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"resume\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=resume&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking></TrackingEvents><VideoClicks><ClickTracking id=\"JioAds\"><![CDATA[https://mercury-ck.jio.com/delivery/ck.php?oaparams=2__b=342__c=522__asi=225__cb=d2cb52b907__vr=A-AN-1.0.6__os=1__ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89__uid=9000196416__mn=Redmi+5A__av=1.0__br=Xiaomi__dt=1__ccb=__at=5__a=3__trq=[trq]__bz=[bz]]]></ClickTracking><ClickThrough id=\"JioAds\"><![CDATA[https://play.google.com/store/apps/details?id=com.jio.myjio&hl=en_IN&gl=US]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery=\"progressive\" bitrate=\"145\" width=\"640\" height=\"360\" type=\"video/mp4\"><![CDATA[https://mercury.akamaized.net/v/218791bce52a4dd9b9e2a9368faeee3c_522_0.mp4]]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>",
+                                    "mod": {
+                                        "trgt": {
+                                            "cde": "checkCKVT('ck_channel', 'sony', '=~')"
+                                        },
+                                        "surl": [
+                                            "https://jioads.akamaized.net/ad_instructions/cap_4988_482506.json?ccb=[ccb]"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "abc3245": {
+            "config": {
+                "at": "4",
+                "te": [
+                    0
+                ],
+                "ma": 1,
+                "vr": "157",
+                "adseq": "",
+                "rwin": 123431,
+                "adrt": 20,
+                "mdt": 20,
+                "plr": 0,
+                "nwhit": 1,
+                "blk": 0
+            },
+            "pacing": {
+                "dom": [
+                    "mercury1.jio.com",
+                    "mercury2.jio1.com"
+                ],
+                "itr": [{
+                        "wt": [
+                            0,
+                            40,
+                            60
+                        ]
+                    },
+                    {
+                        "wt": [
+                            50,
+                            10,
+                            30
+                        ]
+                    }
+                ]
+            },
+            "bkp": {
+                "cmps": {
+                    "md": {
+                        "pgm": 40,
+                        "dd": 60
+                    },
+                    "dd": {
+                        "45321": {
+                            "config": {
+                                "mid": ""
+                            },
+                            "wt": 1,
+                            "ads": {
+                                "67567": {
+                                    "config": {
+                                        "fmt": "1",
+                                        "ao": "portrait",
+                                        "im": "merImpr(mAd87a9fb3f,0);",
+                                        "skd": 0,
+                                        "adr": 30,
+                                        "mdc": 0,
+                                        "mim": 2,
+                                        "oia": 0,
+                                        "strm": 1,
+                                        "cid": "4988_0_87a9fb3f_[ccb]"
+                                    },
+                                    "ad": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"3.0\"><Ad id=\"225\"><InLine><AdSystem><![CDATA[JioAds]]></AdSystem><AdTitle /><Description><![CDATA[Inline Video Ad]]></Description><Error><![CDATA[https://mercury-im.jio.com/delivery/er.php?b=342&c=522&cb=d2cb52b907&asi=225&ec=[ERRORCODE]&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Error><Impression id=\"primaryAdServer\"><![CDATA[https://mercury-im.jio.com/delivery/lg.php?b=342&c=522&asi=225&oxfb=1&cb=d2cb52b907&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Impression><Creatives><Creative sequence=\"1\" id=\"342\"><Linear skipoffset=\"0%\"><AdID><![CDATA[342]]></AdID><Duration>00:00:20</Duration><TrackingEvents><Tracking event=\"start\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=start&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"midpoint\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=midpoint&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"firstQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=firstquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"thirdQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=thirdquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"complete\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=complete&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"mute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=mute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"pause\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=pause&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"replay\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=replay&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"fullscreen\">2021-02-04 10:20:37.725 6059-6059/com.jio.test D/merc:  <![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=fullscreen&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"stop\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=stop&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"unmute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=unmute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"resume\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=resume&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking></TrackingEvents><VideoClicks><ClickTracking id=\"JioAds\"><![CDATA[https://mercury-ck.jio.com/delivery/ck.php?oaparams=2__b=342__c=522__asi=225__cb=d2cb52b907__vr=A-AN-1.0.6__os=1__ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89__uid=9000196416__mn=Redmi+5A__av=1.0__br=Xiaomi__dt=1__ccb=__at=5__a=3__trq=[trq]__bz=[bz]]]></ClickTracking><ClickThrough id=\"JioAds\"><![CDATA[https://play.google.com/store/apps/details?id=com.jio.myjio&hl=en_IN&gl=US]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery=\"progressive\" bitrate=\"145\" width=\"640\" height=\"360\" type=\"video/mp4\"><![CDATA[https://mercury.akamaized.net/v/218791bce52a4dd9b9e2a9368faeee3c_522_0.mp4]]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>",
+                                    "mod": {
+                                        "trgt": {
+                                            "cde": "checkCKVT('md_channel', 'sony', '=~')"
+                                        },
+                                        "surl": [
+                                            "https://jioads.akamaized.net/ad_instructions/cap_4988_482506.json?ccb=[ccb]"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "prm": {
+                        "79370": {
+                            "config": {
+                                "fcr": {
+                                    "i": {
+                                        "m": "1",
+                                        "h": "2",
+                                        "d": "1",
+                                        "l": "-1"
+                                    },
+                                    "c": {
+                                        "m": "2",
+                                        "h": "1",
+                                        "d": "5",
+                                        "l": "-1"
+                                    },
+                                    "lmt": {
+                                        "i": {
+                                            "m": "3",
+                                            "h": "6",
+                                            "d": "5",
+                                            "l": "-1"
+                                        },
+                                        "c": {
+                                            "m": "2",
+                                            "h": "1",
+                                            "d": "1",
+                                            "l": "-1"
+                                        }
+                                    }
+                                },
+                                "mid": ""
+                            },
+                            "wt": 1,
+                            "ads": {
+                                "482507": {
+                                    "config": {
+                                        "fmt": "1",
+                                        "ao": "portrait",
+                                        "im": "merImpr(mAd87a9fb3f,0);",
+                                        "skd": 0,
+                                        "adr": 30,
+                                        "mdc": 0,
+                                        "mim": 2,
+                                        "oia": 0,
+                                        "strm": 1,
+                                        "cid": "4988_0_87a9fb3f_[ccb]"
+                                    },
+                                    "ad": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"3.0\"><Ad id=\"225\"><InLine><AdSystem><![CDATA[JioAds]]></AdSystem><AdTitle /><Description><![CDATA[Inline Video Ad]]></Description><Error><![CDATA[https://mercury-im.jio.com/delivery/er.php?b=342&c=522&cb=d2cb52b907&asi=225&ec=[ERRORCODE]&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Error><Impression id=\"primaryAdServer\"><![CDATA[https://mercury-im.jio.com/delivery/lg.php?b=342&c=522&asi=225&oxfb=1&cb=d2cb52b907&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Impression><Creatives><Creative sequence=\"1\" id=\"342\"><Linear skipoffset=\"0%\"><AdID><![CDATA[342]]></AdID><Duration>00:00:20</Duration><TrackingEvents><Tracking event=\"start\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=start&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"midpoint\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=midpoint&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"firstQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=firstquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"thirdQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=thirdquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"complete\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=complete&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"mute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=mute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"pause\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=pause&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"replay\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=replay&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"fullscreen\">2021-02-04 10:20:37.725 6059-6059/com.jio.test D/merc:  <![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=fullscreen&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"stop\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=stop&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"unmute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=unmute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"resume\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=resume&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking></TrackingEvents><VideoClicks><ClickTracking id=\"JioAds\"><![CDATA[https://mercury-ck.jio.com/delivery/ck.php?oaparams=2__b=342__c=522__asi=225__cb=d2cb52b907__vr=A-AN-1.0.6__os=1__ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89__uid=9000196416__mn=Redmi+5A__av=1.0__br=Xiaomi__dt=1__ccb=__at=5__a=3__trq=[trq]__bz=[bz]]]></ClickTracking><ClickThrough id=\"JioAds\"><![CDATA[https://play.google.com/store/apps/details?id=com.jio.myjio&hl=en_IN&gl=US]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery=\"progressive\" bitrate=\"145\" width=\"640\" height=\"360\" type=\"video/mp4\"><![CDATA[https://mercury.akamaized.net/v/218791bce52a4dd9b9e2a9368faeee3c_522_0.mp4]]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>",
+                                    "mod": {
+                                        "trgt": {
+                                            "cde": "checkCKVT('ck_channel', 'sony', '=~')"
+                                        },
+                                        "surl": [
+                                            "https://jioads.akamaized.net/ad_instructions/cap_4988_482506.json?ccb=[ccb]"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "abc1234": {
+            "config": {
+                "at": "4",
+                "te": [
+                    0
+                ],
+                "ma": 1,
+                "vr": "157",
+                "adseq": "",
+                "rwin": 123431,
+                "adrt": 20,
+                "mdt": 20,
+                "plr": 0,
+                "nwhit": 1,
+                "blk": 0
+            },
+            "pacing": {
+                "dom": [
+                    "mercury1.jio.com",
+                    "mercury2.jio1.com"
+                ],
+                "itr": [{
+                        "wt": [
+                            0,
+                            40,
+                            60
+                        ]
+                    },
+                    {
+                        "wt": [
+                            50,
+                            10,
+                            30
+                        ]
+                    }
+                ]
+            },
+            "bkp": {
+                "cmps": {
+                    "md": {
+                        "pgm": 40,
+                        "dd": 60
+                    },
+                    "dd": {
+                        "89645": {
+                            "config": {
+                                "mid": ""
+                            },
+                            "wt": 1,
+                            "ads": {
+                                "98564": {
+                                    "config": {
+                                        "fmt": "1",
+                                        "ao": "portrait",
+                                        "im": "merImpr(mAd87a9fb3f,0);",
+                                        "skd": 0,
+                                        "adr": 30,
+                                        "mdc": 0,
+                                        "mim": 2,
+                                        "oia": 0,
+                                        "strm": 1,
+                                        "cid": "4988_0_87a9fb3f_[ccb]"
+                                    },
+                                    "ad": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"3.0\"><Ad id=\"225\"><InLine><AdSystem><![CDATA[JioAds]]></AdSystem><AdTitle /><Description><![CDATA[Inline Video Ad]]></Description><Error><![CDATA[https://mercury-im.jio.com/delivery/er.php?b=342&c=522&cb=d2cb52b907&asi=225&ec=[ERRORCODE]&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Error><Impression id=\"primaryAdServer\"><![CDATA[https://mercury-im.jio.com/delivery/lg.php?b=342&c=522&asi=225&oxfb=1&cb=d2cb52b907&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Impression><Creatives><Creative sequence=\"1\" id=\"342\"><Linear skipoffset=\"0%\"><AdID><![CDATA[342]]></AdID><Duration>00:00:20</Duration><TrackingEvents><Tracking event=\"start\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=start&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"midpoint\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=midpoint&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"firstQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=firstquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"thirdQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=thirdquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"complete\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=complete&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"mute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=mute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"pause\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=pause&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"replay\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=replay&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"fullscreen\">2021-02-04 10:20:37.725 6059-6059/com.jio.test D/merc:  <![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=fullscreen&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"stop\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=stop&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"unmute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=unmute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"resume\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=resume&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking></TrackingEvents><VideoClicks><ClickTracking id=\"JioAds\"><![CDATA[https://mercury-ck.jio.com/delivery/ck.php?oaparams=2__b=342__c=522__asi=225__cb=d2cb52b907__vr=A-AN-1.0.6__os=1__ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89__uid=9000196416__mn=Redmi+5A__av=1.0__br=Xiaomi__dt=1__ccb=__at=5__a=3__trq=[trq]__bz=[bz]]]></ClickTracking><ClickThrough id=\"JioAds\"><![CDATA[https://play.google.com/store/apps/details?id=com.jio.myjio&hl=en_IN&gl=US]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery=\"progressive\" bitrate=\"145\" width=\"640\" height=\"360\" type=\"video/mp4\"><![CDATA[https://mercury.akamaized.net/v/218791bce52a4dd9b9e2a9368faeee3c_522_0.mp4]]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>",
+                                    "mod": {
+                                        "trgt": {
+                                            "cde": "checkCKVT('md_channel', 'sony', '=~')"
+                                        },
+                                        "surl": [
+                                            "https://jioads.akamaized.net/ad_instructions/cap_4988_482506.json?ccb=[ccb]"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "prm": {
+                        "79370": {
+                            "config": {
+                                "fcr": {
+                                    "i": {
+                                        "m": "1",
+                                        "h": "2",
+                                        "d": "1",
+                                        "l": "-1"
+                                    },
+                                    "c": {
+                                        "m": "2",
+                                        "h": "1",
+                                        "d": "5",
+                                        "l": "-1"
+                                    },
+                                    "lmt": {
+                                        "i": {
+                                            "m": "3",
+                                            "h": "6",
+                                            "d": "5",
+                                            "l": "-1"
+                                        },
+                                        "c": {
+                                            "m": "2",
+                                            "h": "1",
+                                            "d": "1",
+                                            "l": "-1"
+                                        }
+                                    }
+                                },
+                                "mid": ""
+                            },
+                            "wt": 1,
+                            "ads": {
+                                "482507": {
+                                    "config": {
+                                        "fmt": "1",
+                                        "ao": "portrait",
+                                        "im": "merImpr(mAd87a9fb3f,0);",
+                                        "skd": 0,
+                                        "adr": 30,
+                                        "mdc": 0,
+                                        "mim": 2,
+                                        "oia": 0,
+                                        "strm": 1,
+                                        "cid": "4988_0_87a9fb3f_[ccb]"
+                                    },
+                                    "ad": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><VAST version=\"3.0\"><Ad id=\"225\"><InLine><AdSystem><![CDATA[JioAds]]></AdSystem><AdTitle /><Description><![CDATA[Inline Video Ad]]></Description><Error><![CDATA[https://mercury-im.jio.com/delivery/er.php?b=342&c=522&cb=d2cb52b907&asi=225&ec=[ERRORCODE]&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Error><Impression id=\"primaryAdServer\"><![CDATA[https://mercury-im.jio.com/delivery/lg.php?b=342&c=522&asi=225&oxfb=1&cb=d2cb52b907&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Impression><Creatives><Creative sequence=\"1\" id=\"342\"><Linear skipoffset=\"0%\"><AdID><![CDATA[342]]></AdID><Duration>00:00:20</Duration><TrackingEvents><Tracking event=\"start\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=start&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"midpoint\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=midpoint&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"firstQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=firstquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"thirdQuartile\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=thirdquartile&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"complete\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=complete&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"mute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=mute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"pause\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=pause&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"replay\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=replay&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"fullscreen\">2021-02-04 10:20:37.725 6059-6059/com.jio.test D/merc:  <![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=fullscreen&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"stop\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=stop&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"unmute\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=unmute&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking><Tracking event=\"resume\"><![CDATA[https://mercury-im.jio.com/delivery/ve.php?b=342&c=522&cb=d2cb52b907&asi=225&event=resume&vr=A-AN-1.0.6&os=1&ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89&uid=9000196416&mn=Redmi+5A&av=1.0&br=Xiaomi&dt=1&ccb=&at=5&a=3&trq=[trq]&bz=[bz]]]></Tracking></TrackingEvents><VideoClicks><ClickTracking id=\"JioAds\"><![CDATA[https://mercury-ck.jio.com/delivery/ck.php?oaparams=2__b=342__c=522__asi=225__cb=d2cb52b907__vr=A-AN-1.0.6__os=1__ifa=51cbf1b2-eee4-41c7-85f9-dc0cac941f89__uid=9000196416__mn=Redmi+5A__av=1.0__br=Xiaomi__dt=1__ccb=__at=5__a=3__trq=[trq]__bz=[bz]]]></ClickTracking><ClickThrough id=\"JioAds\"><![CDATA[https://play.google.com/store/apps/details?id=com.jio.myjio&hl=en_IN&gl=US]]></ClickThrough></VideoClicks><MediaFiles><MediaFile delivery=\"progressive\" bitrate=\"145\" width=\"640\" height=\"360\" type=\"video/mp4\"><![CDATA[https://mercury.akamaized.net/v/218791bce52a4dd9b9e2a9368faeee3c_522_0.mp4]]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>",
+                                    "mod": {
+                                        "trgt": {
+                                            "cde": "checkCKVT('ck_channel', 'sony', '=~')"
+                                        },
+                                        "surl": [
+                                            "https://jioads.akamaized.net/ad_instructions/cap_4988_482506.json?ccb=[ccb]"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

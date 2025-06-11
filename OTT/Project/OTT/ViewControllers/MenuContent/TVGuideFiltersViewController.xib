@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TVGuideFiltersViewController" customModule="Viusasa" customModuleProvider="target">
+            <connections>
+                <outlet property="applyBtn" destination="bbJ-Al-DRy" id="ShR-99-7GP"/>
+                <outlet property="applybtnView" destination="E5i-Xm-kTg" id="xeI-3b-7Xu"/>
+                <outlet property="cancelBtn" destination="PbS-bX-VOQ" id="5Oq-MA-GqT"/>
+                <outlet property="categoryBtn" destination="0Wv-MD-Hwe" id="N3j-lX-e22"/>
+                <outlet property="catgBtnWidthConstraint" destination="eGO-UU-Tua" id="ECr-PG-3dV"/>
+                <outlet property="filtersTableView" destination="v0a-e2-bxC" id="sXJ-3x-pdo"/>
+                <outlet property="langBtn" destination="u45-3o-beG" id="CER-LM-8aB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="305"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v0a-e2-bxC">
+                    <rect key="frame" x="0.0" y="45" width="300" height="210"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="210" id="hcT-dO-g9Z"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Xex-NQ-POz"/>
+                        <outlet property="delegate" destination="-1" id="Gud-UF-u1H"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-MD-Hwe">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="X9C-EZ-U9q"/>
+                        <constraint firstAttribute="width" constant="150" id="eGO-UU-Tua"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
+                    <state key="normal" title="Categories">
+                        <color key="titleColor" red="0.51372549019607838" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="categoryBtnClicked:" destination="-1" eventType="touchUpInside" id="AUN-X6-JLm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u45-3o-beG">
+                    <rect key="frame" x="150" y="0.0" width="150" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="7Q8-5K-nmD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="16"/>
+                    <state key="normal" title="Language">
+                        <color key="titleColor" red="0.050980392156862744" green="0.16078431372549018" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="langBtnClicked:" destination="-1" eventType="touchUpInside" id="YWu-F0-VWO"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5i-Xm-kTg">
+                    <rect key="frame" x="0.0" y="255" width="300" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbS-bX-VOQ">
+                            <rect key="frame" x="163" y="9" width="58" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="58" id="0yZ-hM-vGn"/>
+                                <constraint firstAttribute="height" constant="28" id="gDy-K1-BrQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.51372549019607838" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtnClicked:" destination="-1" eventType="touchUpInside" id="rSh-0d-bcr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-Al-DRy">
+                            <rect key="frame" x="229" y="9" width="54" height="28"/>
+                            <color key="backgroundColor" red="0.019607843137254902" green="0.6705882352941176" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="54" id="Ltm-z0-a18"/>
+                                <constraint firstAttribute="height" constant="28" id="hl9-2R-CKG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                            <state key="normal" title="Apply">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="applyBtnClicked:" destination="-1" eventType="touchUpInside" id="Vgp-y0-HSX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="PbS-bX-VOQ" firstAttribute="top" secondItem="E5i-Xm-kTg" secondAttribute="top" constant="9" id="9DC-if-l1W"/>
+                        <constraint firstItem="bbJ-Al-DRy" firstAttribute="leading" secondItem="PbS-bX-VOQ" secondAttribute="trailing" constant="8" id="Hgf-dI-YUS"/>
+                        <constraint firstItem="bbJ-Al-DRy" firstAttribute="top" secondItem="E5i-Xm-kTg" secondAttribute="top" constant="9" id="LGW-GL-gxt"/>
+                        <constraint firstAttribute="trailing" secondItem="bbJ-Al-DRy" secondAttribute="trailing" constant="17" id="VmT-NJ-V0N"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="v0a-e2-bxC" firstAttribute="top" secondItem="0Wv-MD-Hwe" secondAttribute="bottom" id="5bi-Vj-AQD"/>
+                <constraint firstItem="E5i-Xm-kTg" firstAttribute="top" secondItem="v0a-e2-bxC" secondAttribute="bottom" id="DD1-nE-Q8w"/>
+                <constraint firstItem="u45-3o-beG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Uap-F9-heW"/>
+                <constraint firstItem="v0a-e2-bxC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VYQ-mW-89W"/>
+                <constraint firstItem="0Wv-MD-Hwe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yce-Uq-62h"/>
+                <constraint firstItem="u45-3o-beG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bJ2-Fw-hnR"/>
+                <constraint firstItem="0Wv-MD-Hwe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cj2-Fa-vvR"/>
+                <constraint firstItem="E5i-Xm-kTg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="eTh-gG-E0D"/>
+                <constraint firstItem="E5i-Xm-kTg" firstAttribute="top" secondItem="v0a-e2-bxC" secondAttribute="bottom" id="hAP-ek-esF"/>
+                <constraint firstItem="E5i-Xm-kTg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="iOf-6j-Ewl"/>
+                <constraint firstItem="E5i-Xm-kTg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uwn-qE-xVa"/>
+                <constraint firstItem="v0a-e2-bxC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="v3J-xj-m1A"/>
+                <constraint firstItem="u45-3o-beG" firstAttribute="leading" secondItem="0Wv-MD-Hwe" secondAttribute="trailing" id="we1-od-KjJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33" y="64.5"/>
+        </view>
+    </objects>
+</document>

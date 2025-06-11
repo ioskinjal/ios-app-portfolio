@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionDetailsViewController" customModule="FrndlyTV" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="KMe-CY-Cma" id="ozo-Yu-yIb"/>
+                <outlet property="packageHeaderLbl1" destination="dJp-c5-pis" id="Ifz-wX-m93"/>
+                <outlet property="packageHeaderLbl2" destination="r0C-Ox-e4P" id="5Am-7O-d1z"/>
+                <outlet property="packagePriceValueLbl" destination="NyM-Cg-yTp" id="MOa-SG-brw"/>
+                <outlet property="taxPriceValueLabl" destination="44y-Oe-vCB" id="keG-Lm-rW9"/>
+                <outlet property="totalPriceValueLbl" destination="dib-0k-AN3" id="gOc-B7-T3X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMe-CY-Cma">
+                    <rect key="frame" x="272" y="1" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="9er-Rm-fC2"/>
+                        <constraint firstAttribute="height" constant="25" id="OYN-Ns-v82"/>
+                    </constraints>
+                    <state key="normal" image="miniplayer-close"/>
+                    <connections>
+                        <action selector="closeButtonClicked:" destination="-1" eventType="touchUpInside" id="KEq-V7-eZU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-c5-pis">
+                    <rect key="frame" x="20" y="26" width="260" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8j1-eH-ADD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0C-Ox-e4P">
+                    <rect key="frame" x="20" y="52" width="260" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="N7j-0g-Mvh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Price :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd3-ii-cXo">
+                    <rect key="frame" x="20" y="93" width="95" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ZGG-Zu-mJi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Price :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLL-tI-7NL">
+                    <rect key="frame" x="20" y="121" width="64" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="2bx-n8-PoA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-Ti-OOt">
+                    <rect key="frame" x="20" y="149" width="73" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="gs8-QA-6sY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyM-Cg-yTp">
+                    <rect key="frame" x="145" y="93" width="135" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="wBq-oN-g2R"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44y-Oe-vCB">
+                    <rect key="frame" x="145" y="121" width="135" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="WQ0-3m-KP5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dib-0k-AN3">
+                    <rect key="frame" x="145" y="149" width="135" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="k6Q-4r-Q1v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NyM-Cg-yTp" firstAttribute="top" secondItem="r0C-Ox-e4P" secondAttribute="bottom" constant="20" id="0NO-l2-6iQ"/>
+                <constraint firstItem="QgJ-Ti-OOt" firstAttribute="top" secondItem="tLL-tI-7NL" secondAttribute="bottom" constant="8" id="5iv-CU-19p"/>
+                <constraint firstItem="44y-Oe-vCB" firstAttribute="leading" secondItem="tLL-tI-7NL" secondAttribute="trailing" constant="61" id="6Lo-V1-Xc6"/>
+                <constraint firstItem="dJp-c5-pis" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="7DB-yb-CIx"/>
+                <constraint firstItem="r0C-Ox-e4P" firstAttribute="top" secondItem="dJp-c5-pis" secondAttribute="bottom" constant="5" id="C8w-r5-FGE"/>
+                <constraint firstAttribute="trailing" secondItem="NyM-Cg-yTp" secondAttribute="trailing" constant="20" id="CC4-Zn-VR2"/>
+                <constraint firstItem="nd3-ii-cXo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="FJH-pI-Q5a"/>
+                <constraint firstItem="nd3-ii-cXo" firstAttribute="top" secondItem="r0C-Ox-e4P" secondAttribute="bottom" constant="20" id="J8G-yA-ZyY"/>
+                <constraint firstItem="tLL-tI-7NL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="JLv-yP-O2T"/>
+                <constraint firstItem="QgJ-Ti-OOt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Obw-Uj-fg7"/>
+                <constraint firstItem="KMe-CY-Cma" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="1" id="XJJ-eJ-yud"/>
+                <constraint firstAttribute="trailing" secondItem="dib-0k-AN3" secondAttribute="trailing" constant="20" id="Znk-aI-37j"/>
+                <constraint firstAttribute="trailing" secondItem="r0C-Ox-e4P" secondAttribute="trailing" constant="20" id="ZxS-K0-mbf"/>
+                <constraint firstItem="dib-0k-AN3" firstAttribute="leading" secondItem="QgJ-Ti-OOt" secondAttribute="trailing" constant="52" id="aHZ-2Z-gNA"/>
+                <constraint firstItem="r0C-Ox-e4P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="bgS-sh-lWU"/>
+                <constraint firstItem="NyM-Cg-yTp" firstAttribute="leading" secondItem="nd3-ii-cXo" secondAttribute="trailing" constant="30" id="cHk-9B-5Bz"/>
+                <constraint firstItem="tLL-tI-7NL" firstAttribute="top" secondItem="nd3-ii-cXo" secondAttribute="bottom" constant="8" id="i6y-Gq-cL3"/>
+                <constraint firstItem="dJp-c5-pis" firstAttribute="top" secondItem="KMe-CY-Cma" secondAttribute="bottom" id="jQ8-2Y-HEJ"/>
+                <constraint firstAttribute="trailing" secondItem="44y-Oe-vCB" secondAttribute="trailing" constant="20" id="jXd-h4-v1I"/>
+                <constraint firstAttribute="trailing" secondItem="dJp-c5-pis" secondAttribute="trailing" constant="20" id="l2J-v9-ymn"/>
+                <constraint firstItem="44y-Oe-vCB" firstAttribute="top" secondItem="NyM-Cg-yTp" secondAttribute="bottom" constant="8" id="rvY-oq-6B0"/>
+                <constraint firstAttribute="trailing" secondItem="KMe-CY-Cma" secondAttribute="trailing" constant="3" id="vM2-f4-DCg"/>
+                <constraint firstItem="dib-0k-AN3" firstAttribute="top" secondItem="44y-Oe-vCB" secondAttribute="bottom" constant="8" id="zCV-4X-dgq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-12" y="28"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="miniplayer-close" width="12" height="12"/>
+    </resources>
+</document>

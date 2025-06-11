@@ -1,0 +1,973 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JioAdsFramework
+import AVFoundation
+import AVKit
+import AdSupport
+import AppTrackingTransparency
+import SystemConfiguration.CaptiveNetwork
+import CommonCrypto
+import CoreLocation
+import CoreTelephony
+import Foundation
+import ImageIO
+@_exported import JioAdsFramework
+import Network
+import SafariServices
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+public var checkVisibilityQueue: Dispatch.DispatchQueue?
+public struct JioSDKNotificationName {
+  public static let JIO_Opening_LandingPage: Swift.String
+  public static let JIO_Closing_LandingPage: Swift.String
+}
+public func isDeviceTypeiPAD() -> Swift.Bool
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class JioAdView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var customAdInterface: JioAdsFramework.CustomAdInterface? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isShowAdAPICalled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var multiAd: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var customDataSHA1: [Swift.String : Any]?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: JioAdsFramework.JIOAdViewProtocol?
+  @_Concurrency.MainActor(unsafe) public var publicAdTracker: JioAdsFramework.AdViewTrackerInterface?
+  @_Concurrency.MainActor(unsafe) public var getAdInViewPort: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isVideoAdExpnaded: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isPlayPause: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var mediaMuteState: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isHybrid: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var adState: JioAdsFramework.JioAdState
+  @_Concurrency.MainActor(unsafe) public var customNativeAdContaier: UIKit.UIView? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isAutoRefreshEnabled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var adType: JioAdsFramework.AdType
+  @_Concurrency.MainActor(unsafe) public var autoPlayMediaEnalble: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isRewardedAd: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var collectedMarkUp: [JioAdsFramework.VAST_AD_MODEL] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var adPodController: JioAdsFramework.AdPodController? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var customVideoControl: JioAdsFramework.CustomVideoAdControl? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isOnPreparedCalled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isMediationPrepared: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var ImaAdFailedToLoad: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var mediationModel: [JioAdsFramework.MediationModelElement]
+  @_Concurrency.MainActor(unsafe) public var isMediationTypeSelection: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isIMAFirstIndex: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isIMAFirstIndexStartPlaying: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isIMAPlayed: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isImaNeedToClose: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var companionAdView: JioAdsFramework.JioCompanionAdView?
+  @_Concurrency.MainActor(unsafe) public var hybridAdview: JioAdsFramework.JioAdView?
+  @_Concurrency.MainActor(unsafe) public var isAdpodCountShown: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var dynamicDisplaySize: JioAdsFramework.dynamicDisplaySize
+  @_Concurrency.MainActor(unsafe) public var adMetaDataObj: JioAdsFramework.AdMetaData?
+  @_Concurrency.MainActor(unsafe) public var refreshRate: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) convenience public init(adSpotId: Swift.String, adType: JioAdsFramework.AdType, delegate: JioAdsFramework.JIOAdViewProtocol, forPresentionClass: UIKit.UIViewController, publisherContainer: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func cacheAd()
+  @_Concurrency.MainActor(unsafe) public func loadCustomAd()
+  @_Concurrency.MainActor(unsafe) public func loadAd()
+  @_Concurrency.MainActor(unsafe) public func closeAd()
+  @_Concurrency.MainActor(unsafe) public func invalidateAd()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) public func setRefreshRate(refreshRate: Swift.Int)
+}
+public protocol JioCompanionAdviewProtocol : AnyObject {
+  func onCompanionAdFailedToLoad(companionAdView: JioAdsFramework.JioCompanionAdView, error: JioAdsFramework.JioAdError)
+  func onCompanionAdClosed(companionAdView: JioAdsFramework.JioCompanionAdView)
+  func onCompanionAdRender(companionAdView: JioAdsFramework.JioCompanionAdView)
+}
+@_hasMissingDesignatedInitializers public class JIOAdInterface {
+  public class func initWith(adSpotId: Swift.String, customParameter: [Swift.String : Any]?, customParameterForSha1: [Swift.String : Any]?, delegate: JioAdsFramework.JIOAdViewProtocol, forPresentingClass: UIKit.UIViewController, publisherDict: [Swift.String : Any], publisherContainer: UIKit.UIView)
+  public class func destroy(adSpotId: Swift.String)
+  public class func fireImpressionTracker(adSpotId: Swift.String)
+  public class func handleClick(adSpotId: Swift.String)
+  public class func setAdTimeOut(timeOut: Swift.Int, adSpotId: Swift.String)
+  @objc deinit
+}
+public enum CustomAdTrackerEvents : Swift.String {
+  case start
+  case firstQuartile
+  case midQuartile
+  case thirdQuartile
+  case completeQuartile
+  case mute
+  case unmute
+  case pause
+  case resume
+  case skip
+  case fullscreen
+  case error
+  case impression
+  case click
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class NativeAd {
+  public var iConImageURL: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var sponsored: Swift.String? {
+    get
+  }
+  public var desc1: Swift.String? {
+    get
+  }
+  public var mainImageURL: Swift.String? {
+    get
+  }
+  public var ctaText: Swift.String? {
+    get
+  }
+  public var desc2: Swift.String? {
+    get
+  }
+  public var rating: Swift.String? {
+    get
+  }
+  public var downloads: Swift.String? {
+    get
+  }
+  public var price: Swift.String? {
+    get
+  }
+  public var salePrice: Swift.String? {
+    get
+  }
+  public var phone: Swift.String? {
+    get
+  }
+  public var address: Swift.String? {
+    get
+  }
+  public var displayURL: Swift.String? {
+    get
+  }
+  public var likes: Swift.String? {
+    get
+  }
+  public var customImagesUrlDict: [Swift.String : Swift.String]? {
+    get
+  }
+  public var impressionUrlList: [Swift.String]? {
+    get
+  }
+  public var clickTrackerUrlList: [Swift.String]? {
+    get
+  }
+  public var linkURL: Swift.String? {
+    get
+  }
+  public var linkFallbackURL: Swift.String? {
+    get
+  }
+  public var objective: Swift.String? {
+    get
+  }
+  public var campaignID: Swift.String? {
+    get
+  }
+  public var mediumImage: Swift.String? {
+    get
+  }
+  public var video: Swift.String? {
+    get
+  }
+  public var videoData: JioAdsFramework.VideoAd? {
+    get
+  }
+  public var isNativeVideoAd: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VideoAd {
+  public var adSystem: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var desc: Swift.String? {
+    get
+  }
+  public var id: Swift.String? {
+    get
+  }
+  public var skipOffset: Swift.String? {
+    get
+  }
+  public var duration: Swift.String? {
+    get
+  }
+  public var durationInSec: Swift.Int? {
+    get
+  }
+  public var skipDelay: Swift.Int? {
+    get
+  }
+  public var impressions: [Swift.String]? {
+    get
+  }
+  public var media: JioAdsFramework.MediaFile? {
+    get
+  }
+  public var clickThroughUrls: [Swift.String]? {
+    get
+  }
+  public var deeplinkUrl: Swift.String? {
+    get
+  }
+  public var clickTrackingUrls: [Swift.String]? {
+    get
+  }
+  public var trackingEvents: JioAdsFramework.VideoTracker? {
+    get
+  }
+  public var errorUrls: [Swift.String]? {
+    get
+  }
+  public var isLastVastAd: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VideoTracker {
+  public var start: [Swift.String]? {
+    get
+  }
+  public var firstQuartile: [Swift.String]? {
+    get
+  }
+  public var midpoint: [Swift.String]? {
+    get
+  }
+  public var thirdQuartile: [Swift.String]? {
+    get
+  }
+  public var complete: [Swift.String]? {
+    get
+  }
+  public var close: [Swift.String]? {
+    get
+  }
+  public var mute: [Swift.String]? {
+    get
+  }
+  public var unmute: [Swift.String]? {
+    get
+  }
+  public var pause: [Swift.String]? {
+    get
+  }
+  public var resume: [Swift.String]? {
+    get
+  }
+  public var creativeView: [Swift.String]? {
+    get
+  }
+  public var fullscreen: [Swift.String]? {
+    get
+  }
+  public var skip: [Swift.String]? {
+    get
+  }
+  public var Error: [Swift.String]? {
+    get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CustomAdInterface : ObjectiveC.NSObject {
+  public func fireQuartileEvent(mediaTrackerEvent: JioAdsFramework.CustomAdTrackerEvents)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class CustomVideoAdControl : ObjectiveC.NSObject {
+  public var skipAdDelayTitleStr: Swift.String
+  public var adIndicatorText: Swift.String
+  public var adIndicatorTextColor: UIKit.UIColor
+  public var adIndicatorBGColor: UIKit.UIColor
+  public var adIndicatorTextAlignment: UIKit.NSTextAlignment
+  public var adIndicatorFontSize: CoreGraphics.CGFloat
+  public var setAdIndicatorHidden: Swift.Bool
+  public var visitAdvertiserBtnText: Swift.String
+  public var visitAdvertiserBtnTextColor: UIKit.UIColor
+  public var visitAdvertiserBtnFontSize: CoreGraphics.CGFloat
+  public var setVisitAdvertiserBtnHidden: Swift.Bool
+  public var visitAdvertiserBtnBGColor: UIKit.UIColor
+  public var visitAdvertiserBtnTextAlignment: UIKit.NSTextAlignment
+  public var secondaryCtaBtnTextAlignment: UIKit.NSTextAlignment
+  public var secondaryCtaBtnFontSize: CoreGraphics.CGFloat
+  public var secondaryCtaBtnText: Swift.String
+  public var secondaryCtaBtnTextColor: UIKit.UIColor
+  public var secondaryCtaBtnHidden: Swift.Bool
+  public var secondaryCtaBtnBGColor: UIKit.UIColor
+  public var skipAdBtnText: Swift.String
+  public var skipAdBtnTextColor: UIKit.UIColor
+  public var skipAdBtnFontSize: CoreGraphics.CGFloat
+  public var setSkipAdBtnHidden: Swift.Bool
+  public var skipAdBtnBGColor: UIKit.UIColor
+  public var ctaTextPortraitColor: UIKit.UIColor
+  public var ctaBtnPortraitColor: UIKit.UIColor
+  public var ctaTextLandscapeColor: UIKit.UIColor
+  public var ctaBtnLandscapeColor: UIKit.UIColor
+  public var titlePortraitColor: UIKit.UIColor
+  public var titleLandscapeColor: UIKit.UIColor
+  public var descPortraitColor: UIKit.UIColor
+  public var descLandscapeColor: UIKit.UIColor
+  public var muteIconImage: UIKit.UIImage?
+  public var unmuteIconImage: UIKit.UIImage?
+  public var setMuteUnmuteIconHidden: Swift.Bool
+  public var playIconImage: UIKit.UIImage?
+  public var pauseIconImage: UIKit.UIImage?
+  public var setPlayPauseHidden: Swift.Bool
+  public var expandIconImage: UIKit.UIImage?
+  public var collapseIconImage: UIKit.UIImage?
+  public var setExpandCollapseHidden: Swift.Bool
+  public var progressBarColor: UIKit.UIColor
+  public var setProgressBarHidden: Swift.Bool
+  public var bottomStripColor: UIKit.UIColor
+  public var setBottomStripHidden: Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class NativeContentStream : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var iconImg: UIKit.UIImageView?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mainImg: UIKit.UIImageView?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var titleLbl: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var descLbl: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var ctaBtn: UIKit.UIButton?
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var startRatingLbl: JioAdsFramework.FloatRatingView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var advertiserNameLbl: UIKit.UILabel?
+  @_Concurrency.MainActor(unsafe) public var loadViewAtIntdex: Swift.Int
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var mediaView: JioAdsFramework.JIOMediaView?
+  @_Concurrency.MainActor(unsafe) public class func getContentStreamView(loadViewOnIndex: Swift.Int) -> JioAdsFramework.NativeContentStream
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol JIOAdViewProtocol : AnyObject {
+  func onAdReceived(adView: JioAdsFramework.JioAdView)
+  func onAdPrepared(adView: JioAdsFramework.JioAdView)
+  func onAdRender(adView: JioAdsFramework.JioAdView)
+  func onAdClicked(adView: JioAdsFramework.JioAdView)
+  func onAdRefresh(adView: JioAdsFramework.JioAdView)
+  func onAdFailedToLoad(adView: JioAdsFramework.JioAdView, error: JioAdsFramework.JioAdError)
+  func onAdMediaEnd(adView: JioAdsFramework.JioAdView)
+  func onAdClosed(adView: JioAdsFramework.JioAdView, isVideoCompleted: Swift.Bool, isEligibleForReward: Swift.Bool)
+  func onAdMediaStart(adView: JioAdsFramework.JioAdView)
+  func onAdSkippable(adView: JioAdsFramework.JioAdView)
+  func onAdMediaExpand(adView: JioAdsFramework.JioAdView)
+  func onAdMediaCollapse(adView: JioAdsFramework.JioAdView)
+  func onMediaPlaybackChange(adView: JioAdsFramework.JioAdView, mediaPlayBack: JioAdsFramework.MediaPlayBack)
+  func onAdDataPrepared(videoAd: JioAdsFramework.VideoAd?, isLastAd: Swift.Bool)
+  func onAdDataPrepared(nativeAd: JioAdsFramework.NativeAd?, isLastAd: Swift.Bool)
+  func onAdChange(adView: JioAdsFramework.JioAdView, trackNo: Swift.Int)
+  func mediationRequesting()
+  func mediationLoadAd()
+  func onAdSkipButtonClick()
+}
+extension JioAdsFramework.JIOAdViewProtocol {
+  public func onAdSkipButtonClick()
+  public func onAdDataPrepared(videoAd: JioAdsFramework.VideoAd?, isLastAd: Swift.Bool)
+  public func onAdDataPrepared(nativeAd: JioAdsFramework.NativeAd?, isLastAd: Swift.Bool)
+}
+@objc @_hasMissingDesignatedInitializers public class AdPodController : ObjectiveC.NSObject {
+  public var playerController: JioAdsFramework.VideoPlayerController? {
+    get
+  }
+  public func displayAd()
+  @objc deinit
+}
+extension JioAdsFramework.JioAdView {
+  @_Concurrency.MainActor(unsafe) public func setMetaData(metaDataDict: [Swift.String : Any])
+  @_Concurrency.MainActor(unsafe) public func setDampeningLimit(limit: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setRequestTimeout(requestTimeout: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setMediaTimeout(playerTimeOut: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setPodTimeout(podPlayerTimeOut: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setCustomDynamicDisplayAdController(displayContainer: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func setCustomNativeAdContainer(nativeContainerView: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func setCustomImageSize(width: Swift.Int, height: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func getAdtype() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func enableMediaCaching(cacheMode: JioAdsFramework.CacheMode)
+  @_Concurrency.MainActor(unsafe) public func isMediaCachingEnabled() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func getRefreshRate() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func getVideoBitRate() -> Swift.Int?
+  @_Concurrency.MainActor(unsafe) public func getAdSpotId() -> Swift.String
+  @_Concurrency.MainActor(unsafe) public func getNativeAd() -> JioAdsFramework.NativeAd?
+  @_Concurrency.MainActor(unsafe) public func getVideoAd() -> JioAdsFramework.VideoAd?
+  @_Concurrency.MainActor(unsafe) public func getAdMetaData() -> JioAdsFramework.AdMetaData?
+  @_Concurrency.MainActor(unsafe) public func setKeyword(keyword: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func setLanguageOfArticle(langOfArticleName: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func setOrientation(orientationType: JioAdsFramework.ORIENTATION_TYPE)
+  @_Concurrency.MainActor(unsafe) public func setCloseAfter(delay: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setAdPodVariant(podVarient: JioAdsFramework.AdPodVariant)
+  @_Concurrency.MainActor(unsafe) public func setCustomInstreamAdContainer(container: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func enableTransitionLoader(enableTransitionLoader: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func setLayout(potraitLayout: UIKit.UIView?, landscapeLayout: UIKit.UIView?, adCategory: JioAdsFramework.AdCategory)
+  @_Concurrency.MainActor(unsafe) public func setRequestedAdDuration(adPodDuration: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setRequestedAdCount(adPodCount: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setDisplayAdSize(displaySizes: [JioAdsFramework.dynamicDisplaySize])
+  @_Concurrency.MainActor(unsafe) public func getDisplayAdSize() -> Swift.String
+  @_Concurrency.MainActor(unsafe) public func audioAdCompanionContainer(container: UIKit.UIView?, companionAdSize: JioAdsFramework.dynamicDisplaySize?, companionPortraitImage: UIKit.UIImage?, companionLandscapeImage: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) public func setAsCompanion(isSetted: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func setAsCompanionVideoInstream(adView: JioAdsFramework.JioAdView?, adSlotId: Swift.String?, adSpotId: Swift.String, adType: JioAdsFramework.AdType, companionContainer: UIKit.UIView, delegate: JioAdsFramework.JioCompanionAdviewProtocol, forPresentionClass: UIKit.UIViewController, companionAdSize: JioAdsFramework.dynamicDisplaySize)
+}
+extension JioAdsFramework.JioAdView {
+  @_Concurrency.MainActor(unsafe) public func mediationProcessCheckVisibility(container: UIKit.UIView) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func mediationProcessEnablingViewport()
+  @_Concurrency.MainActor(unsafe) public func mediationProcessDisplay()
+  @_Concurrency.MainActor(unsafe) public func mediationProcessRenderNext()
+  @_Concurrency.MainActor(unsafe) public func mediationProcessPlayerImage(isPause: Swift.Bool) -> UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public func mediationProcessIsExpanded() -> (Swift.Bool, UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func adPodStoryConflictWithIMAHandling() -> Swift.Bool
+}
+extension JioAdsFramework.JioAdView {
+  @_Concurrency.MainActor(unsafe) public func setPublisherDictionay(featureDict: [Swift.String : Swift.String])
+}
+@objc public protocol FloatRatingViewDelegate {
+  @objc optional func floatRatingView(_ ratingView: JioAdsFramework.FloatRatingView, didUpdate rating: Swift.Double)
+  @objc optional func floatRatingView(_ ratingView: JioAdsFramework.FloatRatingView, isUpdating rating: Swift.Double)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) open class FloatRatingView : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) weak open var delegate: JioAdsFramework.FloatRatingViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) open var emptyImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var fullImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var imageContentMode: UIKit.UIView.ContentMode
+  @objc @_Concurrency.MainActor(unsafe) open var minRating: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var maxRating: Swift.Int {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var rating: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc public enum FloatRatingViewType : Swift.Int {
+    case wholeRatings
+    case halfRatings
+    case floatRatings
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var type: JioAdsFramework.FloatRatingView.FloatRatingViewType
+  @_Concurrency.MainActor(unsafe) @objc required override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct MediaFile {
+  public var mediaURL: Swift.String?, type: Swift.String?, delivery: Swift.String?
+  public var bitrate: Swift.Int?, height: Swift.Int?, width: Swift.Int?, minBitrate: Swift.Int?, maxBitrate: Swift.Int?
+}
+@objc @_inheritsConvenienceInitializers public class VAST_AD_MODEL : ObjectiveC.NSObject {
+  public var duration: Swift.String?
+  public var isMediationEnabed: Swift.Bool {
+    get
+  }
+  public var adtagURL: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct AdDataModel {
+  public var id: Swift.String?
+  public var title: Swift.String?
+  public var adDuration: Swift.String?
+  public var server: Swift.String?
+  public var position: Swift.String?
+  public var adClickUrl: Swift.String
+  public var adIndex: Swift.Int?
+  public var adparamTitle: Swift.String
+  public var descr: Swift.String
+  public var titleTextColor: Swift.String
+  public var descrTextColor: Swift.String
+  public var iconImage: Swift.String
+  public var ctaText: Swift.String
+  public var ctaBtnBackgroundColour: Swift.String
+  public var ctaTextColour: Swift.String
+  public var secondaryCtaText: Swift.String
+  public var secondaryCtaTextColor: Swift.String
+  public var secondaryCtaBtnColor: Swift.String
+  public var secondaryCtaUrl: Swift.String?
+  public var secondaryTrackingurl: Swift.String?
+  public var adServingId: Swift.String?
+  public var universalAdId: [(Swift.String, Swift.String)]?
+  public var openInApp: Swift.String?
+}
+@_hasMissingDesignatedInitializers public class AdViewTrackerInterface {
+  public func fireImpressionTracker()
+  public func handleClick(adSpotID: Swift.String, clickTrackerLink: [Swift.String], linkUrl: Swift.String?, linkFallBack: Swift.String?)
+  @objc deinit
+}
+public protocol JioAdEventsProtocol : AnyObject {
+  func onAdMediaStart(adMetaData: JioAdsFramework.AdDataModel)
+  func onStreamReady(mediaUrl: Foundation.URL)
+  func onAdMediaEnd()
+  func onAdError(error: Swift.Error)
+  func onAdChange(adMetaData: JioAdsFramework.AdDataModel)
+}
+public class JioSSAIManager {
+  weak public var delegate: JioAdsFramework.JioAdEventsProtocol?
+  public var customMetaData: [Swift.String : Any]?
+  public static let shared: JioAdsFramework.JioSSAIManager
+  public init()
+  public func playerDidFinishPlayingStream()
+  public func initilizeJioSSAIAdManager(streamUrl: Swift.String, metaData: [Swift.String : Any]?, requestTimeout: Swift.Double?)
+  public func setPlayerInstanceForSDKHandling(avPlayer: AVFoundation.AVPlayer)
+  @objc deinit
+  public func setMetadataGroup(metaData: [AVFoundation.AVDateRangeMetadataGroup])
+  public func onAdClicked(isPrimaryCTABtn: Swift.Bool)
+}
+@_hasMissingDesignatedInitializers public class JioAdSdk {
+  public static var isMECURYPointed: Swift.Bool
+  public static var IMSI: Swift.String?
+  public static var userLocation: CoreLocation.CLLocation?
+  public static var deviceVendorId: Swift.String?
+  public class func getSDKLogFilePath() -> Swift.String?
+  public class func setLogLevel(logLevel: JioAdsFramework.LogLevel)
+  public class func getLogLevel() -> JioAdsFramework.LogLevel
+  @available(iOS 14, *)
+  public class func requestAppTrackingPermission(_ completion: @escaping (AppTrackingTransparency.ATTrackingManager.AuthorizationStatus) -> Swift.Void)
+  public static func isAuthorized() -> Swift.Bool
+  public class func getSDKVersion() -> Swift.String
+  public class func clearCachedMedia(mediaType: JioAdsFramework.mediaType, adView: JioAdsFramework.JioAdView?)
+  public func getSHA1(rawString: Swift.String) -> Swift.String?
+  public func getSHA2(rawString: Swift.String) -> Swift.String?
+  public class func setPackageName(packageName: Swift.String)
+  public class func setAppGroupIndentity(GroupIndentity: Swift.String)
+  public class func getUid() -> Swift.String?
+  public class func setMetaData(metaDataDict: [Swift.String : Any])
+  public class func removeMetaKeys(metaKeys: [Swift.String])
+  public class func release()
+  public class func setDeviceVendorId(_ deviceVendorId: Swift.String)
+  @objc deinit
+}
+extension Swift.KeyedDecodingContainer {
+  public func decode(_ type: [Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Any]
+  public func decode(_ type: [Swift.String : Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Swift.String : Any]
+  public func decodeIfPresent(_ type: [Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Any]?
+  public func decodeIfPresent(_ type: [Swift.String : Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Swift.String : Any]?
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func loadGif(name: Swift.String)
+  @available(iOS 9.0, *)
+  @_Concurrency.MainActor(unsafe) public func loadGif(asset: Swift.String)
+}
+extension UIKit.UIImage {
+  public class func gif(data: Foundation.Data) -> UIKit.UIImage?
+  public class func gif(url: Swift.String) -> UIKit.UIImage?
+  public class func gif(name: Swift.String) -> UIKit.UIImage?
+  @available(iOS 9.0, *)
+  public class func gif(asset: Swift.String) -> UIKit.UIImage?
+}
+extension JioAdsFramework.JioAdView {
+  @_Concurrency.MainActor(unsafe) public func pauseInstreamAd()
+  @_Concurrency.MainActor(unsafe) public func resumeInstreamAd()
+  @_Concurrency.MainActor(unsafe) public func pauseMediaAd()
+  @_Concurrency.MainActor(unsafe) public func resumeMediaAd()
+  @_Concurrency.MainActor(unsafe) public func setVideoBitRate(videoBitRate: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func hideAdControls()
+  @_Concurrency.MainActor(unsafe) public func showAdControls()
+  @_Concurrency.MainActor(unsafe) public func expandAd()
+  @_Concurrency.MainActor(unsafe) public func collapseAd()
+  @_Concurrency.MainActor(unsafe) public func isMediaInProgress() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isMediaPlaying() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isMediaMuted() -> Swift.Bool
+}
+extension JioAdsFramework.JioAdView {
+  @_Concurrency.MainActor(unsafe) public func setShowOrHidePlayButton(isHidden: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class JIOMediaView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@objc public class MetaData : ObjectiveC.NSObject {
+  public static var setMetaData: [Swift.String : Any]
+  public init(channelID: Swift.String?, channelName: Swift.String?, showName: Swift.String?, pageCategory: Swift.String?, sectionCategory: Swift.String?, languageOfArticle: Swift.String?, contentID: Swift.String?, contentType: Swift.String?, vendor: Swift.String?, actor: Swift.String?, objects: Swift.String?, isKidsProtected: Swift.Bool?, appVersion: Swift.String?, genre: Swift.String?, state: Swift.String?, city: Swift.String?, age: Swift.String?, gender: Swift.String?, country: Swift.String?, pincode: Swift.String?, isQwerty: Swift.Bool?, keywords: Swift.String?, placementName: Swift.String?, osv: Swift.String?, ad_duration: Swift.String?)
+  @objc deinit
+}
+public struct MediationModelElement : Swift.Codable {
+  public var affiliateid: Swift.String?, zoneid: Swift.String?, networkName: Swift.String?, type: Swift.String?
+  public var priority: Swift.String?, campaignid: Swift.String?, bannerid: Swift.String?, refreshtoken: Swift.String?
+  public var sapCode: Swift.String?, currency: Swift.String?, adunitid: Swift.String?, adtagcode: Swift.String?
+  public var appid: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class JioAdError {
+  public enum RequestError : Swift.Int {
+    case badRequest
+    case noConnection
+    case timeOutError
+    case parserError
+    case nofill
+    case adBlocked
+    case renditionError
+    case allowExtractionError
+    case adPodPlayerTimOutError
+    case InValidadPodDuration
+    case SinlgeAdBreakErrorCode
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public var title: Swift.String
+  public var code: Swift.Int
+  public var errorDescription: Swift.String {
+    get
+  }
+  public var failureReason: Swift.String? {
+    get
+  }
+  public var _description: Swift.String
+  public init(title: Swift.String?, description: Swift.String, code: Swift.Int)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CommonClass {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class AdMetaData : ObjectiveC.NSObject {
+  public var adId: Swift.String?
+  public var adTitle: Swift.String?
+  public var adSystem: Swift.String?
+  public var adDescription: Swift.String?
+  public var vastAdParamObj: JioAdsFramework.VastAdParam?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VastAdParam {
+  public var VastAdtitle: Swift.String?
+  public var VastAddesc: Swift.String?
+  public var VastAdtitletextColor: Swift.String?
+  public var VastAddescTextColor: Swift.String?
+  public var VastAdCTAText: Swift.String?
+  public var VastAdCTATextColor: Swift.String?
+  public var VastAdCTABtnColor: Swift.String?
+  public var VastAdIcon: Swift.String?
+  public var VastAdSecCTAText: Swift.String?
+  public var VastAdSecCTATextColor: Swift.String?
+  public var VastAdSecCTABtnColor: Swift.String?
+  public var VastAdSecCTAUrl: Swift.String?
+  public var VastAdSecCTAUrlTracking: Swift.String?
+  @objc deinit
+}
+public enum AdType {
+  case Native, Native_Banner_Image, Infeed, NativeContentStream, InstreamVideo, Custom_Native, Interstitial, DynamicDisplay, InstreamAudio
+  public static func == (a: JioAdsFramework.AdType, b: JioAdsFramework.AdType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum JioAdState : Swift.Int {
+  case NOT_REQUESTED
+  case REQUESTED
+  case RECEIVED
+  case PREPARED
+  case FAILED
+  case DESTROY
+  case STARTED
+  case ENDED
+  case CLOSED
+  case EXPANDED
+  case COLLAPSED
+  case INTERACTED
+  case BLOCKED
+  public func description() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum dynamicDisplaySize {
+  case SIZE_300x50
+  case SIZE_300x250
+  case SIZE_320x50
+  case SIZE_320x100
+  case SIZE_728x90
+  case SIZE_728x250
+  public func description() -> Swift.String
+  public static func == (a: JioAdsFramework.dynamicDisplaySize, b: JioAdsFramework.dynamicDisplaySize) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum companionAdSize {
+  case SIZE_300x250
+  case SIZE_240x260
+  case SIZE_320x184
+  public static func == (a: JioAdsFramework.companionAdSize, b: JioAdsFramework.companionAdSize) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum AdCategory : Swift.Int {
+  case NATIVE_INTERSTITIAL
+  case VIDEO_INTERSTITIAL
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum MediaPlayBack : Swift.Int {
+  case NOTRUN
+  case RESUME
+  case PAUSE
+  case MUTE
+  case UNMUE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum LogLevel : Swift.Int {
+  case NONE
+  case DEBUG
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum mediaType : Swift.Int {
+  case NONE
+  case IMAGE
+  case VIDEO
+  case ALL
+  public func description() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CacheMode : Swift.Int {
+  case NONE
+  case IMAGE
+  case VIDEO
+  case ALL
+  public func description() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CampaignLevel : Swift.String {
+  case cpd
+  case dd
+  case pgm
+  case ima
+  case prm
+  public func description() -> Swift.String
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NativeAdTags : Swift.Int {
+  case title, desc, iconImageView, mainImageView, customImageView, mediaView, floatRatingView, CTAButton, sponsored, SDKMainImageView, desc2, rating, downloads, price, salePrice, phone, address, displayURL, likes, campaignId
+  case playPauseButton, muteUnmuteButton, expandCollapseBtn, adDurationLbl
+  case closeButton, secondaryCtaButton
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum VideoAdControlTags : Swift.Int {
+  case skipButton, progressBar, visitAdvertiser, playPauseButton, muteUnmuteButton, expandCollapseBtn, adDurationLbl, mediaView
+  case closeButton
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum Severity : Swift.String {
+  case ALL
+  case HIGH
+  case MED
+  case LOW
+  public func description() -> Swift.String
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ORIENTATION_TYPE {
+  case ORIENTATION_DEFAULT
+  case ORIENTATION_PORTRAIT
+  case ORIENTATION_LANDSCAPE
+  public static func == (a: JioAdsFramework.ORIENTATION_TYPE, b: JioAdsFramework.ORIENTATION_TYPE) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum AdPodVariant {
+  case PREROLL
+  case MIDROLL
+  case INFINITE_AD_DURATION_WITH_LOOP
+  public static func == (a: JioAdsFramework.AdPodVariant, b: JioAdsFramework.AdPodVariant) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class VideoPlayerController : ObjectiveC.NSObject, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) public var videoPlayer: AVFoundation.AVPlayer? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var playButton: UIKit.UIButton? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var ExpandCollapseButton: UIKit.UIButton? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var visitAdVerstiserBtn: UIKit.UIButton? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isMediaEnded: Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class JioCompanionAdView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var adview: JioAdsFramework.JioAdView?
+  @_Concurrency.MainActor(unsafe) public var adType: JioAdsFramework.AdType
+  @_Concurrency.MainActor(unsafe) public func invalidateAd()
+  @_Concurrency.MainActor(unsafe) public func closeAd()
+  @_Concurrency.MainActor(unsafe) public func cacheAd(adpodDuration: Swift.Int?, isHybrid: Swift.Bool, secondaryAdSpotId: Swift.String?, secondaryadType: JioAdsFramework.AdType?)
+  @objc deinit
+}
+extension JioAdsFramework.JioCompanionAdView : JioAdsFramework.JIOAdViewProtocol {
+  @_Concurrency.MainActor(unsafe) public func onAdSkipButtonClick()
+  @_Concurrency.MainActor(unsafe) public func mediationRequesting()
+  @_Concurrency.MainActor(unsafe) public func mediationLoadAd()
+  @_Concurrency.MainActor(unsafe) public func onAdReceived(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdPrepared(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdRender(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdClicked(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdRefresh(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdFailedToLoad(adView: JioAdsFramework.JioAdView, error: JioAdsFramework.JioAdError)
+  @_Concurrency.MainActor(unsafe) public func onAdMediaEnd(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdClosed(adView: JioAdsFramework.JioAdView, isVideoCompleted: Swift.Bool, isEligibleForReward: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func onAdMediaStart(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdSkippable(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdMediaExpand(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onAdMediaCollapse(adView: JioAdsFramework.JioAdView)
+  @_Concurrency.MainActor(unsafe) public func onMediaPlaybackChange(adView: JioAdsFramework.JioAdView, mediaPlayBack: JioAdsFramework.MediaPlayBack)
+  @_Concurrency.MainActor(unsafe) public func onAdChange(adView: JioAdsFramework.JioAdView, trackNo: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func mediationRequesting(medaitionModel: [JioAdsFramework.MediationModelElement])
+}
+extension Swift.KeyedEncodingContainer {
+  public mutating func encode(_ value: [Swift.String : Any], forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+  public mutating func encode(_ value: [Any], forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+  public mutating func encodeIfPresent(_ value: [Swift.String : Any]?, forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+  public mutating func encodeIfPresent(_ value: [Any]?, forKey key: Swift.KeyedEncodingContainer<K>.Key) throws
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class InstreamVideoAdController : ObjectiveC.NSObject, UIKit.UIGestureRecognizerDelegate {
+  @objc deinit
+}
+extension JioAdsFramework.CustomAdTrackerEvents : Swift.Equatable {}
+extension JioAdsFramework.CustomAdTrackerEvents : Swift.Hashable {}
+extension JioAdsFramework.CustomAdTrackerEvents : Swift.RawRepresentable {}
+extension JioAdsFramework.FloatRatingView.FloatRatingViewType : Swift.Equatable {}
+extension JioAdsFramework.FloatRatingView.FloatRatingViewType : Swift.Hashable {}
+extension JioAdsFramework.FloatRatingView.FloatRatingViewType : Swift.RawRepresentable {}
+extension JioAdsFramework.JioAdError.RequestError : Swift.Equatable {}
+extension JioAdsFramework.JioAdError.RequestError : Swift.Hashable {}
+extension JioAdsFramework.JioAdError.RequestError : Swift.RawRepresentable {}
+extension JioAdsFramework.AdType : Swift.Equatable {}
+extension JioAdsFramework.AdType : Swift.Hashable {}
+extension JioAdsFramework.JioAdState : Swift.Equatable {}
+extension JioAdsFramework.JioAdState : Swift.Hashable {}
+extension JioAdsFramework.JioAdState : Swift.RawRepresentable {}
+extension JioAdsFramework.dynamicDisplaySize : Swift.Equatable {}
+extension JioAdsFramework.dynamicDisplaySize : Swift.Hashable {}
+extension JioAdsFramework.companionAdSize : Swift.Equatable {}
+extension JioAdsFramework.companionAdSize : Swift.Hashable {}
+extension JioAdsFramework.AdCategory : Swift.Equatable {}
+extension JioAdsFramework.AdCategory : Swift.Hashable {}
+extension JioAdsFramework.AdCategory : Swift.RawRepresentable {}
+extension JioAdsFramework.MediaPlayBack : Swift.Equatable {}
+extension JioAdsFramework.MediaPlayBack : Swift.Hashable {}
+extension JioAdsFramework.MediaPlayBack : Swift.RawRepresentable {}
+extension JioAdsFramework.LogLevel : Swift.Equatable {}
+extension JioAdsFramework.LogLevel : Swift.Hashable {}
+extension JioAdsFramework.LogLevel : Swift.RawRepresentable {}
+extension JioAdsFramework.mediaType : Swift.Equatable {}
+extension JioAdsFramework.mediaType : Swift.Hashable {}
+extension JioAdsFramework.mediaType : Swift.RawRepresentable {}
+extension JioAdsFramework.CacheMode : Swift.Equatable {}
+extension JioAdsFramework.CacheMode : Swift.Hashable {}
+extension JioAdsFramework.CacheMode : Swift.RawRepresentable {}
+extension JioAdsFramework.CampaignLevel : Swift.Equatable {}
+extension JioAdsFramework.CampaignLevel : Swift.Hashable {}
+extension JioAdsFramework.CampaignLevel : Swift.RawRepresentable {}
+extension JioAdsFramework.NativeAdTags : Swift.Equatable {}
+extension JioAdsFramework.NativeAdTags : Swift.Hashable {}
+extension JioAdsFramework.NativeAdTags : Swift.RawRepresentable {}
+extension JioAdsFramework.VideoAdControlTags : Swift.Equatable {}
+extension JioAdsFramework.VideoAdControlTags : Swift.Hashable {}
+extension JioAdsFramework.VideoAdControlTags : Swift.RawRepresentable {}
+extension JioAdsFramework.Severity : Swift.Equatable {}
+extension JioAdsFramework.Severity : Swift.Hashable {}
+extension JioAdsFramework.Severity : Swift.RawRepresentable {}
+extension JioAdsFramework.ORIENTATION_TYPE : Swift.Equatable {}
+extension JioAdsFramework.ORIENTATION_TYPE : Swift.Hashable {}
+extension JioAdsFramework.AdPodVariant : Swift.Equatable {}
+extension JioAdsFramework.AdPodVariant : Swift.Hashable {}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TinyGuideHeaderReusableView" id="U6b-Vx-4bR" customClass="TinyGuideHeaderReusableView" customModule="T_SAT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-DY-d0H">
+                    <rect key="frame" x="0.0" y="3" width="320" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="eaP-V8-XqF"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="av6-EM-0Eq">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gIN-gP-QhZ">
+                    <rect key="frame" x="0.0" y="52" width="320" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="PO8-lp-dff"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MuE-s6-ukZ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2b6-DY-d0H" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="3" id="1ce-6v-1MY"/>
+                <constraint firstItem="gIN-gP-QhZ" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="6tv-GM-SrW"/>
+                <constraint firstItem="gIN-gP-QhZ" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="EBp-br-j4t"/>
+                <constraint firstItem="gIN-gP-QhZ" firstAttribute="top" secondItem="2b6-DY-d0H" secondAttribute="bottom" constant="4" id="GsM-pV-BDq"/>
+                <constraint firstItem="2b6-DY-d0H" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="bbM-He-5gJ"/>
+                <constraint firstItem="2b6-DY-d0H" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="nb0-fa-fVL"/>
+            </constraints>
+            <connections>
+                <outlet property="channelCollection" destination="gIN-gP-QhZ" id="7Yy-hV-VB5"/>
+                <outlet property="datesCollection" destination="2b6-DY-d0H" id="JlH-bz-0B3"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="170.75892857142856"/>
+        </collectionReusableView>
+    </objects>
+</document>

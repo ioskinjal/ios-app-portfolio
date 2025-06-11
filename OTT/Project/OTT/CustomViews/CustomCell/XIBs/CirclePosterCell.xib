@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" restorationIdentifier="CirclePosterCell" reuseIdentifier="CirclePosterCell" id="MSY-io-yzH" customClass="CirclePosterCell" customModule="Aastha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8W2-GL-fQO">
+                <rect key="frame" x="0.0" y="0.0" width="64" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MN4-No-vvf">
+                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="EuO-d6-bSE"/>
+                            <constraint firstAttribute="width" secondItem="MN4-No-vvf" secondAttribute="height" multiplier="1:1" id="d9h-q6-zvl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4P-S1-Lwu">
+                        <rect key="frame" x="0.0" y="64" width="64" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="VcY-KD-8oK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3s-3v-xK6">
+                        <rect key="frame" x="0.0" y="81" width="64" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="8LL-H5-5JL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n4P-S1-Lwu" firstAttribute="leading" secondItem="8W2-GL-fQO" secondAttribute="leading" id="2ZM-wQ-fAw"/>
+                    <constraint firstItem="MN4-No-vvf" firstAttribute="trailing" secondItem="8W2-GL-fQO" secondAttribute="trailing" id="55N-eG-qj0"/>
+                    <constraint firstItem="m3s-3v-xK6" firstAttribute="trailing" secondItem="8W2-GL-fQO" secondAttribute="trailing" id="Ef3-wr-LnN"/>
+                    <constraint firstItem="m3s-3v-xK6" firstAttribute="top" secondItem="n4P-S1-Lwu" secondAttribute="bottom" id="W2R-UG-zbi"/>
+                    <constraint firstItem="n4P-S1-Lwu" firstAttribute="trailing" secondItem="8W2-GL-fQO" secondAttribute="trailing" id="jPi-rj-jbz"/>
+                    <constraint firstItem="MN4-No-vvf" firstAttribute="top" secondItem="8W2-GL-fQO" secondAttribute="top" id="kSV-eq-cou"/>
+                    <constraint firstItem="MN4-No-vvf" firstAttribute="leading" secondItem="8W2-GL-fQO" secondAttribute="leading" id="pSx-lp-93q"/>
+                    <constraint firstItem="m3s-3v-xK6" firstAttribute="leading" secondItem="8W2-GL-fQO" secondAttribute="leading" id="rwJ-So-L5O"/>
+                    <constraint firstItem="n4P-S1-Lwu" firstAttribute="top" secondItem="MN4-No-vvf" secondAttribute="bottom" id="uXY-sf-lwv"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="imageView" destination="MN4-No-vvf" id="wUz-v5-BqF"/>
+                <outlet property="imageViewHeightConstraint" destination="EuO-d6-bSE" id="AdT-9p-B67"/>
+                <outlet property="nameLbl" destination="n4P-S1-Lwu" id="0an-ak-H8a"/>
+                <outlet property="subTitleLabel" destination="m3s-3v-xK6" id="yuR-SP-1Ry"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="-48"/>
+        </collectionViewCell>
+    </objects>
+</document>
