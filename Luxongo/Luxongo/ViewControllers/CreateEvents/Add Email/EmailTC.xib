@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Regular.ttf">
+            <string>SourceSerifPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="KGk-i7-Jjw" customClass="EmailTC" customModule="Luxongo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciF-gy-iDs" customClass="GreyView" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="3" y="3" width="314" height="54.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event subcategory" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deE-qi-OkD" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                <rect key="frame" x="12" y="12" width="254" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="mqv-OV-W1Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-US-7kx">
+                                <rect key="frame" x="274" y="7.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V7L-US-7kx" secondAttribute="height" multiplier="1:1" id="20e-eV-eXo"/>
+                                    <constraint firstAttribute="height" constant="40" id="rFL-t1-xwv"/>
+                                </constraints>
+                                <state key="normal" image="cell_close"/>
+                                <connections>
+                                    <action selector="onClickRemove:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KBc-YE-xyX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="deE-qi-OkD" firstAttribute="leading" secondItem="ciF-gy-iDs" secondAttribute="leading" constant="12" id="F9z-ph-Opo"/>
+                            <constraint firstAttribute="bottom" secondItem="deE-qi-OkD" secondAttribute="bottom" constant="12" id="Ita-rG-rAV"/>
+                            <constraint firstAttribute="trailing" secondItem="V7L-US-7kx" secondAttribute="trailing" id="rAH-IP-KbT"/>
+                            <constraint firstItem="V7L-US-7kx" firstAttribute="leading" secondItem="deE-qi-OkD" secondAttribute="trailing" constant="8" id="tja-hy-C4h"/>
+                            <constraint firstItem="deE-qi-OkD" firstAttribute="top" secondItem="ciF-gy-iDs" secondAttribute="top" constant="12" id="tkp-oP-WtA"/>
+                            <constraint firstItem="V7L-US-7kx" firstAttribute="centerY" secondItem="ciF-gy-iDs" secondAttribute="centerY" id="zvL-ah-TJe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ciF-gy-iDs" secondAttribute="trailing" constant="3" id="SEB-ca-y08"/>
+                    <constraint firstItem="ciF-gy-iDs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="VZW-P4-5MB"/>
+                    <constraint firstAttribute="bottom" secondItem="ciF-gy-iDs" secondAttribute="bottom" constant="3" id="j9b-w9-7Zw"/>
+                    <constraint firstItem="ciF-gy-iDs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="zs0-OO-THr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblEmail" destination="deE-qi-OkD" id="UtA-Y9-X9W"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="125.55803571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cell_close" width="16" height="16"/>
+    </resources>
+</document>

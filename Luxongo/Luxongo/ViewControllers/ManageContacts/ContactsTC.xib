@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Regular.ttf">
+            <string>SourceSerifPro-Regular</string>
+        </array>
+        <array key="SourceSerifPro-Semibold.ttf">
+            <string>SourceSerifPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="ZBs-Oi-gOo" customClass="ContactsTC" customModule="Luxongo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZBs-Oi-gOo" id="dka-6a-8UD">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="96.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5w-KQ-yrV">
+                        <rect key="frame" x="278" y="12" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="k5w-KQ-yrV" secondAttribute="height" multiplier="1:1" id="Ijf-zN-54S"/>
+                            <constraint firstAttribute="height" constant="45" id="SuU-zo-Uzj"/>
+                        </constraints>
+                        <state key="normal" image="ic_moreListing"/>
+                        <connections>
+                            <action selector="onClickMore:" destination="ZBs-Oi-gOo" eventType="touchUpInside" id="ebX-Gu-poK"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-uI-NhW">
+                        <rect key="frame" x="19" y="12" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="vAS-AA-yXg"/>
+                        </constraints>
+                        <state key="normal" image="db_contact"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Contact list 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-oZ-9d4" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="64" y="22" width="203" height="24"/>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="19"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240 contacts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-S2-072" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="64" y="46" width="203" height="19"/>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Created on 12 July, 2015" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G65-vp-vEv" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="64" y="73" width="203" height="15.5"/>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="G65-vp-vEv" firstAttribute="trailing" secondItem="AYL-oZ-9d4" secondAttribute="trailing" id="0WO-H0-kw1"/>
+                    <constraint firstItem="gnU-S2-072" firstAttribute="top" secondItem="AYL-oZ-9d4" secondAttribute="bottom" id="24X-Hc-ysa"/>
+                    <constraint firstItem="3R3-uI-NhW" firstAttribute="width" secondItem="3R3-uI-NhW" secondAttribute="height" multiplier="1:1" id="2Iw-GC-CsH"/>
+                    <constraint firstItem="k5w-KQ-yrV" firstAttribute="leading" secondItem="AYL-oZ-9d4" secondAttribute="trailing" constant="11" id="Ans-zo-1Pt"/>
+                    <constraint firstItem="AYL-oZ-9d4" firstAttribute="leading" secondItem="3R3-uI-NhW" secondAttribute="trailing" id="F0F-I0-ar5"/>
+                    <constraint firstAttribute="trailing" secondItem="k5w-KQ-yrV" secondAttribute="trailing" id="F53-8D-AXG"/>
+                    <constraint firstItem="gnU-S2-072" firstAttribute="trailing" secondItem="AYL-oZ-9d4" secondAttribute="trailing" id="GDr-1x-lcK"/>
+                    <constraint firstItem="gnU-S2-072" firstAttribute="leading" secondItem="AYL-oZ-9d4" secondAttribute="leading" id="GR1-Tf-cdu"/>
+                    <constraint firstItem="3R3-uI-NhW" firstAttribute="top" secondItem="AYL-oZ-9d4" secondAttribute="top" constant="-10" id="I9T-hp-5cz"/>
+                    <constraint firstAttribute="bottom" secondItem="G65-vp-vEv" secondAttribute="bottom" constant="8" id="PZE-v3-roe"/>
+                    <constraint firstItem="3R3-uI-NhW" firstAttribute="leading" secondItem="dka-6a-8UD" secondAttribute="leading" constant="19" id="VgT-Em-Riq"/>
+                    <constraint firstItem="G65-vp-vEv" firstAttribute="leading" secondItem="AYL-oZ-9d4" secondAttribute="leading" id="bcp-OR-03y"/>
+                    <constraint firstItem="G65-vp-vEv" firstAttribute="top" secondItem="gnU-S2-072" secondAttribute="bottom" constant="8" id="dTO-Sw-pHS"/>
+                    <constraint firstItem="AYL-oZ-9d4" firstAttribute="top" secondItem="dka-6a-8UD" secondAttribute="top" constant="22" id="fDK-ZE-y4X"/>
+                    <constraint firstItem="k5w-KQ-yrV" firstAttribute="centerY" secondItem="3R3-uI-NhW" secondAttribute="centerY" id="uaW-Sk-LhO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="IiA-P0-jqx"/>
+            <connections>
+                <outlet property="btnArrow" destination="k5w-KQ-yrV" id="VZq-TB-Hwq"/>
+                <outlet property="lblDate" destination="G65-vp-vEv" id="obV-b4-bG1"/>
+                <outlet property="lblNumOfCon" destination="gnU-S2-072" id="zeC-bG-uLP"/>
+                <outlet property="lblTittle" destination="AYL-oZ-9d4" id="9nZ-Fk-7XO"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="163.72767857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="db_contact" width="15.5" height="17"/>
+        <image name="ic_moreListing" width="3.5" height="14"/>
+    </resources>
+</document>

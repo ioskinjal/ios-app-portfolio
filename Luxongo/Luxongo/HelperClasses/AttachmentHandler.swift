@@ -1,0 +1,546 @@
+//
+//  AttachmentHandler.swift
+//
+
+import Foundation
+import UIKit
+import MobileCoreServices
+import AVFoundation
+import Photos
+import MobileCoreServices.UTType
+
+/*
+ AttachmentHandler.shared.showAttachmentActionSheet(vc: self)
+ AttachmentHandler.shared.imagePickedBlock = { [weak self]  (image, imageName) in
+ guard let self = self else{ return }
+ /* get your image here */
+ }
+ AttachmentHandler.shared.videoPickedBlock = { [weak self] (filePath,fileData) in
+ guard let self = self else{ return }
+ /* get your compressed video url here */
+ }
+ AttachmentHandler.shared.filePickedBlock = { [weak self] (filePath, fileData) in
+ guard let self = self else{ return }
+ /* get your file path url here */
+ }
+ */
+
+
+class AttachmentHandler: NSObject{
+    static let shared = AttachmentHandler()
+    fileprivate var currentVC: UIViewController?
+    fileprivate var isFromCamera = false
+    
+    //MARK: - Internal Properties
+    var imagePickedBlock: ((UIImage, String) -> Void)?
+   // var videoPickedBlock: ((_ fileUrl: URL, _ fileData: Data?) -> Void)?
+  //  var filePickedBlock: ((_ fileUrl: URL, _ fileData: Data?) -> Void)?
+    
+    
+    private enum AttachmentType: String{
+        case camera, photoLibrary
+    }
+    
+    enum AttachmentOption:String {
+        case images, imagePhotoLibrary
+    }
+    
+    //MARK: - Constants
+    fileprivate struct Constants {
+        static let actionFileTypeHeading = "Add a File"
+        static let actionFileTypeDescription = "Choose an image"
+        static let camera = "Camera"
+        static let phoneLibrary = "Phone Library"
+       // static let video = "Video"
+      //  static let file = "File"
+        static let alert = "Alert"
+        static let ok = "Ok"
+        
+        static let alertForPhotoLibraryMessage = "App does not have access to your photos. To enable access, tap settings and turn on Photo Library Access."
+        
+        static let alertForCameraAccessMessage = "App does not have access to your camera. To enable access, tap settings and turn on Camera."
+        
+    //    static let alertForVideoLibraryMessage = "App does not have access to your video. To enable access, tap settings and turn on Video Library Access."
+        
+        
+        static let alertForNoCamera = "Camera is not available in this device"
+        static let alertForNotSupportPhotoLib = "Photolibrary is not availble in this device"
+        
+        
+        
+        static let settingsBtnTitle = "Settings"
+        static let cancelBtnTitle = "Cancel"
+        
+    }
+    
+    //MARK: - showAttachmentActionSheet
+    // This function is used to show the attachment sheet for image, video, photo and file.
+    func showAttachmentActionSheet(vc: UIViewController, attachmentOption: AttachmentOption) {
+        currentVC = vc
+        let actionSheet = UIAlertController(title: Constants.actionFileTypeHeading, message: Constants.actionFileTypeDescription, preferredStyle: .actionSheet)
+        
+        switch attachmentOption{
+        case .images:// It allows pick image and capture image
+            actionSheet.addAction(UIAlertAction(title: Constants.camera, style: .default, handler: { (action) -> Void in
+                self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!)
+            }))
+            actionSheet.addAction(UIAlertAction(title: Constants.phoneLibrary, style: .default, handler: { (action) -> Void in
+                self.authorisationStatus(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!)
+            }))
+        case .imagePhotoLibrary:// It allows only pick image
+            actionSheet.addAction(UIAlertAction(title: Constants.phoneLibrary, style: .default, handler: { (action) -> Void in
+                self.authorisationStatus(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!)
+            }))
+//        case .video: //It allows pick video and capture video
+//            actionSheet.addAction(UIAlertAction(title: Constants.camera, style: .default, handler: { (action) -> Void in
+//                self.authorisationStatus(attachmentTypeEnum: .captureVideo, vc: self.currentVC!)
+//            }))
+//            actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
+//                self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
+//            }))
+//        case .videoLibrary://It allows only pick video
+//            actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
+//                self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
+//            }))
+//        case .file:
+//            actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
+//                self.documentPicker()
+//            }))
+        }
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.cancelBtnTitle, style: .cancel, handler: nil))
+        
+        
+        if let popup = actionSheet.popoverPresentationController {
+            popup.sourceRect = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height, width: 0, height: 0)
+            popup.sourceView = currentVC?.view
+        }
+        
+        vc.present(actionSheet, animated: true, completion: nil)
+      
+    }
+    
+    // This function is used to show the attachment sheet for image, video, photo and file.
+    func showAttachmentActionSheet(vc: UIViewController) {
+        currentVC = vc
+        let actionSheet = UIAlertController(title: Constants.actionFileTypeHeading, message: Constants.actionFileTypeDescription, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.camera, style: .default, handler: { (action) -> Void in
+            self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: Constants.phoneLibrary, style: .default, handler: { (action) -> Void in
+            self.authorisationStatus(attachmentTypeEnum: .photoLibrary, vc: self.currentVC!)
+        }))
+        
+//        actionSheet.addAction(UIAlertAction(title: Constants.video, style: .default, handler: { (action) -> Void in
+//            self.authorisationStatus(attachmentTypeEnum: .video, vc: self.currentVC!)
+//
+//        }))
+//
+//        actionSheet.addAction(UIAlertAction(title: Constants.file, style: .default, handler: { (action) -> Void in
+//            self.documentPicker()
+//        }))
+//
+        actionSheet.addAction(UIAlertAction(title: Constants.cancelBtnTitle, style: .cancel, handler: nil))
+        
+        if let popup = actionSheet.popoverPresentationController {
+            popup.sourceRect = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height, width: 0, height: 0)
+            popup.sourceView = currentVC?.view
+        }
+        
+        vc.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    //MARK: - Authorisation Status
+    // This is used to check the authorisation status whether user gives access to import the image, photo library, video.
+    // if the user gives access, then we can import the data safely
+    // if not show them alert to access from settings.
+    private func authorisationStatus(attachmentTypeEnum: AttachmentType, vc: UIViewController){
+        currentVC = vc
+        
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            
+            if attachmentTypeEnum == AttachmentType.camera{
+                openCamera()
+            }
+            if attachmentTypeEnum == AttachmentType.photoLibrary{
+                photoLibrary()
+            }
+            
+        case .denied:
+            print("permission denied")
+            self.addAlertForSettings(attachmentTypeEnum)
+        case .notDetermined:
+            print("Permission Not Determined")
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if status == PHAuthorizationStatus.authorized{
+                    // photo library access given
+                    print("access given")
+                   
+                    if attachmentTypeEnum == AttachmentType.camera{
+                        self.openCamera()
+                    }
+                    if attachmentTypeEnum == AttachmentType.photoLibrary{
+                        self.photoLibrary()
+                    }
+                    
+                }else{
+                    print("restriced manually")
+                    self.addAlertForSettings(attachmentTypeEnum)
+                }
+            })
+        case .restricted:
+            print("permission restricted")
+            self.addAlertForSettings(attachmentTypeEnum)
+        @unknown default:
+             self.addAlertForSettings(attachmentTypeEnum)
+        }
+    }
+    
+    //MARK: - CAMERA VIDEO CAPTURE
+    //This function is used to open camera from the iphone and
+    private func openCameraForCaptureVideo(){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let myPickerController = UIImagePickerController()
+            self.isFromCamera = true
+            myPickerController.delegate = self
+            myPickerController.sourceType = .camera
+            myPickerController.cameraCaptureMode = .video
+            //
+            currentVC?.present(myPickerController, animated: true, completion: nil)
+        }else{
+            let actionSheet = UIAlertController(title: Constants.alert, message: Constants.alertForNoCamera, preferredStyle: .alert)
+            actionSheet.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { (action) -> Void in
+                //self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!)
+            }))
+            currentVC?.present(actionSheet, animated: true, completion: nil)
+        }
+    }
+    
+    //MARK: - CAMERA PICKER
+    //This function is used to open camera from the iphone and
+    private func openCamera(){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let myPickerController = UIImagePickerController()
+            self.isFromCamera = true
+            myPickerController.delegate = self
+            myPickerController.sourceType = .camera
+            //
+            currentVC?.present(myPickerController, animated: true, completion: nil)
+        }else{
+            let actionSheet = UIAlertController(title: Constants.alert, message: Constants.alertForNoCamera, preferredStyle: .alert)
+            actionSheet.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { (action) -> Void in
+                //self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!)
+            }))
+            currentVC?.present(actionSheet, animated: true, completion: nil)
+        }
+    }
+    
+    
+    //MARK: - PHOTO PICKER
+    private func photoLibrary(){
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let myPickerController = UIImagePickerController()
+            self.isFromCamera = false
+            myPickerController.delegate = self
+            myPickerController.sourceType = .photoLibrary
+            currentVC?.present(myPickerController, animated: true, completion: nil)
+        }else{
+            let actionSheet = UIAlertController(title: Constants.alert, message: Constants.alertForNotSupportPhotoLib, preferredStyle: .alert)
+            actionSheet.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { (action) -> Void in
+                //self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!)
+            }))
+            currentVC?.present(actionSheet, animated: true, completion: nil)
+        }
+    }
+    
+    //MARK: - VIDEO PICKER
+    private func videoLibrary(){
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let myPickerController = UIImagePickerController()
+            myPickerController.delegate = self
+            myPickerController.sourceType = .photoLibrary
+            myPickerController.mediaTypes = [kUTTypeMovie as String, kUTTypeVideo as String]
+            currentVC?.present(myPickerController, animated: true, completion: nil)
+        }else{
+            let actionSheet = UIAlertController(title: Constants.alert, message: Constants.alertForNotSupportPhotoLib, preferredStyle: .alert)
+            actionSheet.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { (action) -> Void in
+                //self.authorisationStatus(attachmentTypeEnum: .camera, vc: self.currentVC!)
+            }))
+            currentVC?.present(actionSheet, animated: true, completion: nil)
+        }
+    }
+    
+    //MARK: - FILE PICKER
+    private func documentPicker(){
+        let supportAllow = [String(kUTTypePDF), String(kUTTypeText), String(kUTTypePlainText),]//String(kUTTypeImage),String(kUTTypeText), String(kUTTypePlainText)
+        let importMenu = UIDocumentPickerViewController(documentTypes: supportAllow, in: .import)
+        //let importMenu = UIDocumentMenuViewController(documentTypes: supportAllow, in: .import)
+        importMenu.delegate = self
+        importMenu.modalPresentationStyle = .formSheet
+        currentVC?.present(importMenu, animated: true, completion: nil)
+    }
+    
+    //MARK: - SETTINGS ALERT
+    private func addAlertForSettings(_ attachmentTypeEnum: AttachmentType){
+        var alertTitle: String = ""
+       
+        if attachmentTypeEnum == AttachmentType.camera{
+            alertTitle = Constants.alertForCameraAccessMessage
+        }
+        if attachmentTypeEnum == AttachmentType.photoLibrary{
+            alertTitle = Constants.alertForPhotoLibraryMessage
+        }
+//        if attachmentTypeEnum == AttachmentType.video{
+//            alertTitle = Constants.alertForVideoLibraryMessage
+//        }
+//
+        let cameraUnavailableAlertController = UIAlertController (title: alertTitle , message: nil, preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: Constants.settingsBtnTitle, style: .destructive) { (_) -> Void in
+            let settingsUrl = NSURL(string:UIApplication.openSettingsURLString)
+            if let url = settingsUrl {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
+                } else {
+                    // Fallback on earlier versions
+                    let success = UIApplication.shared.openURL(url as URL)
+                    print("Open \(url): \(success)")
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: Constants.cancelBtnTitle, style: .default, handler: nil)
+        cameraUnavailableAlertController .addAction(cancelAction)
+        cameraUnavailableAlertController .addAction(settingsAction)
+        currentVC?.present(cameraUnavailableAlertController , animated: true, completion: nil)
+    }
+}
+
+//MARK: - IMAGE PICKER DELEGATE
+// This is responsible for image picker interface to access image, video and then responsibel for canceling the picker
+extension AttachmentHandler: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        currentVC?.dismiss(animated: true, completion: nil)
+    }
+    
+    func imageSelected(imageName: String?, image: UIImage) {
+        DispatchQueue.main.async {
+            if self.isFromCamera {
+                self.imagePickedBlock?(self.imageOrientation(image) ?? image, imageName ?? "image.jpg")
+            } else {
+                self.imagePickedBlock?(image, imageName ?? "image.jpg")
+            }
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Local variable inserted by Swift 4.2 migrator.
+        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+        
+        if let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as? UIImage {
+            let pickedImageName = picker.getPickedFileName(info: info)
+            //self.imagePickedBlock?(image, pickedImageName ?? "image.jpg")
+            self.imageSelected(imageName: pickedImageName, image: image)
+        } else if let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage {
+            let pickedImageName = picker.getPickedFileName(info: info)
+            //self.imagePickedBlock?(image, pickedImageName ?? "image.jpg")
+            self.imageSelected(imageName: pickedImageName, image: image)
+        } else{
+            print("Something went wrong in  image")
+        }
+        
+        if let videoUrl = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.mediaURL)] as? NSURL{
+            print("videourl: ", videoUrl)
+            //trying compression of video
+            let data = NSData(contentsOf: videoUrl as URL)!
+            print("File size before compression: \(Double(data.length / 1048576)) mb")
+            compressWithSessionStatusFunc(videoUrl)
+        }
+        else{
+            print("Something went wrong in  video")
+        }
+        
+        currentVC?.dismiss(animated: false, completion: nil)
+    }
+    
+    func imageOrientation(_ src:UIImage) -> UIImage? {
+        if src.imageOrientation == UIImage.Orientation.up {
+            return src
+        }
+        var transform: CGAffineTransform = CGAffineTransform.identity
+        switch src.imageOrientation {
+        case UIImage.Orientation.down, UIImage.Orientation.downMirrored:
+            transform = transform.translatedBy(x: src.size.width, y: src.size.height)
+            transform = transform.rotated(by: CGFloat(Double.pi))
+            break
+        case UIImage.Orientation.left, UIImage.Orientation.leftMirrored:
+            transform = transform.translatedBy(x: src.size.width, y: 0)
+            transform = transform.rotated(by: CGFloat(Double.pi / 2))
+            break
+        case UIImage.Orientation.right, UIImage.Orientation.rightMirrored:
+            transform = transform.translatedBy(x: 0, y: src.size.height)
+            transform = transform.rotated(by: CGFloat(-Double.pi / 2))
+            break
+        case UIImage.Orientation.up, UIImage.Orientation.upMirrored:
+            break
+        @unknown default:
+            break
+        }
+        
+        switch src.imageOrientation {
+        case UIImage.Orientation.upMirrored, UIImage.Orientation.downMirrored:
+            transform.translatedBy(x: src.size.width, y: 0)
+            transform.scaledBy(x: -1, y: 1)
+            break
+        case UIImage.Orientation.leftMirrored, UIImage.Orientation.rightMirrored:
+            transform.translatedBy(x: src.size.height, y: 0)
+            transform.scaledBy(x: -1, y: 1)
+        case UIImage.Orientation.up, UIImage.Orientation.down, UIImage.Orientation.left, UIImage.Orientation.right:
+            break
+        @unknown default:
+            break
+        }
+        
+        let ctx:CGContext = CGContext(data: nil, width: Int(src.size.width), height: Int(src.size.height), bitsPerComponent: (src.cgImage)!.bitsPerComponent, bytesPerRow: 0, space: (src.cgImage)!.colorSpace!, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
+        
+        ctx.concatenate(transform)
+        
+        switch src.imageOrientation {
+        case UIImage.Orientation.left, UIImage.Orientation.leftMirrored, UIImage.Orientation.right, UIImage.Orientation.rightMirrored:
+            ctx.draw(src.cgImage!, in: CGRect(x: 0, y: 0, width: src.size.height, height: src.size.width))
+            break
+        default:
+            ctx.draw(src.cgImage!, in: CGRect(x: 0, y: 0, width: src.size.width, height: src.size.height))
+            break
+        }
+        
+        if let cgimg:CGImage = ctx.makeImage() {
+            return UIImage(cgImage: cgimg)
+        }
+        return src
+    }
+    
+    //MARK: Video Compressing technique
+    fileprivate func compressWithSessionStatusFunc(_ videoUrl: NSURL) {
+        let compressedURL = NSURL.fileURL(withPath: NSTemporaryDirectory() + NSUUID().uuidString + ".MOV")
+        compressVideo(inputURL: videoUrl as URL, outputURL: compressedURL) { (exportSession) in
+            guard let session = exportSession else {
+                return
+            }
+            
+            switch session.status {
+            case .unknown:
+                break
+            case .waiting:
+                break
+            case .exporting:
+                break
+            case .completed:
+                guard let compressedData = NSData(contentsOf: compressedURL) else {
+                    return
+                }
+                print("File size after compression: \(Double(compressedData.length / 1048576)) mb")
+//                DispatchQueue.main.async {
+//                  //  self.videoPickedBlock?(compressedURL, compressedData as Data)
+//                }
+            case .failed:
+                break
+            case .cancelled:
+                break
+            @unknown default:
+                break
+            }
+        }
+    }
+    
+    // Now compression is happening with medium quality, we can change when ever it is needed
+    func compressVideo(inputURL: URL, outputURL: URL, handler:@escaping (_ exportSession: AVAssetExportSession?)-> Void) {
+        let urlAsset = AVURLAsset(url: inputURL, options: nil)
+        guard let exportSession = AVAssetExportSession(asset: urlAsset, presetName: AVAssetExportPreset1280x720) else {
+            handler(nil)
+            return
+        }
+        exportSession.outputURL = outputURL
+        exportSession.outputFileType = AVFileType.mov
+        exportSession.shouldOptimizeForNetworkUse = true
+        exportSession.exportAsynchronously { () -> Void in
+            handler(exportSession)
+        }
+    }
+}
+
+//MARK: - FILE IMPORT DELEGATE
+extension AttachmentHandler: UIDocumentMenuDelegate, UIDocumentPickerDelegate{
+    func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+        documentPicker.delegate = self
+        currentVC?.present(documentPicker, animated: true, completion: nil)
+    }
+    
+    
+//    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+//        print("url", url)
+//        do {
+//            let data = try Data(contentsOf: url)
+//            self.filePickedBlock?(url, data)
+//        }
+//        catch {
+//            self.filePickedBlock?(url, nil)
+//        }
+//    }
+    
+    //    Method to handle cancel action.
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        currentVC?.dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+    return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+    return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+    return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}
+
+
+
+extension UIImagePickerController{
+    
+    func getPickedFileName(info: [String:Any]) -> String? {
+        if #available(iOS 11.0, *) {
+            if let asset = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.phAsset)] as? PHAsset {
+                if let fileName = (asset.value(forKey: "filename")) as? String {
+                    print("\(fileName)")
+                    return fileName
+                }
+                else{return nil}
+            }
+            else{return nil}
+        } else {
+            // Fallback on earlier versions
+            if let imageURL = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.referenceURL)] as? URL {
+                let result = PHAsset.fetchAssets(withALAssetURLs: [imageURL], options: nil)
+                if let asset = result.firstObject {
+                    print(asset.value(forKey: "filename")!)
+                    return asset.value(forKey: "filename") as? String ?? ""
+                }
+                else{return nil}
+            }
+            else{return nil}
+        }
+        
+    }
+    
+}

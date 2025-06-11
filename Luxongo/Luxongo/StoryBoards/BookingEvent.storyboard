@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Bold.ttf">
+            <string>SourceSerifPro-Bold</string>
+        </array>
+        <array key="SourceSerifPro-Regular.ttf">
+            <string>SourceSerifPro-Regular</string>
+        </array>
+        <array key="SourceSerifPro-Semibold.ttf">
+            <string>SourceSerifPro-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Booking SuccessVC-->
+        <scene sceneID="zoZ-45-dkM">
+            <objects>
+                <viewController storyboardIdentifier="BookingSuccessVC" id="SPP-tO-PTq" customClass="BookingSuccessVC" customModule="Luxongo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwQ-V5-pnn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mL-et-aoN">
+                                <rect key="frame" x="20" y="65" width="55" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qd0-CF-8eK">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                        <state key="normal" image="BMhome"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.7725490196" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6mL-et-aoN" secondAttribute="height" multiplier="1:1" id="1tt-0m-fDF"/>
+                                    <constraint firstAttribute="trailing" secondItem="qd0-CF-8eK" secondAttribute="trailing" id="74N-Hi-vFF"/>
+                                    <constraint firstAttribute="height" constant="55" id="7tj-O6-tHG"/>
+                                    <constraint firstItem="qd0-CF-8eK" firstAttribute="top" secondItem="6mL-et-aoN" secondAttribute="top" id="Pxb-PT-Ztd"/>
+                                    <constraint firstAttribute="bottom" secondItem="qd0-CF-8eK" secondAttribute="bottom" id="bFU-gg-Puh"/>
+                                    <constraint firstItem="qd0-CF-8eK" firstAttribute="leading" secondItem="6mL-et-aoN" secondAttribute="leading" id="xpp-tJ-J8q"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t8Z-HN-kfz">
+                                <rect key="frame" x="18" y="256" width="339" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wd4-Xs-ry0">
+                                        <rect key="frame" x="142" y="0.0" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="ayP-jk-yrc"/>
+                                            <constraint firstAttribute="width" secondItem="wd4-Xs-ry0" secondAttribute="height" multiplier="1:1" id="gpI-dZ-QBZ"/>
+                                        </constraints>
+                                        <state key="normal" image="bigSucsses"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your booking has been Done!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hxL-dR-zKx" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="12.5" y="67" width="314" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="We have sent you the tickets to your registered email aaddress" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-LY-xod" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="24.5" y="109.5" width="290" height="45.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="18"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A5-7O-biV">
+                                <rect key="frame" x="18" y="610" width="339" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Pwu-hO-jTK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="17"/>
+                                <state key="normal" title="VIEW YOUR FLYERS">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgF-Bg-wR7" customClass="BlackBgButton" customModule="Luxongo" customModuleProvider="target">
+                                <rect key="frame" x="18" y="562" width="339" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mo2-pL-lRF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="21"/>
+                                <state key="normal" title="DOWNLOAD TICKET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Me-sa-AXq" firstAttribute="bottom" secondItem="0A5-7O-biV" secondAttribute="bottom" constant="20" id="EQr-3h-YA7"/>
+                            <constraint firstItem="6mL-et-aoN" firstAttribute="leading" secondItem="6Me-sa-AXq" secondAttribute="leading" constant="20" id="Hyu-xq-eFE"/>
+                            <constraint firstItem="t8Z-HN-kfz" firstAttribute="centerY" secondItem="cwQ-V5-pnn" secondAttribute="centerY" id="JQJ-gq-cxq"/>
+                            <constraint firstItem="t8Z-HN-kfz" firstAttribute="leading" secondItem="6Me-sa-AXq" secondAttribute="leading" constant="18" id="M4Z-st-a54"/>
+                            <constraint firstItem="6Me-sa-AXq" firstAttribute="trailing" secondItem="UgF-Bg-wR7" secondAttribute="trailing" constant="18" id="Mwx-Vd-qGa"/>
+                            <constraint firstAttribute="trailing" secondItem="t8Z-HN-kfz" secondAttribute="trailing" constant="18" id="Ngo-fa-VdO"/>
+                            <constraint firstItem="0A5-7O-biV" firstAttribute="top" secondItem="UgF-Bg-wR7" secondAttribute="bottom" constant="8" id="PSN-Rb-MWL"/>
+                            <constraint firstItem="6mL-et-aoN" firstAttribute="top" secondItem="6Me-sa-AXq" secondAttribute="top" constant="45" id="V7j-RS-9f4"/>
+                            <constraint firstItem="t8Z-HN-kfz" firstAttribute="centerX" secondItem="cwQ-V5-pnn" secondAttribute="centerX" id="c9m-Kc-ltf"/>
+                            <constraint firstItem="UgF-Bg-wR7" firstAttribute="leading" secondItem="6Me-sa-AXq" secondAttribute="leading" constant="18" id="cbd-UU-0OM"/>
+                            <constraint firstItem="0A5-7O-biV" firstAttribute="trailing" secondItem="UgF-Bg-wR7" secondAttribute="trailing" id="mei-Si-xhQ"/>
+                            <constraint firstItem="0A5-7O-biV" firstAttribute="leading" secondItem="UgF-Bg-wR7" secondAttribute="leading" id="vR5-Ck-UQB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Me-sa-AXq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fu-P0-LhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="69.715142428785612"/>
+        </scene>
+        <!--Booking FailVC-->
+        <scene sceneID="DwZ-Tr-BKx">
+            <objects>
+                <viewController storyboardIdentifier="BookingFailVC" id="I1o-rt-7GI" customClass="BookingFailVC" customModule="Luxongo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5k-wJ-Cxk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-HT-lzp">
+                                <rect key="frame" x="20" y="65" width="55" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBE-Qr-4LU">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                        <state key="normal" image="BMhome"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.7725490196" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GBE-Qr-4LU" secondAttribute="bottom" id="3c3-zS-c7T"/>
+                                    <constraint firstItem="GBE-Qr-4LU" firstAttribute="top" secondItem="gMl-HT-lzp" secondAttribute="top" id="Ons-yl-1zo"/>
+                                    <constraint firstAttribute="width" secondItem="gMl-HT-lzp" secondAttribute="height" multiplier="1:1" id="UWl-2m-LnD"/>
+                                    <constraint firstAttribute="height" constant="55" id="VEu-wt-Xih"/>
+                                    <constraint firstAttribute="trailing" secondItem="GBE-Qr-4LU" secondAttribute="trailing" id="dj7-YK-fID"/>
+                                    <constraint firstItem="GBE-Qr-4LU" firstAttribute="leading" secondItem="gMl-HT-lzp" secondAttribute="leading" id="qly-cX-pYZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="f9w-pY-bWG">
+                                <rect key="frame" x="18" y="233.5" width="339" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7l-hV-RRM">
+                                        <rect key="frame" x="142" y="0.0" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="o7l-hV-RRM" secondAttribute="height" multiplier="1:1" id="jDW-ay-w7l"/>
+                                            <constraint firstAttribute="height" constant="55" id="upk-Br-95J"/>
+                                        </constraints>
+                                        <state key="normal" image="bigReject"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your transaction has Cancelled" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WKX-QK-172" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="67" width="331.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF7-u8-mXP" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="10.5" y="109.5" width="318" height="90.5"/>
+                                        <string key="text">Due to some error your transaction has been Cancelled. Any amount has been deducted will be refund to you within
+3 business day.</string>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="18"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btm-7o-n8W">
+                                <rect key="frame" x="18" y="610" width="339" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="s90-zE-H1I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="17"/>
+                                <state key="normal" title="BACK TO EVENT DETAIL">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXx-CL-XNH" customClass="BlackBgButton" customModule="Luxongo" customModuleProvider="target">
+                                <rect key="frame" x="18" y="562" width="339" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XNk-ui-SzR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="21"/>
+                                <state key="normal" title="TRY AGAIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f9w-pY-bWG" firstAttribute="leading" secondItem="Gl8-gC-HER" secondAttribute="leading" constant="18" id="6yF-HR-25v"/>
+                            <constraint firstItem="gMl-HT-lzp" firstAttribute="leading" secondItem="Gl8-gC-HER" secondAttribute="leading" constant="20" id="DET-mH-QBT"/>
+                            <constraint firstItem="f9w-pY-bWG" firstAttribute="centerY" secondItem="g5k-wJ-Cxk" secondAttribute="centerY" id="NAX-sU-dz8"/>
+                            <constraint firstAttribute="trailing" secondItem="f9w-pY-bWG" secondAttribute="trailing" constant="18" id="PbE-8r-x8M"/>
+                            <constraint firstItem="f9w-pY-bWG" firstAttribute="centerX" secondItem="g5k-wJ-Cxk" secondAttribute="centerX" id="Se9-ye-1Su"/>
+                            <constraint firstItem="btm-7o-n8W" firstAttribute="top" secondItem="AXx-CL-XNH" secondAttribute="bottom" constant="8" id="TRJ-pT-Gcv"/>
+                            <constraint firstItem="Gl8-gC-HER" firstAttribute="trailing" secondItem="AXx-CL-XNH" secondAttribute="trailing" constant="18" id="V9j-Ol-XMh"/>
+                            <constraint firstItem="Gl8-gC-HER" firstAttribute="bottom" secondItem="btm-7o-n8W" secondAttribute="bottom" constant="20" id="eGy-aF-BTj"/>
+                            <constraint firstItem="AXx-CL-XNH" firstAttribute="leading" secondItem="Gl8-gC-HER" secondAttribute="leading" constant="18" id="nIJ-GN-UVK"/>
+                            <constraint firstItem="btm-7o-n8W" firstAttribute="leading" secondItem="AXx-CL-XNH" secondAttribute="leading" id="uvt-UV-zJe"/>
+                            <constraint firstItem="btm-7o-n8W" firstAttribute="trailing" secondItem="AXx-CL-XNH" secondAttribute="trailing" id="wyg-8m-p1F"/>
+                            <constraint firstItem="gMl-HT-lzp" firstAttribute="top" secondItem="Gl8-gC-HER" secondAttribute="top" constant="45" id="yGA-uy-fSa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gl8-gC-HER"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TaP-I9-3AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="78"/>
+        </scene>
+        <!--Buy NowVC-->
+        <scene sceneID="yD9-tt-0Sc">
+            <objects>
+                <viewController storyboardIdentifier="BuyNowVC" id="ktl-EZ-JaA" customClass="BuyNowVC" customModule="Luxongo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pqf-KX-Br1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bta-Xt-a9U">
+                                <rect key="frame" x="0.0" y="176.5" width="375" height="490.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYw-Sh-xEw">
+                                        <rect key="frame" x="0.0" y="68.5" width="375" height="422"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-Yv-CzV" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                                <rect key="frame" x="338" y="20" width="19" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="53f-MG-Y1U"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="18"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-Rd-U7K">
+                                                <rect key="frame" x="18" y="105" width="339" height="91.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-au-8lO" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="12" width="315" height="23"/>
+                                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="18"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9VF-Yw-lhC" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="47" width="126" height="26.5"/>
+                                                        <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="21"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="hdE-7s-lu8">
+                                                        <rect key="frame" x="228" y="35" width="99" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJm-cZ-UNK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="jJm-cZ-UNK" secondAttribute="height" multiplier="1:1" id="8n8-Va-4KC"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="OyS-hu-uj8"/>
+                                                                </constraints>
+                                                                <state key="normal" image="minus"/>
+                                                                <connections>
+                                                                    <action selector="onClickMinus:" destination="ktl-EZ-JaA" eventType="touchUpInside" id="QBT-z9-KCa"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cl-QC-hsW">
+                                                                <rect key="frame" x="54" y="0.0" width="45" height="45"/>
+                                                                <state key="normal" image="plus"/>
+                                                                <connections>
+                                                                    <action selector="onClickAdd:" destination="ktl-EZ-JaA" eventType="touchUpInside" id="maG-LV-TMN"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="8cl-QC-hsW" firstAttribute="width" secondItem="jJm-cZ-UNK" secondAttribute="width" id="mdn-fd-hjK"/>
+                                                            <constraint firstItem="8cl-QC-hsW" firstAttribute="height" secondItem="jJm-cZ-UNK" secondAttribute="height" id="xI5-we-XAJ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="9VF-Yw-lhC" firstAttribute="width" secondItem="4ig-au-8lO" secondAttribute="width" multiplier="0.4" id="5J3-Ud-ptv"/>
+                                                    <constraint firstItem="9VF-Yw-lhC" firstAttribute="leading" secondItem="4ig-au-8lO" secondAttribute="leading" id="Ed1-v3-4MW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hdE-7s-lu8" secondAttribute="trailing" constant="12" id="Erg-qq-BGN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4ig-au-8lO" secondAttribute="trailing" constant="12" id="Kk0-al-k2c"/>
+                                                    <constraint firstItem="4ig-au-8lO" firstAttribute="top" secondItem="1UH-Rd-U7K" secondAttribute="top" constant="12" id="Lrt-up-lJ2"/>
+                                                    <constraint firstItem="9VF-Yw-lhC" firstAttribute="top" secondItem="4ig-au-8lO" secondAttribute="bottom" constant="12" id="Tu3-QO-MBc"/>
+                                                    <constraint firstItem="hdE-7s-lu8" firstAttribute="top" secondItem="4ig-au-8lO" secondAttribute="bottom" id="XVI-MC-XRz"/>
+                                                    <constraint firstItem="4ig-au-8lO" firstAttribute="leading" secondItem="1UH-Rd-U7K" secondAttribute="leading" constant="12" id="hmc-wH-37W"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9VF-Yw-lhC" secondAttribute="bottom" constant="18" id="irg-nD-Ly4"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-zT-F7a">
+                                                <rect key="frame" x="18" y="204.5" width="339" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBH-l3-fJ5" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="23" width="101.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="16"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$170" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ib-4L-iYm" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                                        <rect key="frame" x="277.5" y="8" width="49.5" height="50"/>
+                                                        <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="24"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.95686274510000002" green="0.89411764709999997" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="3Ib-4L-iYm" firstAttribute="top" secondItem="JSw-zT-F7a" secondAttribute="top" constant="8" id="7j7-LM-Yf7"/>
+                                                    <constraint firstAttribute="height" constant="66" id="Af1-4i-Loi"/>
+                                                    <constraint firstItem="MBH-l3-fJ5" firstAttribute="leading" secondItem="JSw-zT-F7a" secondAttribute="leading" constant="12" id="Eap-Yi-Ubt"/>
+                                                    <constraint firstItem="MBH-l3-fJ5" firstAttribute="width" secondItem="JSw-zT-F7a" secondAttribute="width" multiplier="0.3" id="JgQ-EJ-9EV"/>
+                                                    <constraint firstItem="3Ib-4L-iYm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MBH-l3-fJ5" secondAttribute="trailing" constant="12" id="SCi-hk-oi7"/>
+                                                    <constraint firstItem="MBH-l3-fJ5" firstAttribute="centerY" secondItem="JSw-zT-F7a" secondAttribute="centerY" id="Woo-an-Q9e"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3Ib-4L-iYm" secondAttribute="bottom" constant="8" id="brz-WN-hB8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3Ib-4L-iYm" secondAttribute="trailing" constant="12" id="dCi-Yz-9eH"/>
+                                                    <constraint firstItem="3Ib-4L-iYm" firstAttribute="centerY" secondItem="JSw-zT-F7a" secondAttribute="centerY" id="oaT-XN-hmH"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Tickets once bought cannot be cancelled on the platform" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1R-Iq-cCO" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                                <rect key="frame" x="18" y="288.5" width="339" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="13"/>
+                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZJ-4x-Z7k">
+                                                <rect key="frame" x="18" y="373" width="339" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="COu-NF-wgc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="17"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickCancel:" destination="ktl-EZ-JaA" eventType="touchUpInside" id="SWf-QG-EP6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agc-x5-Pub" customClass="BlackBgButton" customModule="Luxongo" customModuleProvider="target">
+                                                <rect key="frame" x="18" y="325" width="339" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Qua-wf-bR8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="21"/>
+                                                <state key="normal" title="CHECKOUT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickCheckOut:" destination="ktl-EZ-JaA" eventType="touchUpInside" id="ie4-PZ-kRX"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecte event type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecX-QH-hL2" customClass="TextField" customModule="Luxongo" customModuleProvider="target">
+                                                <rect key="frame" x="18" y="20" width="139.5" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="N3v-JY-aXV"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gPr-dp-F32">
+                                                <rect key="frame" x="18" y="68" width="339" height="19"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sold Ticket : 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wT-QF-etn" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="19"/>
+                                                        <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="15"/>
+                                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Available Ticket : 0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-UJ-Cvu" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                                        <rect key="frame" x="173.5" y="0.0" width="165.5" height="19"/>
+                                                        <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="15"/>
+                                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="gPr-dp-F32" firstAttribute="leading" secondItem="ecX-QH-hL2" secondAttribute="leading" id="2e0-Dt-yUw"/>
+                                            <constraint firstItem="ecX-QH-hL2" firstAttribute="top" secondItem="BYw-Sh-xEw" secondAttribute="top" constant="20" id="6Wj-pn-G9C"/>
+                                            <constraint firstAttribute="trailing" secondItem="CZJ-4x-Z7k" secondAttribute="trailing" constant="18" id="7Lw-NH-zus"/>
+                                            <constraint firstItem="9VF-Yw-lhC" firstAttribute="width" secondItem="4ig-au-8lO" secondAttribute="width" multiplier="0.4" id="7kr-jW-w9h"/>
+                                            <constraint firstItem="hdE-7s-lu8" firstAttribute="top" secondItem="4ig-au-8lO" secondAttribute="bottom" id="AgK-Ht-v5N"/>
+                                            <constraint firstAttribute="trailing" secondItem="1UH-Rd-U7K" secondAttribute="trailing" constant="18" id="BNT-vg-6P3"/>
+                                            <constraint firstItem="DIU-Yv-CzV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ecX-QH-hL2" secondAttribute="trailing" constant="18" id="CRN-3f-byf"/>
+                                            <constraint firstItem="9VF-Yw-lhC" firstAttribute="leading" secondItem="4ig-au-8lO" secondAttribute="leading" id="CcO-do-NYB"/>
+                                            <constraint firstItem="ecX-QH-hL2" firstAttribute="leading" secondItem="BYw-Sh-xEw" secondAttribute="leading" constant="18" id="DFp-gr-d1A"/>
+                                            <constraint firstItem="CZJ-4x-Z7k" firstAttribute="trailing" secondItem="agc-x5-Pub" secondAttribute="trailing" id="H5J-Fo-xWl"/>
+                                            <constraint firstItem="9VF-Yw-lhC" firstAttribute="top" secondItem="4ig-au-8lO" secondAttribute="bottom" constant="12" id="Jah-ym-tLg"/>
+                                            <constraint firstItem="1UH-Rd-U7K" firstAttribute="top" secondItem="gPr-dp-F32" secondAttribute="bottom" constant="18" id="KJ8-pe-yCs"/>
+                                            <constraint firstAttribute="trailing" secondItem="DIU-Yv-CzV" secondAttribute="trailing" constant="18" id="PEl-8N-1af"/>
+                                            <constraint firstItem="CZJ-4x-Z7k" firstAttribute="top" secondItem="agc-x5-Pub" secondAttribute="bottom" constant="8" id="Pom-Xy-aA0"/>
+                                            <constraint firstItem="JSw-zT-F7a" firstAttribute="leading" secondItem="BYw-Sh-xEw" secondAttribute="leading" constant="18" id="Q6m-fQ-ee4"/>
+                                            <constraint firstAttribute="trailing" secondItem="4ig-au-8lO" secondAttribute="trailing" constant="30" id="TkY-X6-Ape"/>
+                                            <constraint firstItem="gPr-dp-F32" firstAttribute="trailing" secondItem="DIU-Yv-CzV" secondAttribute="trailing" id="UCt-uF-ihQ"/>
+                                            <constraint firstItem="1UH-Rd-U7K" firstAttribute="leading" secondItem="BYw-Sh-xEw" secondAttribute="leading" constant="18" id="YOS-Ib-uDE"/>
+                                            <constraint firstItem="CZJ-4x-Z7k" firstAttribute="leading" secondItem="agc-x5-Pub" secondAttribute="leading" id="ZZe-dE-2cD"/>
+                                            <constraint firstItem="JSw-zT-F7a" firstAttribute="top" secondItem="1UH-Rd-U7K" secondAttribute="bottom" constant="8" id="be0-yd-Qt6"/>
+                                            <constraint firstItem="b1R-Iq-cCO" firstAttribute="leading" secondItem="JSw-zT-F7a" secondAttribute="leading" id="eqZ-h9-m4a"/>
+                                            <constraint firstItem="b1R-Iq-cCO" firstAttribute="trailing" secondItem="JSw-zT-F7a" secondAttribute="trailing" id="g94-Pe-bBF"/>
+                                            <constraint firstAttribute="trailing" secondItem="JSw-zT-F7a" secondAttribute="trailing" constant="18" id="ia2-M4-hZZ"/>
+                                            <constraint firstItem="gPr-dp-F32" firstAttribute="top" secondItem="ecX-QH-hL2" secondAttribute="bottom" constant="18" id="mKn-vT-HVM"/>
+                                            <constraint firstItem="4ig-au-8lO" firstAttribute="leading" secondItem="BYw-Sh-xEw" secondAttribute="leading" constant="30" id="rKE-Gq-zHG"/>
+                                            <constraint firstItem="CZJ-4x-Z7k" firstAttribute="leading" secondItem="BYw-Sh-xEw" secondAttribute="leading" constant="18" id="s85-gn-hRB"/>
+                                            <constraint firstItem="DIU-Yv-CzV" firstAttribute="top" secondItem="BYw-Sh-xEw" secondAttribute="top" constant="20" id="voO-mX-i2Z"/>
+                                            <constraint firstItem="agc-x5-Pub" firstAttribute="top" secondItem="b1R-Iq-cCO" secondAttribute="bottom" constant="20" id="wXV-7N-HVk"/>
+                                            <constraint firstAttribute="bottom" secondItem="CZJ-4x-Z7k" secondAttribute="bottom" constant="12" id="wva-Fp-Rzm"/>
+                                            <constraint firstItem="b1R-Iq-cCO" firstAttribute="top" secondItem="JSw-zT-F7a" secondAttribute="bottom" constant="18" id="xwG-Ho-aXl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY NOW" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NE6-NG-SyZ" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="18" width="359" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.7725490196" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BYw-Sh-xEw" firstAttribute="leading" secondItem="Bta-Xt-a9U" secondAttribute="leading" id="2Yd-GS-XRe"/>
+                                    <constraint firstItem="NE6-NG-SyZ" firstAttribute="centerX" secondItem="Bta-Xt-a9U" secondAttribute="centerX" id="3j3-q7-h0B"/>
+                                    <constraint firstItem="NE6-NG-SyZ" firstAttribute="top" secondItem="Bta-Xt-a9U" secondAttribute="top" constant="18" id="KGZ-0k-Sty"/>
+                                    <constraint firstAttribute="trailing" secondItem="BYw-Sh-xEw" secondAttribute="trailing" id="QQd-Jp-ejJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="BYw-Sh-xEw" secondAttribute="bottom" id="SIG-B0-hZx"/>
+                                    <constraint firstAttribute="trailing" secondItem="NE6-NG-SyZ" secondAttribute="trailing" constant="8" id="ab3-dA-Pfs"/>
+                                    <constraint firstItem="NE6-NG-SyZ" firstAttribute="leading" secondItem="Bta-Xt-a9U" secondAttribute="leading" constant="8" id="fgg-iA-tl0"/>
+                                    <constraint firstItem="BYw-Sh-xEw" firstAttribute="top" secondItem="NE6-NG-SyZ" secondAttribute="bottom" constant="20" id="y98-uv-sko"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bta-Xt-a9U" firstAttribute="leading" secondItem="MUr-sb-YQf" secondAttribute="leading" id="3zp-I2-A1h"/>
+                            <constraint firstItem="Bta-Xt-a9U" firstAttribute="bottom" secondItem="MUr-sb-YQf" secondAttribute="bottom" id="5hx-yj-Ha4"/>
+                            <constraint firstItem="Bta-Xt-a9U" firstAttribute="trailing" secondItem="MUr-sb-YQf" secondAttribute="trailing" id="OUU-Py-Sny"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MUr-sb-YQf"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="CZJ-4x-Z7k" id="mNB-OR-WOE"/>
+                        <outlet property="btnCheckOut" destination="agc-x5-Pub" id="uXH-Dh-Ojq"/>
+                        <outlet property="lblAvailableTkt" destination="LeA-UJ-Cvu" id="wnG-8f-bs2"/>
+                        <outlet property="lblBuyNow" destination="NE6-NG-SyZ" id="5H2-DA-uJ7"/>
+                        <outlet property="lblDesc" destination="b1R-Iq-cCO" id="uCn-aR-wM1"/>
+                        <outlet property="lblQuatity" destination="4ig-au-8lO" id="Iwd-LQ-pz3"/>
+                        <outlet property="lblSoldTicket" destination="3wT-QF-etn" id="Qm3-NG-fHu"/>
+                        <outlet property="lblTotal" destination="MBH-l3-fJ5" id="x7B-yx-jyX"/>
+                        <outlet property="lblValBasePrice" destination="DIU-Yv-CzV" id="0be-48-8xm"/>
+                        <outlet property="lblValQua" destination="9VF-Yw-lhC" id="59H-c8-Oyg"/>
+                        <outlet property="lblValTotal" destination="3Ib-4L-iYm" id="iMP-K7-dgI"/>
+                        <outlet property="qualityView" destination="1UH-Rd-U7K" id="OMb-Rm-9VN"/>
+                        <outlet property="tfTicketType" destination="ecX-QH-hL2" id="Je3-Nb-91w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ed6-AL-8NI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751.20000000000005" y="69.715142428785612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BMhome" width="21" height="19"/>
+        <image name="bigReject" width="39.5" height="39.5"/>
+        <image name="bigSucsses" width="39.5" height="39.5"/>
+        <image name="minus" width="24" height="24"/>
+        <image name="plus" width="24" height="24"/>
+    </resources>
+</document>

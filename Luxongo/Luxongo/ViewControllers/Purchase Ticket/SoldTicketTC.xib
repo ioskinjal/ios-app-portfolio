@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Bold.ttf">
+            <string>SourceSerifPro-Bold</string>
+        </array>
+        <array key="SourceSerifPro-Regular.ttf">
+            <string>SourceSerifPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="wg2-at-0lR" customClass="SoldTicketTC" customModule="Luxongo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wg2-at-0lR" id="Jgb-TC-mng">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Ticket ID: TS023690" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IF-92-MTL" customClass="LabelBold" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="20" y="12" width="237" height="19"/>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvq-PN-VIw">
+                        <rect key="frame" x="20" y="43" width="237" height="33.5"/>
+                        <string key="text">Kiera knightley Booked 2 ticketsfor Tennis tournament final for </string>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="$ 120" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5B-C0-7i5" customClass="LabelBold" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="265" y="12" width="35" height="19"/>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zd-rd-6lw">
+                        <rect key="frame" x="267" y="37.5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="MAf-7h-88a"/>
+                            <constraint firstAttribute="width" secondItem="0zd-rd-6lw" secondAttribute="height" multiplier="1:1" id="ie7-Tl-G81"/>
+                        </constraints>
+                        <state key="normal" image="redDustbin"/>
+                        <connections>
+                            <action selector="onClickDelete:" destination="wg2-at-0lR" eventType="touchUpInside" id="Qeu-ik-ofx"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Fvq-PN-VIw" secondAttribute="bottom" constant="12" id="1LE-Oa-TSf"/>
+                    <constraint firstAttribute="trailing" secondItem="R5B-C0-7i5" secondAttribute="trailing" constant="20" id="4vd-yR-HY0"/>
+                    <constraint firstItem="3IF-92-MTL" firstAttribute="leading" secondItem="Jgb-TC-mng" secondAttribute="leading" constant="20" id="9dV-2D-fbr"/>
+                    <constraint firstItem="Fvq-PN-VIw" firstAttribute="leading" secondItem="3IF-92-MTL" secondAttribute="leading" id="Me2-f8-vLx"/>
+                    <constraint firstItem="3IF-92-MTL" firstAttribute="top" secondItem="Jgb-TC-mng" secondAttribute="top" constant="12" id="NBm-hk-gLf"/>
+                    <constraint firstItem="Fvq-PN-VIw" firstAttribute="top" secondItem="3IF-92-MTL" secondAttribute="bottom" constant="12" id="TzR-Of-pES"/>
+                    <constraint firstAttribute="trailing" secondItem="0zd-rd-6lw" secondAttribute="trailing" constant="8" id="dz0-Oh-d2u"/>
+                    <constraint firstItem="Fvq-PN-VIw" firstAttribute="trailing" secondItem="3IF-92-MTL" secondAttribute="trailing" id="hwB-jE-OXM"/>
+                    <constraint firstItem="0zd-rd-6lw" firstAttribute="centerY" secondItem="Fvq-PN-VIw" secondAttribute="centerY" id="lUc-5s-Rwf"/>
+                    <constraint firstItem="R5B-C0-7i5" firstAttribute="top" secondItem="Jgb-TC-mng" secondAttribute="top" constant="12" id="suy-dR-bqz"/>
+                    <constraint firstItem="R5B-C0-7i5" firstAttribute="leading" secondItem="3IF-92-MTL" secondAttribute="trailing" constant="8" id="yIg-1V-XUa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="dcg-0B-brn"/>
+            <connections>
+                <outlet property="lblDescr" destination="Fvq-PN-VIw" id="hwJ-kg-Ybg"/>
+                <outlet property="lblPrice" destination="R5B-C0-7i5" id="rsv-qW-Uou"/>
+                <outlet property="lblTransID" destination="3IF-92-MTL" id="NWv-BJ-oMP"/>
+            </connections>
+            <point key="canvasLocation" x="73.913043478260875" y="80.022321428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="redDustbin" width="12.5" height="15"/>
+    </resources>
+</document>

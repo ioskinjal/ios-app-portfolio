@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Regular.ttf">
+            <string>SourceSerifPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="77" id="Lqn-mR-nWZ" customClass="SelectOraganizerTC" customModule="Luxongo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lqn-mR-nWZ" id="gaa-6K-Ol8">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u1x-n1-jzp">
+                        <rect key="frame" x="12" y="12" width="299" height="52.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwN-2S-k8D">
+                                <rect key="frame" x="0.0" y="4" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RM1-PS-u3Z"/>
+                                    <constraint firstAttribute="width" secondItem="fwN-2S-k8D" secondAttribute="height" multiplier="1:1" id="VtT-PH-Rri"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="py0-Og-oFg">
+                                <rect key="frame" x="53" y="14" width="193" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kiera Johnson" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpE-nC-idp" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="193" height="24"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pD-iH-E6r" customClass="LabelRegular" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="193" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="14"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-FT-5Of">
+                                <rect key="frame" x="254" y="4" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6rP-FT-5Of" secondAttribute="height" multiplier="1:1" id="CeT-0K-Kyq"/>
+                                    <constraint firstAttribute="height" constant="45" id="M5e-kg-5jW"/>
+                                </constraints>
+                                <state key="normal" image="checkBoxUnSelect"/>
+                                <connections>
+                                    <action selector="onClickCheckBox:" destination="Lqn-mR-nWZ" eventType="touchUpInside" id="re1-8T-hjU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="u1x-n1-jzp" secondAttribute="trailing" constant="12" id="3e0-m7-CxT"/>
+                    <constraint firstItem="u1x-n1-jzp" firstAttribute="leading" secondItem="gaa-6K-Ol8" secondAttribute="leading" constant="12" id="b0E-rp-V5I"/>
+                    <constraint firstItem="u1x-n1-jzp" firstAttribute="top" secondItem="gaa-6K-Ol8" secondAttribute="top" constant="12" id="b9B-uP-BIx"/>
+                    <constraint firstAttribute="bottom" secondItem="u1x-n1-jzp" secondAttribute="bottom" constant="12" id="pTo-7d-GiU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="AgH-it-76x"/>
+            <connections>
+                <outlet property="btnCheckBox" destination="6rP-FT-5Of" id="oIJ-Ew-lh2"/>
+                <outlet property="imgUser" destination="fwN-2S-k8D" id="9OC-03-Ugu"/>
+                <outlet property="lblDesc" destination="2pD-iH-E6r" id="Gfj-7B-WnV"/>
+                <outlet property="lblUserName" destination="NpE-nC-idp" id="DZp-6U-SKj"/>
+            </connections>
+            <point key="canvasLocation" x="9" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkBoxUnSelect" width="14.5" height="14.5"/>
+    </resources>
+</document>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jEO-TE-bFR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Bold.ttf">
+            <string>SourceSerifPro-Bold</string>
+        </array>
+        <array key="SourceSerifPro-Semibold.ttf">
+            <string>SourceSerifPro-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Payment HistoryVC-->
+        <scene sceneID="8We-Kh-pXO">
+            <objects>
+                <viewController storyboardIdentifier="PaymentHistoryVC" id="jEO-TE-bFR" customClass="PaymentHistoryVC" customModule="Luxongo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IT5-sy-9is">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4L4-Nh-Zuk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6T-br-dhT" customClass="LabelBold" customModule="Luxongo" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="58.5" width="294" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSerifPro-Bold" family="Source Serif Pro" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P82-CL-kI9">
+                                        <rect key="frame" x="12" y="51.5" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="T56-u1-x3a"/>
+                                            <constraint firstAttribute="width" secondItem="P82-CL-kI9" secondAttribute="height" multiplier="1:1" id="VY4-fh-Elk"/>
+                                        </constraints>
+                                        <state key="normal" image="backArrow"/>
+                                        <connections>
+                                            <action selector="onClickBack:" destination="jEO-TE-bFR" eventType="touchUpInside" id="aMC-Ad-G4k"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Byp-9R-wiV">
+                                        <rect key="frame" x="19" y="99.5" width="337" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9n-i9-UjS" customClass="BlackTabButton" customModule="Luxongo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="CEh-yp-nIk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="17"/>
+                                                <state key="normal" title="Paid">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickPaid:" destination="jEO-TE-bFR" eventType="touchUpInside" id="S2P-hY-vWm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-V6-RlC" customClass="BlackTabButton" customModule="Luxongo" customModuleProvider="target">
+                                                <rect key="frame" x="175.5" y="0.0" width="161.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="SourceSerifPro-Semibold" family="Source Serif Pro Semibold" pointSize="17"/>
+                                                <state key="normal" title="Received">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickReceived:" destination="jEO-TE-bFR" eventType="touchUpInside" id="0yt-Jr-DY5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zs9-kg-GDK">
+                                        <rect key="frame" x="39" y="144.5" width="121.5" height="2"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="ElY-uX-A2G"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.7725490196" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zs9-kg-GDK" firstAttribute="centerX" secondItem="q9n-i9-UjS" secondAttribute="centerX" id="3kE-GX-Ql3"/>
+                                    <constraint firstItem="zs9-kg-GDK" firstAttribute="width" secondItem="q9n-i9-UjS" secondAttribute="width" multiplier="0.75" id="6AP-ML-3vQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="zs9-kg-GDK" secondAttribute="bottom" id="YgQ-Ub-yVc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Byp-9R-wiV" secondAttribute="trailing" constant="19" id="ZEW-6V-3q6"/>
+                                    <constraint firstItem="zs9-kg-GDK" firstAttribute="top" secondItem="Byp-9R-wiV" secondAttribute="bottom" id="b3x-ZN-FF0"/>
+                                    <constraint firstAttribute="trailing" secondItem="T6T-br-dhT" secondAttribute="trailing" constant="16" id="cox-bX-J80"/>
+                                    <constraint firstItem="P82-CL-kI9" firstAttribute="leading" secondItem="4L4-Nh-Zuk" secondAttribute="leading" constant="12" id="fuh-uk-iEt"/>
+                                    <constraint firstAttribute="bottom" secondItem="P82-CL-kI9" secondAttribute="bottom" constant="50" id="i4O-js-5c3"/>
+                                    <constraint firstItem="Byp-9R-wiV" firstAttribute="leading" secondItem="4L4-Nh-Zuk" secondAttribute="leading" constant="19" id="rRz-AJ-NZL"/>
+                                    <constraint firstItem="T6T-br-dhT" firstAttribute="leading" secondItem="P82-CL-kI9" secondAttribute="trailing" constant="8" id="wYa-uF-aM2"/>
+                                    <constraint firstItem="T6T-br-dhT" firstAttribute="centerY" secondItem="P82-CL-kI9" secondAttribute="centerY" id="y3a-G1-ENj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kq-Z7-228">
+                                <rect key="frame" x="0.0" y="146.5" width="375" height="520.5"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvO-B7-IhT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="520.5"/>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nvO-B7-IhT" secondAttribute="bottom" id="5zE-dB-yTD"/>
+                                    <constraint firstItem="nvO-B7-IhT" firstAttribute="top" secondItem="1kq-Z7-228" secondAttribute="top" id="gx6-CL-5Ze"/>
+                                    <constraint firstItem="nvO-B7-IhT" firstAttribute="leading" secondItem="1kq-Z7-228" secondAttribute="leading" id="nmj-Y8-qli"/>
+                                    <constraint firstAttribute="trailing" secondItem="nvO-B7-IhT" secondAttribute="trailing" id="sas-vc-VCp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4L4-Nh-Zuk" firstAttribute="trailing" secondItem="LgZ-wN-9TP" secondAttribute="trailing" id="6SG-9F-qPL"/>
+                            <constraint firstAttribute="bottom" secondItem="1kq-Z7-228" secondAttribute="bottom" id="6fW-SO-sYq"/>
+                            <constraint firstItem="4L4-Nh-Zuk" firstAttribute="leading" secondItem="LgZ-wN-9TP" secondAttribute="leading" id="G6P-zB-Xu8"/>
+                            <constraint firstItem="1kq-Z7-228" firstAttribute="height" secondItem="IT5-sy-9is" secondAttribute="height" multiplier="0.78" id="H9e-N9-hoc"/>
+                            <constraint firstItem="1kq-Z7-228" firstAttribute="leading" secondItem="LgZ-wN-9TP" secondAttribute="leading" id="QwC-C6-bNX"/>
+                            <constraint firstItem="1kq-Z7-228" firstAttribute="top" secondItem="4L4-Nh-Zuk" secondAttribute="bottom" id="XzE-Gd-Sf5"/>
+                            <constraint firstItem="4L4-Nh-Zuk" firstAttribute="top" secondItem="IT5-sy-9is" secondAttribute="top" id="mwq-8H-bb4"/>
+                            <constraint firstItem="1kq-Z7-228" firstAttribute="trailing" secondItem="LgZ-wN-9TP" secondAttribute="trailing" id="u7t-qa-gtJ"/>
+                            <constraint firstItem="4L4-Nh-Zuk" firstAttribute="height" secondItem="IT5-sy-9is" secondAttribute="height" multiplier="0.22" id="yOS-Ag-32T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LgZ-wN-9TP"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="P82-CL-kI9" id="hgU-zY-pNW"/>
+                        <outlet property="btnBootomView" destination="zs9-kg-GDK" id="gsL-3g-T4Y"/>
+                        <outlet property="btnPaid" destination="q9n-i9-UjS" id="XrC-RH-81W"/>
+                        <outlet property="btnReceived" destination="0FK-V6-RlC" id="giD-Uc-gb5"/>
+                        <outlet property="lblTittle" destination="T6T-br-dhT" id="Oku-AG-Tpw"/>
+                        <outlet property="rootContainerView" destination="nvO-B7-IhT" id="mKF-LR-zZ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fes-7t-m94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3857" y="692"/>
+        </scene>
+        <!--Payment History ListVC-->
+        <scene sceneID="PyJ-ve-gQB">
+            <objects>
+                <viewController storyboardIdentifier="PaymentHistoryListVC" id="Gmz-HK-E5Q" customClass="PaymentHistoryListVC" customModule="Luxongo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBK-zI-wJc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-nG-erH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xiw-nG-erH" firstAttribute="top" secondItem="LTc-E2-G8T" secondAttribute="top" id="3nG-EG-Tw3"/>
+                            <constraint firstItem="LTc-E2-G8T" firstAttribute="trailing" secondItem="Xiw-nG-erH" secondAttribute="trailing" id="Mdw-0i-cEC"/>
+                            <constraint firstItem="Xiw-nG-erH" firstAttribute="leading" secondItem="LTc-E2-G8T" secondAttribute="leading" id="TZX-4d-1kh"/>
+                            <constraint firstItem="LTc-E2-G8T" firstAttribute="bottom" secondItem="Xiw-nG-erH" secondAttribute="bottom" id="pVk-qQ-mUo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LTc-E2-G8T"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Xiw-nG-erH" id="Ll7-qq-b6G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUL-Ie-vVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4614" y="691"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backArrow" width="21.5" height="19"/>
+    </resources>
+</document>

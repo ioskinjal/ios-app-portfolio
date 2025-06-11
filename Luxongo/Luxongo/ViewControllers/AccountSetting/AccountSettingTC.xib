@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSerifPro-Regular.ttf">
+            <string>SourceSerifPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="Chp-vc-enu" customClass="AccountSettingTC" customModule="Luxongo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Chp-vc-enu" id="ouz-Zm-unZ">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSh-CS-eFG">
+                        <rect key="frame" x="259" y="12" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CSh-CS-eFG" secondAttribute="height" multiplier="1:1" id="YpY-mM-jHI"/>
+                            <constraint firstAttribute="height" constant="45" id="oJv-qn-3a4"/>
+                        </constraints>
+                        <state key="normal" image="ICrightArrow"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchased tickets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-3a-31u" customClass="LabelSemiBold" customModule="Luxongo" customModuleProvider="target">
+                        <rect key="frame" x="23" y="22.5" width="225" height="24"/>
+                        <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="19"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wTh-3a-31u" firstAttribute="centerY" secondItem="CSh-CS-eFG" secondAttribute="centerY" id="2OT-sT-ub7"/>
+                    <constraint firstAttribute="bottom" secondItem="CSh-CS-eFG" secondAttribute="bottom" constant="12" id="Exk-5K-KxC"/>
+                    <constraint firstItem="CSh-CS-eFG" firstAttribute="leading" secondItem="wTh-3a-31u" secondAttribute="trailing" constant="11" id="TuK-nu-C4v"/>
+                    <constraint firstItem="CSh-CS-eFG" firstAttribute="top" secondItem="ouz-Zm-unZ" secondAttribute="top" constant="12" id="eGM-Uv-aSl"/>
+                    <constraint firstAttribute="trailing" secondItem="CSh-CS-eFG" secondAttribute="trailing" constant="19" id="gBS-H4-GyL"/>
+                    <constraint firstItem="wTh-3a-31u" firstAttribute="leading" secondItem="ouz-Zm-unZ" secondAttribute="leading" constant="23" id="wnb-pz-QaX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="XDp-mM-lsK"/>
+            <connections>
+                <outlet property="btnArrow" destination="CSh-CS-eFG" id="XJz-zY-mSF"/>
+                <outlet property="lblTittle" destination="wTh-3a-31u" id="zSr-V9-nRc"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="156.36160714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ICrightArrow" width="8.5" height="15.5"/>
+    </resources>
+</document>
